@@ -1,0 +1,85 @@
+---
+title: <span style="color:#8acfe6">**Probabilidad y Estadística**</span>
+author: "dgonzalez "
+subtitle: <span style="color:#8acfe6">**Unidad 3.1**</span> 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0= "#b0394a"
+c1= "#ad6395"
+c2= "#a391c4"
+c3= "#8acfe6"
+c4= "#646420"
+c5= "#db524f"
+
+```
+
+
+
+![](img/banner3.png)
+
+<br/><br/>
+
+# **Guía de aprendizaje**
+
+
+## **Introducción**
+
+El concepto de variable  aleatoria  y sus principales características como es su tipo, su función de probabilidad, función de distribución acumulada,  valor esperado y la varianza, permiten la identificación de diferentes modelos para su uso a través funciones matemáticas y su posterior aplicación  computacional con el fin de representar situaciones reales en la búsqueda de solución a problemas. 
+
+<br/><br/>
+
+## **Objetivos de la unidad**
+
+Al finalizar la unidad los estudiantes estarán  en  capacidad de IDENTIFICAR, CALCULAR y APLICAR los conceptos y las principales características  de las VARIABLE ALEATORIA para representar situaciones reales en la búsqueda de soluciones a problemas o valorar los riesgos que se pueden presentar en toma de decisiones
+
+<br/><br/>
+
+## **Duración**
+
+La presente  unidad será desarrollada durante la semana séptima del semestre ( 6  al 12 de marzo  de 2023). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightsce hasta el  12 de marzo.
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+<br/><br/>
+
+## **Cronograma de trabajo**
+
+
+|Actividad      | Descripción                    | 
+|:--------------|:-----------------------------  |
+|Individual     |[**Taller311**](https://dgonxalex80.github.io/web00520231.io/taller311.html): El siguiente taller recoge los principales conceptos relacionados con variables aleatorias, tanto discretas como continuas y sus aplicaciones en la estimación de probabilidades|
+|Reursos        | recursos 3.1 | 
+|               |Capitulo  2 Navidi. Navidi, W. estadística para ingenieros y científicos. Editorial Mc Graw Hill. 2006. |
+|               | Capitulos  3 y 4 Walpole. Walpole, R. Myers, R. Myers, S. Ye, K. Probabilidad y Estadística para ingeniería y Ciencias.8 Ed. Editorial Pearson. 2007 |
+<br/><br/>
+
+## **Criterios de evaluación**
+
+* Reconoce los diferentes tipos de variables aleatorias y sus principales características 
+
+* Utiliza las herramientas estadística apropiadas en el calculo de probabilidades en la solución de problemas en contexto
+
+* Utiliza herramientas computacionales que le permiten representar y calcular probabilidades en la solución de problemas en contexto
+
+* Interpreta y expresa el desarrollo de los problemas con el lenguaje propio de la estadística
+
+<br/><br/>
+
+## **Entregables** 
+
+|                   |                                       |
+|:------------------|:--------------------------------------|
+|**Taller 311.pdf** | El taller tiene un valor de 30 puntos si es resuelto completamente y enviado dentro de los tiempos establecidos |
+| Fecha             | Domingo 12  de marzo de 2023 |
+| Hora límite       | 23:59  hora  local           |
+
+<br/><br/><br/><br/>

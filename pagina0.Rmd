@@ -1,0 +1,17 @@
+---
+title: <span style="color:#034A94"> **PROBABILIDAD Y ESTADÍSTICA **</span>  
+author: "dgonzalez "
+subtitle: <span style="color:#034A94">**Módulo - Unidad **</span> 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# **EN CONSTRUCCIÓN**

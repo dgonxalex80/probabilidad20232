@@ -1,0 +1,83 @@
+---
+title: <span style="color:#ad6395"> **Caso de estudio 1**</span>  
+author: "dgonzalez "
+subtitle: <span style="color:#ad6395">**Módulo 1- Unidad 1.2**</span> 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+
+library(RColorBrewer)
+library(summarytools)
+library(knitr)
+library(readxl)
+library(tidyverse)
+# Colombia<- readRDS("data/Colombia.RDS")
+# 
+# colores
+c0= "#b0394a"
+c1= "#ad6395"
+c2= "#a391c4"
+c3= "#8acfe6"
+c4= "#646420"
+c5= "#db524f"
+```
+
+![](img/banner1.png)
+
+## **Enunciado**
+
+![](img/cerveza.png)
+
+La siguiente información recoge cinco de las principales características de un grupo de marcas de cerveza que fue recogida con la finalizad de clasificar los productos y además permita realizar un análisis descriptivo de las 69 marcas recogidas
+
+Inicialmente el director de investigación desea su apoyo en una primera etapa del análisis que consiste en resumir la información suministrada en tablas e indicadores que le permitan validar algunas de sus hipótesis.
+
+La base compartida contiene información sobre 69 marcas de cervezas que son distribuidas en la ciudad. 
+Las variables recogidas corresponden a:  
+
++ <span style="color:#b0394a">**precio**</span>  de la presentación en caja de seis botellas de 12 onzas, 
+
++ contendo de <span style="color:#b0394a">**calorias**</span>  congtenidas en una unidad de 12 onzas, 
+
++ porcentaje de contenido de <span style="color:#b0394a">**alcohol**</span>  por 12 onzas de contenido, 
+
++ <span style="color:#b0394a">**tipo**</span>  de cerveza (1-lager artesanal, 2-clara artesanal, 3-lager importada, 4-cerveza normal y helada, y 5-cerveza baja en calorías y sin alcohol) y 
+
++ país de <span style="color:#b0394a">**origen**</span>  (0-nacional, 1- importada).
+
+Su trabajo consiste en escribir un primer informe basado en una evaluación descriptiva, que contenga las tablas que resumen la información para cada variable de base de datos y  resumen de sus indicadores estadísticos.
+
+Finalmente adjunte un análisis de los resultados obtenidos.
+
+<br/><br/>
+
+## **Cargar datos** 
+
+```{r, eval=FALSE}
+install.packages("devtools") # solo una vez
+devtools::install_github("dgonxalex80/paqueteDEG") # descarga paqueteDEG
+library(paqueteDEG) # activa paqueteDEG
+data("beer") # carga la base beer
+```
+
+<br/><br/>
+
+## **Batos de datos**
+```{r}
+library(DT)
+library(paqueteDEG)
+data(beer)
+DT::datatable(head(beer, 69),fillContainer = FALSE, options = list(pageLength = 8))
+```
+
+<br/>
+
+
+

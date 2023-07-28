@@ -1,0 +1,104 @@
+---
+title: <span style="color:#a391c4">**Probabilidad y Estadística**</span>
+author: "dgonzalez "
+subtitle: <span style="color:#a391c4">**Unidad 2.2**</span>
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0= "#b0394a"
+c1= "#ad6395"
+c2= "#a391c4"
+c3= "#8acfe6"
+c4= "#646420"
+c5= "#db524f"
+
+```
+
+
+
+
+
+![](img/banner2.png)
+
+<br/><br/>
+
+# <span style="color:#a391c4">**Guía de aprendizaje 2.2**</span>
+ 
+<br/><br/>
+
+## <span style="color:#a391c4">**Introducción**</span>
+
+Como fue mencionado en la Unidad 2.1 el concepto de probabilidad es fundamental dentro de la Estadística, pues soporta los conceptos de variable aleatoria y de las funciones que las rigen. Entre sus principales aplicaciones está la valoración del riesgo en relación con la toma de decisiones, la fiabilidad de productos y garantías de productos, teoría de juegos, entre otras aplicaciones.
+
+Como complemento de los conceptos vistos en la Unidad 2.1, en esta unidad se aborda el concepto de **Probabilidad total** y el **Teorema de Bayes**.
+
+<br/><br/>
+
+## <span style="color:#a391c4">**Objetivos de la unidad**</span>
+
+Al finalizar la unidad los estudiantes estarán  en  capacidad de  RECONOCER, CALCULAR e INTERPRETAR  los diferentes tipos de probabilidad y sus aplicaciones, con el propósito de valorar los riesgos asociados a una decisión. 
+
+<br/><br/>
+
+## <span style="color:#a391c4">**Duración**</span>
+
+La presente  unidad será desarrollada durante la semana comprendida entre el 20  y 26 de febrero de 2023. Ademas del material suministrado  contaran con el acompañamiento del profesor,  del monitor y espacio de Atención a estudiantes y manera asincrónica  de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  26 de febrero  de 2023
+
+Para alcanzar los objetivos planteados se propone realizar la siguiente actividad
+
+<br/><br/>
+
+## <span style="color:#a391c4">**Cronograma de trabajo**</span>
+
+
+|Actividad      | Descripción                    | 
+|:--------------|:-----------------------------  |
+| Actividad 221 | A partir de los conceptos vistos en las Unidades 2.1 y 2.2 deberá resolver los problemas propuestos en el [**Taller 221**](https://dgonxalex80.github.io/pye20222/Talller221.html) y entregue su solución  en formato **pdf**  en el enlace correspondiente de Brightspace.|
+|Trabajo en parejas||
+|Fecha  |  26 de septiembre de 2023 |
+|Hora   |  23:59 hora local     |
+|||
+
+
+<br/><br/>
+
+## <span style="color:#a391c4">**Criterios de evaluación**</span>
+
+El taller del Modulo 2 recoge los elementos estudiados y por tanto  tiene objetivo la revisión de los principales conceptos tratados.
+
++ Reconocer los principales conceptos de  probabilidad y su efecto sobre la toma de decisiones informadas.
+
++ Reconocer e identificar los diferentes tipos de probabilidad  y sus respectivas interpretación.
+
+<br/><br/>
+
+## <span style="color:#a391c4">**Entregables**</span> 
+
+| Entregable |  Descripción                    |
+|:--------------|:-----------------------------|
+| Actividad221    | Solucionario taller 221. Cada estudiante debe subir a la plataforma una copia en pdf del trabajo realizado que incluya el nombre de los dos | 
+| Fecha           |Domongo  26 de febrero  de 2023 | 
+|Hora límite      | 23:59  hora  local |
+
+<br/><br/><br/><br/>
+
+
+## <span style="color:#a391c4">**Parciales anteriores**</span> 
+
+
+* [Primer parcial 2015-2](https://github.com/dgonxalex80/web00520231.io/blob/main/pdf/PARCIAL1.pdf)
+
+
+* [Primer parcial 2017-1](https://github.com/dgonxalex80/web00520231.io/blob/main/pdf/Primer%20parcial_20171-C.pdf)
+
+
+<br/><br/><br/>

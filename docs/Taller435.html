@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="dgonzalez" />
+
+
+<title>Taller 435</title>
+
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"> </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    PyE
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 0
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo0.html">Módulo 0</a>
+    </li>
+    <li>
+      <a href="recurso001.html">Recurso 0.1</a>
+    </li>
+    <li>
+      <a href="recurso002.html">Recurso 0.2</a>
+    </li>
+    <li>
+      <a href="recurso003.html">Recurso 0.3</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Recurso 0.4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo1.html">Módulo 1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="Guia101.html">Guía 1.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Guía 1.2</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Guía 1.3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso101.html">Recursos 1.1</a>
+    </li>
+    <li>
+      <a href="recurso102.html">Recursos 1.2</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Recursos 1.3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="monitoria1.html">Monitoria 1</a>
+    </li>
+    <li>
+      <a href="Taller1.html">Taller 1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="introduccionR.html">Introducción a R</a>
+    </li>
+    <li>
+      <a href="codigo101.html">Código 1.1</a>
+    </li>
+    <li>
+      <a href="codigo102.html">Código 1.2</a>
+    </li>
+    <li>
+      <a href="codigo103.html">Código 1.3</a>
+    </li>
+    <li>
+      <a href="Ficha.html">Ficha ténica</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Caso 1</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo2.html">Módulo 2</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Guía 2.1</a>
+    </li>
+    <li>
+      <a href="Guia202.html">Guía 2.2</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Recursos 2.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Recursos 2.2</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Monitoria 2</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Código 2.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Taller 211</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Taller 221</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo3.html">Módulo 3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Guía 3.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Guía 3.2</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Guía 3.3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Recursos 3.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Recursos 3.2</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Recursos 3.3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Monitoria 3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Código 3.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Código 3.2</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Código 3.3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Taller 311</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Actividad 331</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Actividad 332</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo4.html">Módulo 4</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Guía 4.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Guía 4.2</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Guía 4.3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Recursos 4.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Recursos 4.2</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Recursos 4.3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Monitoria 4</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Código 4.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Código 4.2</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Código 4.3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Taller 421</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Taller 435</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 5
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo5.html">Módulo 5</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Guía 5.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Guía 5.2</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso501.html">Recursos 5.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Recursos 5.2</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso000.html">Monitoria 5</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="CODIGO501.html">Código 5.1</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Código 5.2</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Proyecto
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recurso000.html">Guía proyecto</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>Taller 435</strong></h1>
+<h3 class="subtitle">Modulo 4- Unidad 4.3</h3>
+<h4 class="author">dgonzalez</h4>
+
+</div>
+
+
+<p><br/><br/></p>
+<div id="section" class="section level3">
+<h3><strong>1.</strong></h3>
+<p>Los jóvenes colombianos se han vuelto más consientes con respecto a
+la importancia de una buena nutrición acompañada de actividad deportiva
+para tener buena salud. Una asociación de médicos opina que quizás los
+jóvenes estén modificando sus dietas para para incluir menos carnes
+rojas y más frutas y verduras.</p>
+<center>
+<img src="img/vegetales.png" width="70%" style="display: block; margin: auto;" />
+<sub> Tomada de 123rf.com </sub>
+</center>
+<p><br/></p>
+<p>Para verificar esta teoría ,un grupo de estudiantes de la Javeriana
+Cali decide seleccionar registros nutricionales delos estudiantes
+(consignados en una encuesta realizada por VMU) de hace 10 años y
+comparar la cantidad promedio de carne de res consumida por año, con las
+cantidades consumidas por un número de jóvenes que serían entrevistados
+este año. De acuerdo con la información actual se estima que el consumo
+de carne de res por año varia entre 0 y 104 libras por año.</p>
+<p>¿Cuántos jóvenes deben seleccionar los investigadores de cada grupo
+si desean estimar la diferencia en el consumo anual promedio per cápita
+de carne de res correcta dentro de 5 libras con un 99% de confianza?</p>
+<p>Si además se desea estimar la proporción de jóvenes que son
+vegetarianos con un error de muestreo del 5%, ¿que tamaño debe tener la
+muestra?</p>
+<p><br/><br/><br/></p>
+</div>
+<div id="section-1" class="section level3">
+<h3><strong>2.</strong></h3>
+<p>Los investigadores del problema anterior seleccionaron dos grupos de
+400 jóvenes cada uno y reunieron la siguiente información sobre los
+hábitos de consumo de carnes de res actuales y de hace 10 años :</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="center">Hace 10 años</th>
+<th align="center">Este año</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">media muestral</td>
+<td align="center">73</td>
+<td align="center">63</td>
+</tr>
+<tr class="even">
+<td align="left">desviación estandar muestral</td>
+<td align="center">25</td>
+<td align="center">28</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<center>
+<img src="img/carne_res.png" width="90%" style="display: block; margin: auto;" />
+<sub> Tomada de 123rf.com </sub>
+</center>
+<p><br/></p>
+<p>A los investigadores les gustaría poder mostrar que el consumo de
+carne per cápita se redujo en los últimos 10 años, mediante la
+construcción de intervalos de confianza. ¿A que conclusión se puede
+lllegar a partir de la información suministrada?</p>
+<p><br/><br/><br/></p>
+</div>
+<div id="section-2" class="section level3">
+<h3><strong>3.</strong></h3>
+<center>
+<img src="img/dolor_cabeza.png" width="70%" style="display: block; margin: auto;" />
+<sub> Tomada de 123rf.com </sub>
+</center>
+<p><br/></p>
+<p>Uno de los problemas más frecuentes en jóvenes universitarios es la
+alta tensión que generan las evaluaciones finales, las cuales en algunos
+casos genera dolores de cabeza. La tensión muscular en laregión dela
+cabeza se ha asociado con los dolores de cabeza, es razonable pensar que
+si la tensión muscular disminuye, es probable que los dolores de cabeza
+se reduzcan o desaparezcan. Un grupo de investigadores diseña un
+experimento en el cual participan nueve estudiantes que padecen dolores
+de cabeza durante las semanas de evaluación. Posteriormente un grupo de
+profesionales de ingeniería Biomédica y Enfermería los entrenan con el
+fin de que puedan aprender a reducir la tensión muscular en la región
+frontal de la cabeza. Para este experimento el dispositivo mencionado se
+conecta al musculo frontal, que se encuentra en la región frontal de la
+cara. El dispositivo indica al estudiante la cantidad de tensión que
+existe en el musculo al que está unido (en este caso, al frontal) y le
+ayuda a reducir los niveles de tensión. Después de 6 semanas de
+entrenamiento, los jóvenes han logrado mantener una baja tensión en el
+musculo frontal; entonces se lleva nuevamente un registro de los dolores
+de cabeza que sufren durante las dos semanas de evaluaciones. La
+información recogida se presenta en la siguiente tabla :</p>
+<table style="width:100%;">
+<colgroup>
+<col width="30%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Sujeto</th>
+<th align="right">1</th>
+<th align="right">2</th>
+<th align="right">3</th>
+<th align="right">4</th>
+<th align="right">5</th>
+<th align="right">6</th>
+<th align="right">7</th>
+<th align="right">8</th>
+<th align="right">9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">linea base</td>
+<td align="right">17</td>
+<td align="right">13</td>
+<td align="right">6</td>
+<td align="right">5</td>
+<td align="right">5</td>
+<td align="right">10</td>
+<td align="right">8</td>
+<td align="right">6</td>
+<td align="right">7</td>
+</tr>
+<tr class="even">
+<td align="left">Después de entrenamiento</td>
+<td align="right">3</td>
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">6</td>
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
+<p>Dado que pueden existir problemas de interacción en el planteamiento
+anterior, debido a que los resultados muestran aparentemente una
+disminución de los dolores de cabeza, es posible que esta disminución no
+se deba al entrenamiento realizado con la utilización del dispositivo ,
+sino a algún otro factor también presente en la situación, como por
+ejemplo el momento en que se realizan las mediciones ( primeros
+parciales, segundos parciales, finales), los investigadores incorporan
+un grupo que se denomina grupo control que permita dar cuenta de estas
+variaciones. Este grupo de jóvenes que tambien presentan dolores de
+cabeza fue medido durante los mismos momentos del primer grupo (grupo
+experimental) salvo que no fue entrenado con el dispositivo para
+controlar la tension. Durante el periodo intermedion este grupo solo
+hablo con los investigadores sobre los dolores de cabeza. El número de
+dolores de cabeza durante la linea base y el segundo periodo para el
+grupo control se presentan en la siguiente tabla:</p>
+<table style="width:100%;">
+<colgroup>
+<col width="30%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Sujeto</th>
+<th align="right">1</th>
+<th align="right">2</th>
+<th align="right">3</th>
+<th align="right">4</th>
+<th align="right">5</th>
+<th align="right">6</th>
+<th align="right">7</th>
+<th align="right">8</th>
+<th align="right">9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">linea base</td>
+<td align="right">5</td>
+<td align="right">8</td>
+<td align="right">14</td>
+<td align="right">16</td>
+<td align="right">6</td>
+<td align="right">5</td>
+<td align="right">8</td>
+<td align="right">10</td>
+<td align="right">9</td>
+</tr>
+<tr class="even">
+<td align="left">Después de entrenamiento</td>
+<td align="right">4</td>
+<td align="right">9</td>
+<td align="right">12</td>
+<td align="right">15</td>
+<td align="right">4</td>
+<td align="right">3</td>
+<td align="right">7</td>
+<td align="right">6</td>
+<td align="right">7</td>
+</tr>
+</tbody>
+</table>
+<p>Se puede concluir que el tratamiento realizado con el dispivo
+disminuye los dolores de cabeza?</p>
+<p><br/><br/></p>
+</div>
+<div id="nota" class="section level3">
+<h3><strong>Nota:</strong></h3>
+<p>Suponga que el número de dolores de cabeza se distribuye
+aproximadamente normal. (Basado en Robert Pangano (2006))</p>
+</div>
+<div id="solución" class="section level2">
+<h2><strong>Solución</strong></h2>
+<iframe src="pdf/taller435.pdf" width="100%" height="800"></iframe>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

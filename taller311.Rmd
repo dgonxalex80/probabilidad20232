@@ -1,0 +1,206 @@
+---
+title: <span style="color:#8acfe6"> **Taller 311**</span>  
+author: "dgonzalez "
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: flatly
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+
+```
+
+<br/><br/>
+
+## <span style="color:#8acfe6">**Problema 1**</span>
+
+Clasifique las siguientes variables como discretas o continuas:
+
+|      |                                                                                |
+|-----:|:-------------------------------------------------------------------------------|
+|X :   | el número de accidentes automovilísticos que ocurren durante un dia en Cali    |
+|Y :   | tiempo que se tarda una persona en recorrer 100 metros en segundos             |
+|M :   | cantidad de leche que una vaca produce semanalmente en litros                  |
+|Z :   | el número de huevos que una gallina produce semanalmente                       |
+|G :   | número de permisos para la construcción que son aprobados mensualmente en Cali |
+|Q :   | peso en kilogramos de automóvil                                                |
+|R :   | embergadura de las alas  de un condor en edad adulta en metros                 |
+|S :   | tiempo que dedica una persona al ocio - tiempo no productivo en horas          |
+|T :   | ingresos de una familia en pesos por mes                                       |
+|V :   | cantidad de calorias que contiene una bebida gaseosa                           |               
+|W :   | largo del femur de un adulto humano en centimetros                             |
+
+
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 2**</span>
+
+Determine el valor de $C$ de modo que cada una de las siguientes funciones sirva
+como una función de probabilidad de una variable aleatoria discreta
+
+$$f(x) = C \binom{2}{x} \binom{3}{3-x}, \text{ para } x=0,1,2$$
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 3**</span>
+
+Un embarque de 7 televisores contiene 2 unidades defectuosas. Un hotel compra al azar 3 de los televisores. Si $X$ es el número de unidades defectuosas en un grupo de tres televisores comprados por el hotel al azar, encuentra la función de probabilidad de $X$. Expresa los resultados de forma gráfica. Construye la función de distribución acumulada de $X$. Usar $F(X)$ para responder, ¿cuál es la probabilidad que hayan cero televisores defectuosos en el grupo de tres televisores?, ¿cuál es la probabilidad que haya más de 1 televisor defectuoso en la selección de tres televisores?.
+
+
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 4**</span>
+
+La distribución de probabilidad de $X$, el número de imperfecciones por 10 metros de una tela sintética en rollos continuos de ancho uniforme, está dada por
+
+|   $x$ |   0    |    1   |   2    |  3     |   4    |
+|------:|-------:|-------:|-------:|-------:|-------:|
+| $f(x)$| 0.41   | 0.37   | 0.16   |  0.05  | 0.01   |
+
+
+* Construya la función de distribución acumulada de $X$. 
+* Gratifica la función de probabilidad y la distribución de probabilidad de $X$. 
+* ¿Cuál es la probabilidad de encontrar menos de $3$ imperfecciones en $10$ metros de una tela seleccionada al azar?.
+* Calcule el valor esperado del número de imperfecciones obtenidas por 10 metros de tela. Interpretes su resultado. 
+* Calcule la variaran del número de imperfecciones obtenidas por 10 metros de tela.
+
+
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 5**</span>
+
+Sea $W$ el número de sellos en tres lanzamientos de una moneda. Liste los elementos del espacio muestral $S$ para los tres lanzamientos de la moneda y asigne un valor $w$ de $W$ a cada punto muestral.
+
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 6**</span>
+
+Encuentre la distribución de probabilidad de la variable aleatoria W del ejercicio anterior; suponga que la cara está cargada de manera que una cara tenga doble de probabilidad de ocurrir que un sello.
+
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 7**</span>
+
+La vida útil en días, para frascos de cierta medicina de prescripción es una variable aleatoria que tiene función de densidad,
+
+$$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{2000}{(x+100)^{3}}, & \mbox{  }	x \geq 0\\ 
+				& \\
+				0 , & \mbox{en cualquier otro caso }
+				\end{matrix}\right.  
+				$$
+				
+Encuentre la probabilidad de que un frasco de esta medicina tenga una vida útil de : 
+
+* Al menos 22 días. 
+* Cualquier lapso entre 80 a 120 días.
+* Si se requiere encontrar el valor promedio de vida del medicamento, como lo encontrariamos?. Cuál seria su valor?
+
+
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 8**</span>
+
+El número total de horas, medidas en unidades de 100 horas, que una familia utiliza una lavadora en un periodo de un año es una variable aleatoria continua $X$ que tiene la función de densidad,
+
+$$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				x  ,& \mbox{ }	0 \leq x < 1\\ 
+				   & \\
+				2-x ,&  \mbox{ }	1 \leq x \leq 2\\
+				   &\\
+				0  ,& \mbox{en cualquier otro caso }
+				\end{matrix}\right.  
+				$$
+
+Encontrar la probabilidad de :
+
+* menos de 120 horas.
+* entre 50 y 100 horas.
+
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 9**</span>
+
+Una variable aleatoria continua $X$ que puede tomar valores entre $x = 1$ y $x = 3$ tiene una función de densidad dada por $f (x) = 1/2$.
+
+* Muestre que el área bajo la curva es igual a $1$.
+
+* Encuentre :
+    + $P(2 < X < 2.5)$  
+    + $P(X = 2.5)$ 
+    + $P(2 \leq X < 2.5)$ 
+    + $P(X > 2.5)$ 
+    + $P(X \geq 2.5)$.
+
+Para la función de densidad del ejercicio anterior encuentre $F(x)$. Utilíce la función obtenida para encontrar: 
+
+  + $P(2 < X < 2.5)$ 
+  + $P(X = 2.5)$ 
+  + $P(2 \leq X < 2.5)$  
+  + $P(X >2.5)$ 
+  + $P(X \geq 2.5)$
+
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 10**</span>
+
+En una tarea de laboratorio, cuando el equipo está operando la función de densidad
+del resultado, $X$, es el tiempo,
+
+
+$$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				2(1-x),  & \mbox{   }	0 \leq x \leq 1\\ 
+				& \\
+				0 , & \mbox{en cualquier otro caso }
+				\end{matrix}\right.  
+$$
+
+* Calcule $P(X \leq 1/3)$
+* ¿Cuál es la probabilidad que $X$ excederá a $0.5$?
+* Dado que $X \geq 0.5$, ¿cuál es la probabilidad de que $X$ será menor que $0.75$?
+* Determine su valor espeado y su varianza
+
+
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 11**</span>
+
+La probabilidad de tener una unidad defectuosa en una línea de ensamblaje es de $p = 0.05$. Si el conjunto de unidades terminadas constituye un conjunto de ensayos independientes, la función de probabilidad de número de unidades defectuosas está dada por,
+
+
+$$f(x) = \binom{10}{x} p^{x} (1 − p)^{10−x}  \text{,  } x = 0, 1, . . . , 10$$
+
+* ¿cuál es la probabilidad de que en diez unidades dos se encuentren defectuosas?
+* ¿cuál es la probabilidad de encontrar por lo menos dos defectuosas?
+* ¿cuál es la probabilidad de que por lo menos una se encuentre defectuosa?
+
+
+<br/><br/><br/>
+
+## <span style="color:#8acfe6">**Problema 12**</span>
+
+El gerente de un restaurante que sólo da servicio mediante reservas sabe, por experiencia, que el $20$% de las personas que reservan una mesa no asistirán. Si el restaurante acepta $25$ reservas pero sólo dispone de $20$ mesas, ¿cuál es la probabilidad de que a todas las personas que asistan al restaurante se les asigne una mesa?. 
+
+<br/>
+
+La función de probabilidad del número de personas que llegan al restaurante es,
+
+$$f(x) = \binom{25}{x} (0.80)^{x} (0.20)^{25−x}  \text{,  } x = 0, 1, . . . , 25$$
+
+<br/><br/><br/>
+
+### <span style="color:#db524f">**NOTA**</span>
+
+**En todos los casos** represente gráficamente la función de probabilidad correspondiente y en ella resalte las probabilidades solicitadas.
+
+Problemas seleccionados de Walpole(2012).
+  
+
+

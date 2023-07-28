@@ -1,0 +1,91 @@
+---
+title: "**PROBABILIDAD Y ESTADÍSTICA**"
+subtitle: " "
+author: "dgonzalez"
+date: ""
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: flatly
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+cg="#6c4675"
+
+```
+
+# **300MAE005**
+
+<br/><br/>
+
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/bannerG.png")
+```
+
+
+<br/><br/><br/>
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+ knitr::include_graphics("img/modulos.png")
+```
+<br/><br/>
+
+# **Metodología**
+ 
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/aulainvertida.png")
+```
+<br/><br/><br/>
+
+
+# **Calendario 2023-2**
+
+<br/><br/>
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/CALENDARIO20232.png")
+```
+
+<br/><br/>
+``
+
+
+# **Salones**
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/SALONES.png")
+```
+
+# **Atención a Estudiantes**
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+# knitr::include_graphics("img/calendario2023-1bre.png")
+```
+
+<br/><br/>
+
+# **Información supletorios**
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+# knitr::include_graphics("img/calendario2023-1bre.png")
+```
+
+<br/><br/>
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+# knitr::include_graphics("img/calendario2023-1bre.png")
+```
+
+

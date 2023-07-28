@@ -1,0 +1,87 @@
+---
+title: <span style="color:#646420">**Probabilidad y Estadística**</span>
+author: "dgonzalez "
+subtitle: <span style="color:#646420">**Unidad 4.2**</span>
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0= "#b0394a"
+c1= "#ad6395"
+c2= "#a391c4"
+c3= "#8acfe6"
+c4= "#646420"
+c5= "#db524f"
+```
+
+
+
+![](img/banner4.png)
+
+
+
+# **Guía de aprendizaje**
+
+<br/><br/>
+
+## **Introducción**
+
+La inferencia estadística constituye una de las principales componentes de la metodologia estadistica, encaminados a generar procedimiento para el avance de la ciencia. Con ella se pueden generalizar los
+resultados obtenidos en una muestra a toda la población, previo cumplimiento de supuestos establecidos por la estadística (llamada paramétrica) .
+
+Antes de empezar es necesario entender los conceptos básicos como: población, censo, parámetro, muestra, muestreo, estimador, estimación, métodos de estimación, propiedades de los estimadores como la insesgadez, la eficiencia, la consistencia .Las distribuciones muestrales : normal, t-student, chi-cuadrado y f de Fisher. Todos trabajados y tratados en la unidad 4.1.
+
+El siguiente documento te  oriente sobre los pasos a seguir para alcanzar el objetivo planteado
+
+<br/><br/>
+
+## **Objetivos de la unidad**
+
+Al finalizar la unidad el estudiante estará en capacidad de IDENTIFICAR, CALCULAR, INTERPRETAR e INFERIR sobre un intervalo de confianza para estimadores de una y dos poblaciones,
+que le permita seleccionar la mejor alternativa para la estimación de un parámetro poblacional, orientados a la toma de decisiones  informadas.
+
+<br/><br/>
+
+
+
+## **Duración**
+
+La presente  unidad será desarrollada del 24 de abril  al 01  de mayo  2023 . Ademas del material suministrado  contaran con el acompañamiento del profesor durante las sesiones de clase  y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  03 de mayo  de 2023 
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+
+<br/><br/>
+
+## **Cronograma de trabajo**
+
+
+|Actividad      | Descripción                    | https://github.com/dgonxalex80
+|:--------------|:-----------------------------  |
+|**Actividad 421**    |Resuelva las preguntas y problemas planteadas en  el  **Taller 421** y entregue su solución  en formato  pdf en el enlace correspondiente de  Brightspace|
+|Trabajo individual |  |
+|Fecha          | 03  de mayo de 2023 |
+|Hora           | 23:59 hora local       |
+
+
+
+
+## **Criterios de evaluación**
+
+<br/><br/>
+
+## **Entregables** 
+
+|               |                              | 
+|:--------------|:-----------------------------|
+| Actividad 421 | Solucionario taller 421 de problemas sobre intervalos de confianza| 
+|Fecha          | 3 de mayo  de 2023 |
+|Hora           | 23:59 hora local       |
+

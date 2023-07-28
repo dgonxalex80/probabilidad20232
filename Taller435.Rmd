@@ -1,0 +1,115 @@
+---
+title: "**Taller 435**"
+author: "dgonzalez"
+subtitle: "Modulo 4- Unidad 4.3" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+library(knitr)
+```
+
+<br/><br/>
+
+### **1.** 
+Los jóvenes colombianos se han vuelto más consientes con respecto a la importancia de una buena nutrición acompañada de actividad deportiva para tener buena salud. Una asociación de médicos opina que quizás los jóvenes estén modificando sus dietas para para incluir menos carnes rojas y más frutas y verduras. 
+
+<center>
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+knitr::include_graphics("img/vegetales.png")
+```
+<sub> Tomada de  123rf.com </sub>
+</center>
+
+<br/>
+
+Para verificar esta teoría ,un grupo de estudiantes de la Javeriana Cali decide seleccionar registros nutricionales delos estudiantes (consignados en una encuesta realizada por VMU) de hace 10 años y comparar la cantidad promedio de carne de res consumida por año, con las cantidades consumidas por un número de jóvenes que serían entrevistados este año. De acuerdo con  la información actual se estima que el consumo de carne de res por año varia entre 0 y 104  libras por año. 
+
+¿Cuántos jóvenes deben seleccionar los investigadores de cada grupo si desean estimar la diferencia en el consumo anual promedio per cápita de carne de res correcta dentro  de 5 libras con un 99% de confianza?
+
+Si además se desea estimar la proporción de jóvenes que son vegetarianos con un error de muestreo del 5%, ¿que tamaño debe tener la muestra?
+
+<br/><br/><br/>
+
+### **2.**
+
+Los investigadores del problema anterior seleccionaron  dos grupos de 400 jóvenes cada uno y reunieron la siguiente información sobre los hábitos de consumo de carnes de res actuales y de hace 10 años :
+
+|                    |  Hace 10 años  | Este año       |
+|:-------------------|:--------------:|:--------------:|
+| media muestral     |       73       |  63            |
+| desviación estandar muestral |  25  |  28            |
+
+
+<br/>
+<center>
+```{r, echo=FALSE, out.width="90%", fig.align = "center"}
+knitr::include_graphics("img/carne_res.png")
+```
+<sub> Tomada de  123rf.com </sub>
+</center>
+<br/>
+
+A los investigadores les gustaría poder mostrar que el consumo de carne per cápita se redujo en los últimos 10 años, mediante la construcción de intervalos de confianza. ¿A que conclusión se puede lllegar a partir de la información suministrada?
+
+
+<br/><br/><br/>
+
+### **3.**
+
+
+<center>
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+knitr::include_graphics("img/dolor_cabeza.png")
+```
+<sub> Tomada de  123rf.com </sub>
+</center>
+<br/>
+
+Uno de los problemas más frecuentes en jóvenes universitarios es la alta tensión que generan las evaluaciones finales, las cuales en algunos casos genera dolores de cabeza. La tensión muscular en laregión dela cabeza se ha asociado con los dolores de cabeza, es razonable pensar que si la tensión muscular disminuye, es probable que los dolores de cabeza se reduzcan o desaparezcan. Un grupo de investigadores diseña un experimento en el cual participan nueve estudiantes que padecen dolores de cabeza durante las semanas de evaluación. Posteriormente un grupo de profesionales de ingeniería Biomédica y Enfermería los entrenan con el fin de que puedan aprender a reducir la tensión muscular en la región frontal de la cabeza. Para este experimento el dispositivo mencionado se conecta al musculo frontal, que se encuentra en la región frontal de la cara. El dispositivo indica al estudiante la cantidad de tensión que existe en el musculo al que está unido (en este caso, al frontal) y le ayuda a reducir los niveles de tensión.  Después de 6 semanas de entrenamiento, los jóvenes han logrado mantener una baja tensión en el musculo frontal; entonces se lleva nuevamente un registro de los dolores de cabeza que sufren durante las dos semanas de evaluaciones.  La información recogida se presenta en la siguiente tabla :
+
+|Sujeto                  |   1  |   2  |  3   |  4   |  5   |  6   |   7  |   8  |  9   |
+|:-----------------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|
+|linea base              |  17  |  13  |  6   | 5    |  5   | 10   | 8    | 6    |  7   |
+|Después de entrenamiento|   3  |   7  |  2   | 3    |  6   |  2   |  1   |  0   |  2   |
+
+Dado que pueden existir problemas de interacción en el planteamiento anterior, debido a que los resultados muestran aparentemente una disminución de los dolores de cabeza, es posible que esta disminución no se deba al entrenamiento realizado con la utilización del dispositivo , sino a algún otro factor también presente en la situación, como por ejemplo el momento en que se realizan las mediciones ( primeros parciales, segundos parciales, finales), los investigadores incorporan un grupo que se denomina grupo control que permita dar cuenta de estas variaciones. Este grupo de jóvenes que  tambien presentan dolores de cabeza fue medido durante los mismos momentos del primer grupo (grupo experimental) salvo que no fue entrenado con el dispositivo para controlar la tension. Durante el periodo intermedion este grupo solo hablo con los investigadores sobre los dolores de cabeza. El número de dolores de cabeza durante la linea base y el segundo periodo para el grupo control se presentan en la siguiente tabla:
+
+
+|Sujeto                  |   1  |   2  |  3   |  4   |  5   |  6   |   7  |   8  |  9   |
+|:-----------------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|
+|linea base              |   5  |   8  |  14  |  16  |  6   |  5   |   8  |  10  |  9   |
+|Después de entrenamiento|   4  |   9  |  12  |  15  |  4   | 3    |  7   | 6    |    7 |
+
+ 
+Se puede concluir que el tratamiento realizado con el dispivo disminuye los dolores de cabeza? 
+
+<br/><br/>
+
+### **Nota:**
+
+Suponga que el número de dolores de cabeza se distribuye aproximadamente normal. (Basado  en Robert Pangano (2006))
+
+## **Solución**
+
+
+
+
+```{r, echo=FALSE}
+library(htmltools)
+
+tags$iframe(
+  src = "pdf/taller435.pdf",
+  width = "100%",  
+  height = "800"  
+)
+```

@@ -1,0 +1,108 @@
+---
+title: <span style="color:#8acfe6">**Probabilidad y Estadística**</span>
+author: "dgonzalez "
+subtitle: <span style="color:#8acfe6">**Unidad 3.3**</span> 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0= "#b0394a"
+c1= "#ad6395"
+c2= "#a391c4"
+c3= "#8acfe6"
+c4= "#646420"
+c5= "#db524f"
+
+```
+
+
+
+![](img/banner3.png)
+<br/><br/>
+
+
+# **Guía de aprendizaje 3.3**
+
+<br/><br/>
+
+## **Introducción**
+
+En las unidades 3.1 y 3.2 hemos recorrido los principales conceptos relacionados caracterización de las variables aleatorias tanto discretas como continuas.  Características como:  $f(x)$, $F(x)$, $E[X]$, $V[X]$, en el caso univariado. Para el caso conjunto : $f(x,y)$, $F(x,y)$, $E[XY]$, $Cov[XY]$  y  $\rho$. 
+
+En esta unidad se presentan los principales modelos estadísticos tanto para variables discretas como continuas y sus aplicaciones. En el caso de los modelos discretas se deberá identificar el modelo a través de  las características del experimento que la genera la variable. Para el caso continuo los ejemplos indicaran el modelo correspondiente que genera la variable.
+
+
+<br/><br/>
+
+## **Objetivos de la unidad**
+
+Al finalizar la unidad los estudiantes estarán  en  capacidad de  IDENTIFICAR, CALCULAR y APLICAR los diferentes modelos de probabilidad para la solución de problemas en contexto  y su representación a través de la simulación.
+
+<br/><br/>
+
+## **Duración**
+
+La presente  unidad será desarrollada durante la comprendida entre 22 de marzo  al 17 de abril      
+Ademas del material suministrado  contaran con el acompañamiento del profesor en las  sesiones descritas en el calentadario y de manera asincrónica con  foro de actividades académicas. Los entegables  de la actividad 302 para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  17 de abril.
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+
+<br/><br/>
+
+## **Cronograma de trabajo**
+
+
+|Actividad        | Descripción                                                             | 
+|:----------------|:------------------------------------------------------------------------|
+|[**Actividad 331**](https://dgonxalex80.github.io/sitioweb00520231.io/Actividad331.html)   |            |    
+|**Poster**       | Construir un poster en formato A1 (841x594)  para el modelo asignado que contenga sus principales características   |
+|Fechas           | abril  12 de 2023 (fecha de revisión por pares)                         |            
+|                 | abril 14 de 2023 (entrega y presentación)                               |
+|Hora             | segun horario de clase                                                  |
+
+
+Los documentos construidos por todos serán publicados en una página para la revisión de todos, para lo cual se requiere entrega de archivo pdf
+
+<br/><br/>
+
+|                |                                                                         | 
+|:---------------|:------------------------------------------------------------------------|
+|[**Activiad 332**](https://dgonxalex80.github.io/sitioweb00520231.io/Actividad332.html) | De manera individual deberá resolver lo problemas asignado   con ayuda computacional. La presentacion de los resultados acompañados de los enunciados se debe publicar en **RPub**. Su enlace copiado en la **actividad 331** de la plataforma **Bs**                                         |
+|               | Trabajo individual                                                      |
+|Fecha          | 17 de abril                                                             |
+|Hora           | 23:59                                                                   |
+
+<br/><br/>
+
+## **Criterios de evaluación**
+
+<br/><br/>
+
+
+* Reconoce los modelos especiales asociados a contextos  y problemas reales
+
+* Utiliza las herramientas estadística apropiadas en el calculo de probabilidades en la solución de problemas en contexto
+
+* Utiliza herramientas computacionales que le permita  la solución de problemas en contexto a través de la simulación
+	
+<br/><br/>
+
+## **Entregables** 
+
+<br/><br/>
+
+|Actividad      | Descripción                      | 
+|:--------------|:---------------------------------|
+|Actividad 331  | poster impreso y presentación del mismo |
+|Actividad 332  | enlace de Rmd publicado en **RPub** con el desarrollo del problema asignado |
+
+
+<br/><br/><br/><br/>

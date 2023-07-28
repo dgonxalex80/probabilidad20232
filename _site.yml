@@ -1,0 +1,181 @@
+name: " "
+output_dir: "docs"
+navbar:
+  title: " "
+  left:
+    - text: "PyE"
+      icon: fa-home
+      href: index.html
+    - text: "Módulo 0"
+      menu:
+        - text: "Módulo 0"
+          href: Modulo0.html
+        - text: "Recurso 0.1"
+          href: recurso001.html  
+        - text: "Recurso 0.2"
+          href: recurso002.html  
+        - text: "Recurso 0.3"
+          href: recurso003.html  
+        - text: "Recurso 0.4"
+          href: recurso000.html  
+    - text: "Módulo 1"
+      menu:
+        - text: "Módulo 1"
+          href: Modulo1.html
+        - text: "---------"          
+        - text: "Guía 1.1"
+          href: Guia101.html            
+        - text: "Guía 1.2"
+          href: recurso000.html            
+        - text: "Guía 1.3"
+          href: recurso000.html 
+        - text: "---------"  
+        - text: "Recursos 1.1"
+          href: recurso101.html  
+        - text: "Recursos 1.2"
+          href: recurso102.html  
+        - text: "Recursos 1.3"
+          href: recurso000.html
+        - text: "---------"            
+        - text: "Monitoria 1"
+          href: monitoria1.html
+        - text: "Taller 1"
+          href: Taller1.html          
+          
+        - text: "---------"          
+        - text: "Introducción a R"
+          href: introduccionR.html
+        - text: "Código 1.1"
+          href: codigo101.html
+        - text: "Código 1.2"
+          href: codigo102.html  
+        - text: "Código 1.3"
+          href: codigo103.html   
+        - text: "Ficha ténica"
+          href: Ficha.html  
+        - text: "Caso 1"
+          href: recurso000.html            
+    - text: "Módulo 2"
+      menu:
+        - text: "Módulo 2"
+          href: Modulo2.html
+        - text: "---------"  
+        - text: "Guía 2.1"
+          href: recurso000.html
+        - text: "Guía 2.2"
+          href: Guia202.html             
+        - text: "---------"            
+        - text: "Recursos 2.1"
+          href: recurso000.html  
+        - text: "Recursos 2.2"
+          href: recurso000.html  
+        - text: "---------"  
+        - text: "Monitoria 2"
+          href: recurso000.html   
+        - text: "---------"  
+        - text: "Código 2.1"
+          href: recurso000.html 
+        - text: "Taller 211"
+          href: recurso000.html   
+        - text: "Taller 221"
+          href: recurso000.html  
+    - text: "Módulo 3"
+      menu:
+        - text: "Módulo 3"
+          href: Modulo3.html
+        - text: "---------"
+        - text: "Guía 3.1"
+          href: recurso000.html
+        - text: "Guía 3.2"
+          href: recurso000.html
+        - text: "Guía 3.3"
+          href: recurso000.html             
+        - text: "---------"  
+        - text: "Recursos 3.1"
+          href: recurso000.html  
+        - text: "Recursos 3.2"
+          href: recurso000.html  
+        - text: "Recursos 3.3"
+          href: recurso000.html 
+        - text: "---------"            
+        - text: "Monitoria 3"
+          href: recurso000.html
+        - text: "---------"   
+        - text: "Código 3.1"
+          href: recurso000.html
+        - text: "Código 3.2"
+          href: recurso000.html
+        - text: "Código 3.3"
+          href: recurso000.html 
+        - text: "---------"            
+        - text: "Taller 311"
+          href: recurso000.html 
+        - text: "---------"                
+        - text: "Actividad 331"
+          href: recurso000.html 
+        - text: "Actividad 332"
+          href: recurso000.html       
+    - text: "Módulo 4"
+      menu:
+        - text: "Módulo 4"
+          href: Modulo4.html
+        - text: "---------"
+        - text: "Guía 4.1"
+          href: recurso000.html 
+        - text: "Guía 4.2"
+          href: recurso000.html 
+        - text: "Guía 4.3"
+          href: recurso000.html          
+        - text: "---------"          
+        - text: "Recursos 4.1"
+          href: recurso000.html 
+        - text: "Recursos 4.2"
+          href: recurso000.html 
+        - text: "Recursos 4.3"
+          href: recurso000.html 
+        - text: "---------"  
+        - text: "Monitoria 4"
+          href: recurso000.html 
+        - text: "---------"   
+        - text: "Código 4.1"
+          href: recurso000.html 
+        - text: "Código 4.2"
+          href: recurso000.html 
+        - text: "Código 4.3"
+          href: recurso000.html 
+        - text: "---------"            
+        - text: "Taller 421"
+          href: recurso000.html 
+        - text: "Taller 435"
+          href: recurso000.html            
+          
+    - text: "Módulo 5"
+      menu:
+        - text: "Módulo 5"
+          href: Modulo5.html
+        - text: "---------"
+        - text: "Guía 5.1"
+          href: recurso000.html 
+        - text: "Guía 5.2"
+          href: recurso000.html 
+        - text: "---------"          
+        - text: "Recursos 5.1"
+          href: recurso501.html 
+        - text: "Recursos 5.2"
+          href: recurso000.html 
+        - text: "---------"            
+        - text: "Monitoria 5"
+          href: recurso000.html 
+        - text: "---------"           
+        - text: "Código 5.1"
+          href: CODIGO501.html 
+        - text: "Código 5.2"
+          href: recurso000.html 
+    - text: "Proyecto"
+      menu:
+        - text: "Guía proyecto"
+          href: recurso000.html   
+output:
+  html_document:
+    theme: flatly
+    css: style.css
