@@ -51,7 +51,7 @@ Al finalizar esta unidad el estudiante estará en capacidad de RESUMIR e INTERPR
 
 ## **Duración**
 
-La presente unidad será desarrollada durante la segunda semana del semestre ( 30 de enero al 5 de febrero). Ademas del material suministrado contaran con el acompañamiento del profesor en dos sesiones (lunes, miércoles y viernes) y de manera asincrónica con foro de actividades académicas. Los entregables para esta unidad deberán enviarse a través de la plataforma Brightspace hasta el 5 de febrero.
+La presente unidad será desarrollada durante la segunda semana del semestre ( 31 de julio al 6 de agosto). Ademas del material suministrado contaran con el acompañamiento del profesor en dos sesiones (lunes, miércoles y viernes) y de manera asincrónica con foro de actividades académicas. Los entregables para esta unidad deberán enviarse a través de la plataforma Brightspace hasta el 6 de agosto.
 
 
 Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
@@ -67,8 +67,8 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |Trabajo individual| **Actividad 121** - **Caso 1** :  Realice las actividades consignadas en el **Caso1**, adjunte y envíe las respuesta a la plataforma de Brightspace en **formato pdf** |
 |Recursos       |[Video indicadores estadísticos](https://youtu.be/dWVs-M7oCh4)         |
 || [Vídeo calculo indicadores con tablas de distribución](https://youtu.be/n2UCDZNncls)|
-| Fecha         | 05 de febrero de 2023          |
-| Hora          | 23:59                         |
+| Fecha         | 06 de agosto de 2023          |
+| Hora          | 23:59 hora local                        |
 
 <br/> 
 
@@ -79,7 +79,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |               |Excel                |
 |               |RStudio              |
 ||Código u1.2                         |
-|Fecha          | 05 de febrero de 2023 |
+|Fecha          | 06 de agosto de 2023 |
 |Hora           |  23:59 hora local   |
 
 
@@ -105,7 +105,7 @@ Los entregables completos y enviados dentro de los tiempos establecidos otorgar�
 |:--------------|:-------------------------------|
 |**Actividad121.pdf**|  Desarrollo del Caso 1    |
 |**Actividad122.pdf**|  Aplicar lo aprendido en la unidad 1.2 a la base de datos seleccionada para la actividad102    |
-|Fecha          |Domingo 05 de febrero de 2023   | 
+|Fecha          |Domingo 06 de agosto de 2023   | 
 |Hora límite    | 23:59  hora  local             |
 
 
