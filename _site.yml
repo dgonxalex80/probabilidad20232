@@ -39,8 +39,10 @@ navbar:
         - text: "---------"            
         - text: "Monitoria 1"
           href: monitoria1.html
-        - text: "Taller 1"
-          href: Taller1.html          
+        - text: "Taller 111"
+          href: taller1.html   
+        - text: "Caso 1"
+          href: caso1.html            
           
         - text: "---------"          
         - text: "Introducción a R"

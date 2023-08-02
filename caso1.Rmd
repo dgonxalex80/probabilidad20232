@@ -79,10 +79,6 @@ DT::datatable(head(beer, 69),fillContainer = FALSE, options = list(pageLength = 
 
 <br/>
 
-```{r}
-x=rnorm(1000)
-hist(x)
-```
 
 
 

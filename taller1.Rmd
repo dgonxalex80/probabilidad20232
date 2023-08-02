@@ -83,31 +83,34 @@ tiempo=c(10.6, 10.9, 13.3, 11.5, 11.5, 9.0, 7.1, 10.8, 13.1, 8.1, 14.6, 9.4,
          7.5, 10.1, 12.7, 12.5, 7.1, 10.9, 10.6, 12.4, 10.6, 9.0, 7.5, 11.5, 
          7.4, 11.3, 11.8, 6.4, 2.3, 15.2, 5.4, 10.9, 8.3, 10.9, 7.9, 13.8,11.0)
 
-#stem(tiempo)
-
-# The decimal point is at the |
-
-#   2 | 3
-#   5 | 4
-#   6 | 478
-#   7 | 111345589
-#   8 | 13
-#   9 | 004567
-#  10 | 1666889999
-#  11 | 0355558
-#  12 | 1457
-#  13 | 11388
-#  14 | 6
-#  15 | 2
-
-
-sum(tiempo)  =  500.7 
-sum(tiempo^2) =  5350.37 
-sum(tiempo-mean(tiempo)^1)   =    3.463896e-14 
-sum((tiempo-mean(tiempo))^2) =  336.3602 
-sum((tiempo-mean(tiempo))^3) = -330.4283 
-sum((tiempo-mean(tiempo))^4) = 6910.703 
 </pre>
+
+<!-- <pre> -->
+<!-- #stem(tiempo) -->
+
+<!-- # The decimal point is at the | -->
+
+<!-- #   2 | 3 -->
+<!-- #   5 | 4 -->
+<!-- #   6 | 478 -->
+<!-- #   7 | 111345589 -->
+<!-- #   8 | 13 -->
+<!-- #   9 | 004567 -->
+<!-- #  10 | 1666889999 -->
+<!-- #  11 | 0355558 -->
+<!-- #  12 | 1457 -->
+<!-- #  13 | 11388 -->
+<!-- #  14 | 6 -->
+<!-- #  15 | 2 -->
+
+
+<!-- sum(tiempo)  =  500.7  -->
+<!-- sum(tiempo^2) =  5350.37  -->
+<!-- sum(tiempo-mean(tiempo)^1)   =    3.463896e-14  -->
+<!-- sum((tiempo-mean(tiempo))^2) =  336.3602  -->
+<!-- sum((tiempo-mean(tiempo))^3) = -330.4283  -->
+<!-- sum((tiempo-mean(tiempo))^4) = 6910.703  -->
+<!-- </pre> -->
 
 <br/><br/>
 
@@ -141,9 +144,5 @@ knitr::include_graphics("img/resumen00.png")
 
 <br/><br/>
 
-# **Solución**
 
-a. No posee datos atípicos
-
-Para determinar si existen datos atípicos podemos construir un diagrama de cajas que visualiza 
 
