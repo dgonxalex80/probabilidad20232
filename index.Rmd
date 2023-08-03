@@ -55,22 +55,28 @@ knitr::include_graphics("img/CALENDARIO20232.png")
 ```
 
 <br/><br/>
-``
+
 
 
 # **Salones**
 
 
+<!-- |Curso     | **Grupo** | Horario       | **LUNES**  | $\hspace{1cm}$ | **MIERCOLES** | $\hspace{1cm}$ | **VIERNES** | -->
+<!-- |:---------|:----------|:--------------|:-----------|:-------|:--------------|:-------|:------------| -->
+<!-- |300MAE005 |  **A**    | 9:00 A 11:00  | **LG 4.6** |        | **LG-1.8**    |        | **PL-3.4**  | -->
+<!-- |          |           |               |            |        |               |        |             | -->
+<!-- |300MAE005 |  **E**    | 14:00 A 16:00 | **PL-3.3** |        | **LG-4.4**    |        | **LG-4.6**  | -->
+<!-- |          |           |               |            |        |               |        |             | -->
+
+
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/SALONES.png")
+ knitr::include_graphics("img/salones.png")
 ```
+
+<br/><br/>
 
 # **Atención a Estudiantes**
 
-
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-# knitr::include_graphics("img/calendario2023-1bre.png")
-```
 
 <br/><br/>
 
