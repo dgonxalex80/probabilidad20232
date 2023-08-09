@@ -1,0 +1,167 @@
+---
+title: Tablero
+output:
+html_document:
+css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+library(summarytools)
+
+
+c1 ="#FF7F00"  # naranja - color primario 
+c2 ="#034A94"  # azul oscuro - color secundario
+c3 ="#0EB0C6"  # azul claro - color terciario
+c4 ="#686868"  # gris - color texto
+```
+
+</br></br>
+
+# **Creación de tablero**
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/tableroZ.png")
+```
+
+
+Mediante este paquete   `flexdashboard` se pueden construir tableros en formato html que se podrán colocar en github para visualización de los resultados de una investigación o estudio de datos.
+
+</br>
+
+Con el fin de visualizar los pasos para la construcción de un tablero se utiliza la data `CarreraLuz2022` contenida en `paqueteMET` y se describen los siguientes pasos utilizando el lenguaje `Rmardown` con algunos cambios adicionales.
+
+
+</br></br>
+
+
+### **Descargar e instalar los paquetes requeridos**  
+
+<pre>
+install.packages("flexdashboard")  # instala paquete flexdashboard
+install.packages("devtools")       # instala paquete devtools
+devtools::install_github("dgonxalex80/paquetePROB") # descarga de paqueteMET
+library(paqueteMET)                # activar paqueteMET
+
+data("CarreraLuz22")               # cargar la dataset
+
+install.packages("remotes")  
+remotes::install_github("rstudio/bslib")  # descarga paquete que contiene formato    
+</pre>
+
+
+</br></br>
+
+### **Creación de la plantilla del tablero** 
+
+<pre>
+
+File / New File / R Markdown...     
+From Template  / Flex Dashboard themed with {bslib}
+
+</pre>
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/tablero1.png")
+```
+
+
+### **Ajuste del formato**
+
+El formato permite cambiar los colores que por defecto trae la plantilla y ajustarlos a una paleta especial de colores. También se pueden cambiar; la orientación del tablero de columnas por defecto a filas y ajustar los títulos.
+
+* `Column {data-width=350}`: permite determinar el ancho de la columna
+* `Column {data-width=700 .tabset}`: permite construir páginas adicionales
+* `valueBox(value = variable,caption = "Titulo caja",icon = icono, color = código color)`: permite construir cajas con indicadores  
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/tablero3.png")
+```
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/tablero5.png")
+```
+
+</br></br>
+
+
+
+### **Incorporación de los elementos al tablero**
+
+Se pueden agregar los gráficos en los bloques preestablecidos o crear nuevos según las necesidades y los indicadores más relevantes.
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/tableroZ.png")
+```
+
+
+</br></br>
+
+
+
+### **Publicación**
+
+</br>
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/RStudio-git-github.png")
+```
+
+</br></br>
+
+#### Para su publicación es necesario :
+
+</br>
+
+* Tener instalado **git** en nuestro equipo
+
+* Tener una cuenta abierta en **GitHub**
+
+* Crear un repositorio en **GitHub**
+
+* Clonar el repositorio en nuestro equipo
+
+* Crear archivo **Rmd** con formato flexdashboard (pasos 1 a 4)
+
+* Renderizar  el archivo con  **Kinit** (convertirlo en formato html)
+
+* Subirlo los archivos al repositorio de GitHub 
+
+  + `git add .`
+  + `git commit -m "primer commit"`
+  + `git push`
+
+</br>
+
+Estos códigos se pueden ejecutar desde el Menú de RStudio o desde la ventana git 
+
+Termina de RStudio
+```{r, echo=FALSE, out.width="80%", fig.align = "center"}
+knitr::include_graphics("img/github.png")
+```
+
+</br>
+
+Ventana git
+ + Commit : marcar los archivos a subir
+ + Escribir el comentario en ventana **Commit message**  
+ + Dar clic en boton **Push**
+```{r, echo=FALSE, out.width="80%", fig.align = "center"}
+knitr::include_graphics("img/git.png")
+```  
+
+</br>  
+
+* Publicar el tablero  : Este paso requiere regresar al repositorio de github y en él configurar el repositorio como página web: 
+
+  * Settings
+  * Pages
+  * Branch : main , (root), Save . Se debe esperar unos momentos mientras se genera la URL. Cuando aparezca la URL, agregamos al final el nombre del tablero por ejemplo : `https://usuariogithub.github.io/nombrerepositorio/tablero.html`
+
+
+
+Tablero : https://dgonxalex80.github.io/tablero/tablero.html
+
+

@@ -42,8 +42,7 @@ navbar:
         - text: "Taller 111"
           href: taller1.html   
         - text: "Caso 1"
-          href: caso1.html            
-          
+          href: caso1.html    
         - text: "---------"          
         - text: "Introducción a R"
           href: introduccionR.html
@@ -55,8 +54,8 @@ navbar:
           href: codigo103.html   
         - text: "Ficha ténica"
           href: Ficha.html  
-        - text: "Caso 1"
-          href: caso1.html            
+        - text: "Tablero 1"
+          href: tablero1.html            
     - text: "Módulo 2"
       menu:
         - text: "Módulo 2"
