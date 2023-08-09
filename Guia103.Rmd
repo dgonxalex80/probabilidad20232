@@ -53,7 +53,7 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de  RECONOCER los
 
 ## **Duración**
 
-La presente  unidad será desarrollada durante la  tercera semana del semestre ( 7 al 13 de agosto). Ademas del material suministrado  contaran con el acompañamiento del profesor en las sesiones y de manera asincrónica. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  12 de febrero.
+La presente  unidad será desarrollada durante la  tercera semana del semestre ( 9 al 13 de agosto). Ademas del material suministrado  contaran con el acompañamiento del profesor en las sesiones y de manera asincrónica. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  13 de agosto.
 
 Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
 
@@ -77,7 +77,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |:--------------|:-----------------------------  |
 |Trabajo equipo|  Deben construir un **mapa mental** del *Módulo 1*  que resuma los conceptos más importantes del Modulo 1. El mapa debe ser construido a mano en medio pliego de cartulina. Los equipos podrán estar conformados por 3 o 4 estudiantes - Se sugiere que cada estudiante lleve su mapa mental como aporte a la construcción colectiva |
 |	Recurso    |[Capitulo 1](https://github.com/dgonzalez80/presentacionespye.io/blob/main/pdf/Capitulo1.pdf), web del curso, || Presentaciones y videos clases |
-|Fecha  | 11 de agosto  de 2023 - al finalizar la sesión|
+|Fecha  | **11 de agosto  de 2023** - al finalizar la sesión|
 |Hora   | al final de la sesión |
 
 <br/><br/>
@@ -100,7 +100,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 | Fecha         | agosto 13 de 2023             |
 |Hora límite    | 23:59  hora  local            |
 |Activiada132   | Mapa mental - 1/8 pliego de cartulina con el mapa dibujado a mano |
-|Fecha          | agosto 11 de 2023             |
+|Fecha          | **agosto 11 de 2023**             |
 |Hora límite    | al finalizar la sesión        |
 |               |                               |
 
