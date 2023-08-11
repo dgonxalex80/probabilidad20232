@@ -62,20 +62,20 @@ navbar:
           href: Modulo2.html
         - text: "---------"  
         - text: "Guía 2.1"
-          href: recurso000.html
+          href: Guia201.html
         - text: "Guía 2.2"
           href: Guia202.html             
         - text: "---------"            
         - text: "Recursos 2.1"
-          href: recurso000.html  
+          href: recurso201.html  
         - text: "Recursos 2.2"
           href: recurso000.html  
         - text: "---------"  
         - text: "Monitoria 2"
-          href: recurso000.html   
+          href: monitoria2.html   
         - text: "---------"  
         - text: "Código 2.1"
-          href: recurso000.html 
+          href: recurso201.html 
         - text: "Taller 211"
           href: recurso000.html   
         - text: "Taller 221"

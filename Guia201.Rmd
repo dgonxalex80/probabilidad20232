@@ -48,7 +48,7 @@ Al finalizar la  unidad el estudiante estará en capacidad de DESARROLLAR el pen
 
 ## **Duración**
 
-La presente  unidad será desarrollada durante la  cuarta semana del semestre (13 al 19 de febrero   de 2023). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  19 de febrero.
+La presente  unidad será desarrollada durante la  cuarta semana del semestre (16 al 20 de agosto de 2023). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  20 de agosto.
 
 Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
 
@@ -61,7 +61,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |:--------------|:-----------------------------  |
 | Actividad 211 | [**Taller211**](https://dgonxalex80.github.io/pye20222/Talller211.html).  Resuelva las preguntas del siguiente  taller y entregue su solución  en formato **pdf**  en el enlace correspondiente de Brightspace.|
 | En parejas    | Cada integrante debe subir la solución de manera indivudial en la plataforma  Bs  | 
-|Fecha  |  19 de febrero de 2023 |
+|Fecha  |  20 de agosto de 2023 |
 |Hora   |  23:59 hora local     |
 |||
 
@@ -82,7 +82,7 @@ El **taller211** de la unidad 2.1 recoge los elementos estudiados y por tanto  t
 | Entregable |  Descripción                    |
 |:--------------|:-----------------------------|
 | Actividad211    | Solucionario taller 211 | 
-| Fecha           | 19 de febrero  de 2023 | 
+| Fecha           | 20 de agosto de 2023 | 
 |Hora límite      | 23:59  hora  local |
  
 <br/><br/><br/><br/>
