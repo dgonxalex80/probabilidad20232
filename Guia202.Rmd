@@ -51,7 +51,7 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de  RECONOCER, CA
 
 ## <span style="color:#a391c4">**Duración**</span>
 
-La presente  unidad será desarrollada durante la semana comprendida entre el 20  y 26 de febrero de 2023. Ademas del material suministrado  contaran con el acompañamiento del profesor,  del monitor y espacio de Atención a estudiantes y manera asincrónica  de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  26 de febrero  de 2023
+La presente  unidad será desarrollada durante la semana comprendida entre el 23  y 27 de agosto de 2023. Ademas del material suministrado  contaran con el acompañamiento del profesor,  del monitor y espacio de Atención a estudiantes y manera asincrónica  de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  26 de febrero  de 2023
 
 Para alcanzar los objetivos planteados se propone realizar la siguiente actividad
 
@@ -64,7 +64,7 @@ Para alcanzar los objetivos planteados se propone realizar la siguiente activida
 |:--------------|:-----------------------------  |
 | Actividad 221 | A partir de los conceptos vistos en las Unidades 2.1 y 2.2 deberá resolver los problemas propuestos en el [**Taller 221**](https://dgonxalex80.github.io/pye20222/Talller221.html) y entregue su solución  en formato **pdf**  en el enlace correspondiente de Brightspace.|
 |Trabajo en parejas||
-|Fecha  |  26 de septiembre de 2023 |
+|Fecha  |  27 de agosto de 2023 |
 |Hora   |  23:59 hora local     |
 |||
 
@@ -86,7 +86,7 @@ El taller del Modulo 2 recoge los elementos estudiados y por tanto  tiene objeti
 | Entregable |  Descripción                    |
 |:--------------|:-----------------------------|
 | Actividad221    | Solucionario taller 221. Cada estudiante debe subir a la plataforma una copia en pdf del trabajo realizado que incluya el nombre de los dos | 
-| Fecha           |Domongo  26 de febrero  de 2023 | 
+| Fecha           |Domongo  27 de agosto  de 2023 | 
 |Hora límite      | 23:59  hora  local |
 
 <br/><br/><br/><br/>

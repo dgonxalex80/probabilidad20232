@@ -64,12 +64,12 @@ navbar:
         - text: "Guía 2.1"
           href: Guia201.html
         - text: "Guía 2.2"
-          href: recurso000.html             
+          href: Guia202.html             
         - text: "---------"            
         - text: "Recursos 2.1"
           href: recurso201.html  
         - text: "Recursos 2.2"
-          href: recurso000.html  
+          href: recurso202.html  
         - text: "---------"  
         - text: "Monitoria 2"
           href: monitoria2.html   
