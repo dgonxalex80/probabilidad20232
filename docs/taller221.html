@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="dgonzalez" />
 
 
-<title>Tablero</title>
+<title> Taller 221</title>
 
 <script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +30,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -222,6 +226,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -229,6 +296,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -548,133 +625,65 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Tablero</h1>
+<h1 class="title toc-ignore"><span style="color:#a391c4"> <strong>Taller
+221</strong></span></h1>
+<h3 class="subtitle"><span style="color:#a391c4"><strong>Módulo 2-
+Unidad 2.2</strong></span></h3>
+<h4 class="author">dgonzalez</h4>
 
 </div>
 
 
-<p></br></br></p>
-<div id="creación-de-tablero" class="section level1">
-<h1><strong>Creación de tablero</strong></h1>
-<p><img src="img/tableroZ.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>Mediante este paquete <code>flexdashboard</code> se pueden construir
-tableros en formato html que se podrán colocar en github para
-visualización de los resultados de una investigación o estudio de
-datos.</p>
-<p></br></p>
-<p>Con el fin de visualizar los pasos para la construcción de un tablero
-se utiliza la data <code>CarreraLuz2022</code> contenida en
-<code>paqueteMET</code> y se describen los siguientes pasos utilizando
-el lenguaje <code>Rmardown</code> con algunos cambios adicionales.</p>
-<p></br></br></p>
-<div id="descargar-e-instalar-los-paquetes-requeridos"
-class="section level3">
-<h3><strong>Descargar e instalar los paquetes requeridos</strong></h3>
-<pre>
-install.packages("flexdashboard")  # instala paquete flexdashboard
-install.packages("devtools")       # instala paquete devtools
-devtools::install_github("dgonxalex80/paquetePROB") # descarga de paqueteMET
-library(paqueteMET)                # activar paqueteMET
-
-data("CarreraLuz22")               # cargar la dataset
-
-install.packages("remotes")  
-remotes::install_github("rstudio/bslib")  # descarga paquete que contiene formato    
-</pre>
-<p></br></br></p>
+<p><img src="img/banner2.png" /> </br></br></br></p>
+<p><img src="img/problema1.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+<div style="display: flex;">
+<div>
+<p>Una compañia de seguros de automóviles trabaja con cuatro tipo de
+autos : Rayquaza, Etenatus, Mewtwo y Groudon, sobre los que cuenta con
+la información que se muestra en la siguiente tabla.</p>
+<p>Construya un diagrama de árbol que represente la información
+suministrada y a partir de los resultados obtenidos ayude al gerente de
+la compaía quien esta interesado en conocer cual marca tiene mayor
+probabilidad de accidente si se conoce que ha tenido un accidente. Esto
+le ayudará a realizar ajustes en los precios de las polizas.</p>
 </div>
-<div id="creación-de-la-plantilla-del-tablero" class="section level3">
-<h3><strong>Creación de la plantilla del tablero</strong></h3>
-<pre>
-
-File / New File / R Markdown...     
-From Template  / Flex Dashboard themed with {bslib}
-
-</pre>
-<p><img src="img/tablero1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="ajuste-del-formato" class="section level3">
-<h3><strong>Ajuste del formato</strong></h3>
-<p>El formato permite cambiar los colores que por defecto trae la
-plantilla y ajustarlos a una paleta especial de colores. También se
-pueden cambiar; la orientación del tablero de columnas por defecto a
-filas y ajustar los títulos.</p>
-<ul>
-<li><code>Column {data-width=350}</code>: permite determinar el ancho de
-la columna</li>
-<li><code>Column {data-width=700 .tabset}</code>: permite construir
-páginas adicionales</li>
-<li><code>valueBox(value = variable,caption = "Titulo caja",icon = icono, color = código color)</code>:
-permite construir cajas con indicadores</li>
-</ul>
-<p><img src="img/tablero3.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="img/tablero5.png" width="100%" style="display: block; margin: auto;" /></p>
-<p></br></br></p>
-</div>
-<div id="incorporación-de-los-elementos-al-tablero"
-class="section level3">
-<h3><strong>Incorporación de los elementos al tablero</strong></h3>
-<p>Se pueden agregar los gráficos en los bloques preestablecidos o crear
-nuevos según las necesidades y los indicadores más relevantes.</p>
-<p><img src="img/tableroZ.png" width="100%" style="display: block; margin: auto;" /></p>
-<p></br></br></p>
-</div>
-<div id="publicación" class="section level3">
-<h3><strong>Publicación</strong></h3>
-<p></br></p>
-<p><img src="img/RStudio-git-github.png" width="50%" style="display: block; margin: auto;" /></p>
-<p></br></br></p>
-<div id="para-su-publicación-es-necesario" class="section level4">
-<h4>Para su publicación es necesario :</h4>
-<p></br></p>
-<ul>
-<li><p>Tener instalado <strong>git</strong> en nuestro equipo</p></li>
-<li><p>Tener una cuenta abierta en <strong>GitHub</strong></p></li>
-<li><p>Crear un repositorio en <strong>GitHub</strong></p></li>
-<li><p>Clonar el repositorio en nuestro equipo</p></li>
-<li><p>Crear archivo <strong>Rmd</strong> con formato flexdashboard
-(pasos 1 a 4)</p></li>
-<li><p>Renderizar el archivo con <strong>Kinit</strong> (convertirlo en
-formato html)</p></li>
-<li><p>Subirlo los archivos al repositorio de GitHub</p>
-<ul>
-<li><code>git add .</code></li>
-<li><code>git commit -m "primer commit"</code></li>
-<li><code>git push</code></li>
-</ul></li>
-</ul>
-<p></br></p>
-<p>Estos códigos se pueden ejecutar desde el Menú de RStudio o desde la
-ventana git</p>
-<p>Termina de RStudio
-<img src="img/github.png" width="80%" style="display: block; margin: auto;" /></p>
-<p></br></p>
-<p>Ventana git + Commit : marcar los archivos a subir + Escribir el
-comentario en ventana <strong>Commit message</strong><br />
-+ Dar clic en boton <strong>Push</strong>
-<img src="img/git.png" width="80%" style="display: block; margin: auto;" /></p>
-<p></br></p>
-<ul>
-<li><p>Publicar el tablero : Este paso requiere regresar al repositorio
-de github y en él configurar el repositorio como página web:</p>
-<ul>
-<li>Settings</li>
-<li>Pages</li>
-<li>Branch : main , (root), Save . Se debe esperar unos momentos
-mientras se genera la URL. Cuando aparezca la URL, agregamos al final el
-nombre del tablero por ejemplo :
-<code>https://usuariogithub.github.io/nombrerepositorio/tablero.html</code></li>
-</ul></li>
-</ul>
-<p>Tablero : <a
-href="https://dgonxalex80.github.io/tablero/tablero.html"
-class="uri">https://dgonxalex80.github.io/tablero/tablero.html</a></p>
+<div>
+<p><img src="img/tabla221.png" width="200%" style="display: block; margin: auto;" /></p>
+<!-- | Marca    |Proporción de autos       | probabilidad de accidente | -->
+<!-- |:--------:|:------------------------:|:-------------------------:| -->
+<!-- | Rayquaza | 0.27                     | 0.03                      |  -->
+<!-- | Etenatus | 0.17                     | 0.03                      | -->
+<!-- | Mewtwo   | 0.35                     | 0.05                      | -->
+<!-- | Groudon  | 0.21                     | 0.04                      | -->
+<!-- |          | 1.00                     |                           | -->
 </div>
 </div>
-</div>
+<p><br/><br/><br/></p>
+<p><img src="img/problema2.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+<p>Un dispositivo sirve para identificar una cierta enfermedad. Si
+alguien está enfer mo, hay un 90 % de posibilidades de que la prueba sea
+positiva. Si no está enfermo hay todavía un 1 % de posibilidades de que
+la prueba sea positiva. Aproximada- mente el 1 % de la población está
+enferma. Smith pasa la prueba y resulta positiva. La probabilidad de que
+tenga la enfermedad es? (Carmen Diaz-2005)</p>
+<p><br/><br/><br/></p>
+<p><img src="img/problema3.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+<p>En una ciudad hay 60 hombres y 40 mujeres por cada 100 habitantes. La
+mitad de los hombres y una tercera parte de las mujeres fuman. Si se
+selecciona al azar un fumador, ¿qué es más probable, que sea hombre o
+mujer? (Carmen Diaz-2005)</p>
+<p><br/><br/><br/></p>
+<p><img src="img/problema4.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+<p>En un grupo de 1000 sujetos se encontraron 500 sujetos aptos de los
+que 300 tenían inteligencia superior. De los 400 con inteligencia
+superior 300 resultaron aptos. ¿Son los sucesos A: “ser superior a la
+media en inteligencia” y B “ser apto en rendimiento” independientes?
+(Botella, León y San Martín, 1993, p. 283)</p>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -707,6 +716,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

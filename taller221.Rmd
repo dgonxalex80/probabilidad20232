@@ -1,0 +1,94 @@
+---
+title: <span style="color:#a391c4"> **Taller  221**</span>  
+author: "dgonzalez "
+subtitle: <span style="color:#a391c4">**Módulo 2- Unidad 2.2**</span>
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+library(tidyverse)
+#Colombia<- readRDS("data/Colombia.RDS")
+
+
+# colores
+c0= "#b0394a"
+c1= "#ad6395"
+c2= "#a391c4"
+c3= "#8acfe6"
+c4= "#646420"
+c5= "#db524f"
+
+library(summarytools)
+```
+
+![](img/banner2.png)
+</br></br></br>
+
+```{r, echo=FALSE, out.width="10%", fig.align = "left"}
+knitr::include_graphics("img/problema1.png")
+```
+
+:::: {style="display: flex;"}
+::: {}
+
+Una compañia de seguros de automóviles trabaja con cuatro tipo de autos :  Rayquaza, Etenatus, Mewtwo y Groudon, sobre los que cuenta con la información que se muestra en la siguiente tabla.
+
+Construya un diagrama de árbol que represente la información suministrada y a partir de los resultados obtenidos ayude al gerente de la compaía quien esta interesado en conocer cual marca tiene mayor probabilidad de accidente si se conoce que ha tenido un accidente. Esto le ayudará a realizar ajustes en los precios de las polizas.
+  
+:::
+::: {}
+
+
+```{r, echo=FALSE, out.width="200%", fig.align = "center"}
+knitr::include_graphics("img/tabla221.png")
+```
+
+<!-- | Marca    |Proporción de autos       | probabilidad de accidente | -->
+<!-- |:--------:|:------------------------:|:-------------------------:| -->
+<!-- | Rayquaza | 0.27                     | 0.03                      |  -->
+<!-- | Etenatus | 0.17                     | 0.03                      | -->
+<!-- | Mewtwo   | 0.35                     | 0.05                      | -->
+<!-- | Groudon  | 0.21                     | 0.04                      | -->
+<!-- |          | 1.00                     |                           | -->
+:::
+::::
+
+<br/><br/><br/>
+
+```{r, echo=FALSE, out.width="10%", fig.align = "left"}
+knitr::include_graphics("img/problema2.png")
+```
+
+Un dispositivo sirve para identificar una cierta enfermedad. Si alguien está enfer
+mo, hay un 90 % de posibilidades de que la prueba sea positiva. Si no está enfermo
+hay todavía un 1 % de posibilidades de que la prueba sea positiva. Aproximada-
+mente el 1 % de la población está enferma. Smith pasa la prueba y resulta positiva.
+La probabilidad de que tenga la enfermedad es? (Carmen Diaz-2005)
+
+<br/><br/><br/>
+
+```{r, echo=FALSE, out.width="10%", fig.align = "left"}
+knitr::include_graphics("img/problema3.png")
+```
+
+En una ciudad hay 60 hombres y 40 mujeres por cada 100 habitantes. La mitad de
+los hombres y una tercera parte de las mujeres fuman. Si se selecciona al azar un
+fumador, ¿qué es más probable, que sea hombre o mujer? (Carmen Diaz-2005)
+
+<br/><br/><br/>
+
+```{r, echo=FALSE, out.width="10%", fig.align = "left"}
+knitr::include_graphics("img/problema4.png")
+```
+
+En un grupo de 1000 sujetos se encontraron 500 sujetos aptos de los que 300
+tenían inteligencia superior. De los 400 con inteligencia superior 300 resultaron
+aptos. ¿Son los sucesos A: “ser superior a la media en inteligencia” y B “ser apto
+en rendimiento” independientes? (Botella, León y San Martín, 1993, p. 283)
+

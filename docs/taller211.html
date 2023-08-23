@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="dgonzalez" />
 
 
-<title>Tablero</title>
+<title> Taller 211</title>
 
 <script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +30,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -222,6 +226,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -229,6 +296,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -548,133 +625,197 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Tablero</h1>
+<h1 class="title toc-ignore"><span style="color:#a391c4"> <strong>Taller
+211</strong></span></h1>
+<h3 class="subtitle"><span style="color:#a391c4"><strong>Módulo 2-
+Unidad 2.1</strong></span></h3>
+<h4 class="author">dgonzalez</h4>
 
 </div>
 
 
-<p></br></br></p>
-<div id="creación-de-tablero" class="section level1">
-<h1><strong>Creación de tablero</strong></h1>
-<p><img src="img/tableroZ.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>Mediante este paquete <code>flexdashboard</code> se pueden construir
-tableros en formato html que se podrán colocar en github para
-visualización de los resultados de una investigación o estudio de
-datos.</p>
-<p></br></p>
-<p>Con el fin de visualizar los pasos para la construcción de un tablero
-se utiliza la data <code>CarreraLuz2022</code> contenida en
-<code>paqueteMET</code> y se describen los siguientes pasos utilizando
-el lenguaje <code>Rmardown</code> con algunos cambios adicionales.</p>
-<p></br></br></p>
-<div id="descargar-e-instalar-los-paquetes-requeridos"
-class="section level3">
-<h3><strong>Descargar e instalar los paquetes requeridos</strong></h3>
-<pre>
-install.packages("flexdashboard")  # instala paquete flexdashboard
-install.packages("devtools")       # instala paquete devtools
-devtools::install_github("dgonxalex80/paquetePROB") # descarga de paqueteMET
-library(paqueteMET)                # activar paqueteMET
-
-data("CarreraLuz22")               # cargar la dataset
-
-install.packages("remotes")  
-remotes::install_github("rstudio/bslib")  # descarga paquete que contiene formato    
-</pre>
-<p></br></br></p>
+<p><img src="img/banner2.png" /> </br></br></br></p>
+<p><img src="img/problema1.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+<div id="probabilidad-y-mi-vida" class="section level4">
+<h4><strong>Probabilidad y mi vida</strong></h4>
+<p>Las decisiones forman parte de nuestras vidas, dia a dia tomamos
+decisiones que afectan nuestro futuro, para tomarlas en algunas
+ocasiones recurrimos a valorar el riesgo que podrían tener. ¿ En tu vida
+has tomado decisiones con información previa que te ha permitido valorar
+su riesgo?. o por el contrario tus decisiones han obedecido a
+corazonadas y sentimientos?. Esta pregunta solo es para reflexionar
+sobre el tema . No debes contestarla si no lo deseas.</p>
+<p></br></br></br></p>
+<p><img src="img/problema2.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
-<div id="creación-de-la-plantilla-del-tablero" class="section level3">
-<h3><strong>Creación de la plantilla del tablero</strong></h3>
-<pre>
-
-File / New File / R Markdown...     
-From Template  / Flex Dashboard themed with {bslib}
-
-</pre>
-<p><img src="img/tablero1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="ajuste-del-formato" class="section level3">
-<h3><strong>Ajuste del formato</strong></h3>
-<p>El formato permite cambiar los colores que por defecto trae la
-plantilla y ajustarlos a una paleta especial de colores. También se
-pueden cambiar; la orientación del tablero de columnas por defecto a
-filas y ajustar los títulos.</p>
+<div id="lanzamiento-de-un-dado" class="section level4">
+<h4><strong>Lanzamiento de un dado</strong></h4>
+<p>Un experimento consiste en lanzar un dado y observar el número de
+puntos en su cara superior. Algunos eventos aleatorios que se pueden
+definir a partir de este experimento pueden ser:</p>
 <ul>
-<li><code>Column {data-width=350}</code>: permite determinar el ancho de
-la columna</li>
-<li><code>Column {data-width=700 .tabset}</code>: permite construir
-páginas adicionales</li>
-<li><code>valueBox(value = variable,caption = "Titulo caja",icon = icono, color = código color)</code>:
-permite construir cajas con indicadores</li>
-</ul>
-<p><img src="img/tablero3.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="img/tablero5.png" width="100%" style="display: block; margin: auto;" /></p>
-<p></br></br></p>
-</div>
-<div id="incorporación-de-los-elementos-al-tablero"
-class="section level3">
-<h3><strong>Incorporación de los elementos al tablero</strong></h3>
-<p>Se pueden agregar los gráficos en los bloques preestablecidos o crear
-nuevos según las necesidades y los indicadores más relevantes.</p>
-<p><img src="img/tableroZ.png" width="100%" style="display: block; margin: auto;" /></p>
-<p></br></br></p>
-</div>
-<div id="publicación" class="section level3">
-<h3><strong>Publicación</strong></h3>
-<p></br></p>
-<p><img src="img/RStudio-git-github.png" width="50%" style="display: block; margin: auto;" /></p>
-<p></br></br></p>
-<div id="para-su-publicación-es-necesario" class="section level4">
-<h4>Para su publicación es necesario :</h4>
-<p></br></p>
-<ul>
-<li><p>Tener instalado <strong>git</strong> en nuestro equipo</p></li>
-<li><p>Tener una cuenta abierta en <strong>GitHub</strong></p></li>
-<li><p>Crear un repositorio en <strong>GitHub</strong></p></li>
-<li><p>Clonar el repositorio en nuestro equipo</p></li>
-<li><p>Crear archivo <strong>Rmd</strong> con formato flexdashboard
-(pasos 1 a 4)</p></li>
-<li><p>Renderizar el archivo con <strong>Kinit</strong> (convertirlo en
-formato html)</p></li>
-<li><p>Subirlo los archivos al repositorio de GitHub</p>
-<ul>
-<li><code>git add .</code></li>
-<li><code>git commit -m "primer commit"</code></li>
-<li><code>git push</code></li>
-</ul></li>
+<li>A: sacar 2</li>
+<li>B: sacar un número par</li>
+<li>C: sacar un número mayor a 2</li>
+<li>D: obtener A y B</li>
+<li>E: obtener A o B o ambos</li>
+<li>F: obtener A y C</li>
 </ul>
 <p></br></p>
-<p>Estos códigos se pueden ejecutar desde el Menú de RStudio o desde la
-ventana git</p>
-<p>Termina de RStudio
-<img src="img/github.png" width="80%" style="display: block; margin: auto;" /></p>
-<p></br></p>
-<p>Ventana git + Commit : marcar los archivos a subir + Escribir el
-comentario en ventana <strong>Commit message</strong><br />
-+ Dar clic en boton <strong>Push</strong>
-<img src="img/git.png" width="80%" style="display: block; margin: auto;" /></p>
-<p></br></p>
 <ul>
-<li><p>Publicar el tablero : Este paso requiere regresar al repositorio
-de github y en él configurar el repositorio como página web:</p>
-<ul>
-<li>Settings</li>
-<li>Pages</li>
-<li>Branch : main , (root), Save . Se debe esperar unos momentos
-mientras se genera la URL. Cuando aparezca la URL, agregamos al final el
-nombre del tablero por ejemplo :
-<code>https://usuariogithub.github.io/nombrerepositorio/tablero.html</code></li>
-</ul></li>
+<li>Describa el espacio muestral asociado al experimento aleatorio</li>
+<li>Liste cada uno de los eventos aleatorios A hasta F</li>
+<li>Represéntelos mediante un diagrama de Ven</li>
+<li>Determine en cada caso las probabilidades asociadas a cada evento
+aleatorio</li>
 </ul>
-<p>Tablero : <a
-href="https://dgonxalex80.github.io/tablero/tablero.html"
-class="uri">https://dgonxalex80.github.io/tablero/tablero.html</a></p>
+<p></br></br></br></p>
+<p><img src="img/problema3.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
+<div id="faltar-a-clases" class="section level4">
+<h4><strong>Faltar a clases</strong></h4>
+<p>En un grupo de 100 estudiantes 30 residen por fuera de la ciudad, de
+los cuales 10 presentan altos niveles de inasistencia a clases, mientras
+que 35 de los que residen dentro en la ciudad también presentan altos
+niveles de inasistencia a clases.</p>
+<ul>
+<li>Construya una tabla de probabilidades con la información
+anterior.</li>
+<li>Represente también la información mediante un diagrama de Venn.</li>
+<li>Identifique dos eventos simples y dos eventos conjuntos En cada caso
+escriba en palabras la probabilidad y su resultado</li>
+<li>¿Se podría afirmar que residir en la ciudad y no tener altos niveles
+de inasistencia a clases son eventos independientes?</li>
+</ul>
+<p></br></br></br></p>
+<p><img src="img/problema4.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
+<div id="sobre-costos-en-la-construcción" class="section level4">
+<h4><strong>Sobre costos en la construcción</strong></h4>
+<p>Una empresa de construcción local descubrió a través de una
+investigación que solo el 20% de todos los trabajos son terminados a
+tiempo, mientras que el 30% sufrían sobrecostos. Además, los sobrecostos
+se presentan en el 75% de las veces en la que los trabajos se terminaron
+a tiempo. Carlos, gerente de la empresa desea conocer que tan probable
+es que un proyecto no tenga sobrecostos y se termine a tiempo. Esto le
+permitirá tomar decisiones en caso de ser necesario. Ayude a Carlos a
+resolver su interrogante.</p>
+<p></br></br></br></p>
+<p><img src="img/problema5.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+<div id="muertes-por-accidentes-de-transito" class="section level4">
+<h4><strong>Muertes por accidentes de transito</strong></h4>
+<p>Se sabe que los accidentes de tránsito en su mayoria ocurren durante
+la noche de los sábados y se deben en un 65% la ingesta excesiva de
+alcohol, un 25% se deben a la imprudencia del conductor y el resto a
+otras causas, (fallo mecánico…etc.). En estos accidentes, el resultado
+es nefasto en el 30% de las veces para el primer caso, un 20% en el
+segundo y el 5% en el tercero. Una empresa de salud que presta servicios
+de ambulancias quiere que Usted le ayude a pronosticar cuál es la causa
+del accidente más probable, sabiendo que este hecho ha tenido resultados
+nefastos. Con esta información la empresa pretende tomar decisiones
+sobre el equipamiento que deben tener sus vehículos, dando prioridad a
+los elementos relacionados con mayor probabilidad de ocurrencia. Ayude a
+la compañía de salud a establecer el orden de estas prioridades.</p>
+<p></br></br></br>
+<img src="img/problema6.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+<div id="sistema-de-seguridad" class="section level4">
+<h4><strong>Sistema de seguridad</strong>:</h4>
+<p>Uno de los sistemas de seguridad de la universidad funciona mediante
+la conexión de cuatro componentes como se muestra en las figuras.
+Suponga que estos componentes funcionan de manera independientes y que
+la probabilidad de que falle cada uno de los componentes
+<code>R1</code>, <code>R2</code>, <code>R3</code>y <code>R4</code> son
+respectivamente: <span class="math inline">\(0.10\)</span>, <span
+class="math inline">\(0.05\)</span>, <span
+class="math inline">\(0.10\)</span> y <span
+class="math inline">\(0.20\)</span>. Con el fin de tener la mejor
+composición de ellos, es decir la mayor confiabilidad de funcionamiento,
+el director de recursos físicos le pide a determine cuál es la mejor
+configuración del sistema.</p>
+<p><img src="img/circuitos.png" width="60%" style="display: block; margin: auto;" /></p>
+<p></br></br></br></p>
+<p><img src="img/problema7.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+<div id="delincuentes-adictos-a-las-drogas" class="section level4">
+<h4><strong>Delincuentes adictos a las drogas</strong> :</h4>
+<p>Un estudio sobre la conducta de un gran numero de delincuentes
+adictos a las drogas hace pensar que la probabilidad de una condena de
+dos años después del tratamiento podría depender del nivel de educación
+del delincuente. Las proporciones del numero total de casos que caen en
+cuatro categorías de educación y condena se muestran en la tabla
+siguiente:</p>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="32%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Educación</th>
+<th align="right"></th>
+<th align="right">Condiciones dos años después del tratamiento</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Condenado</th>
+<th align="right">No condenado</th>
+<th align="right">Totales</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">10 años o más</td>
+<td align="right">0.10</td>
+<td align="right">0.30</td>
+<td align="right">0.40</td>
+</tr>
+<tr class="even">
+<td align="left">9 años o menos</td>
+<td align="right">0.27</td>
+<td align="right">0.33</td>
+<td align="right">0.60</td>
+</tr>
+<tr class="odd">
+<td align="left">Totales</td>
+<td align="right">0.37</td>
+<td align="right">0.63</td>
+<td align="right">1.00</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<p>Suponga que se selecciona un delincuente del programa de tratamiento
+y se esta interesado en los siguientes eventos :</p>
+<p><span class="math inline">\(A\)</span>: El delincuente tiene 10 años
+de educación o más</p>
+<p><span class="math inline">\(B\)</span>: El delincuente es condenado
+dos años después de completar el tratamiento</p>
+<p></br></p>
+<p>Encuentre las probabilidades para los eventos:</p>
+<ul>
+<li><span class="math inline">\(A\)</span></li>
+<li><span class="math inline">\(B\)</span></li>
+<li><span class="math inline">\(A \cap B\)</span></li>
+<li><span class="math inline">\(A \cup B\)</span></li>
+<li><span class="math inline">\(A&#39;\)</span></li>
+<li><span class="math inline">\((A \cap B)&#39;\)</span></li>
+<li><span class="math inline">\((A \cup B)&#39;\)</span></li>
+</ul>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -707,6 +848,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
