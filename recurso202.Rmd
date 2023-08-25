@@ -455,22 +455,34 @@ Información
 |                   |                          |                            |                               |
 |$P(N|J)=1/200$     |$P(N|L) = 1/100$          |$P(N|M)=1/90$               |$P(N|S)=1/200$                 |
 
+<br/>
 
-|                   |                                |
-|------------------:|:-------------------------------------------|
-|N = (J \cap N) \cup (L \cap N) \cup (M \cap N) \cup (S \cap N) $$
+En terninos de conjuntos podemos escribir:
+
+$$N = (J \cap N) \cup (L \cap N) \cup (M \cap N) \cup (S \cap N) $$
+<br/><br/>
+
+Ahora en terminos de probabilidad:
+
+
 $$P(N) = P(J \cap N) + P(L \cap N) + P(M \cap N) + P(S \cap N) $$
 $$P(N) = P(J)P(N|J) + P(L)P(N|L) + P(M)P(N|M) + P(S)P(N|S)$$
-$$P(N) = 0.40 \dfrac{1}{200} + 0.30 \dfrac{1}{100} + 0.15 \dfrac{1}{90} + 0.15 \dfrac{1}{200}$$
+$$P(N) = 0.40 \dfrac{1}{200} + 0.30 \dfrac{1}{100} + 0.15 \dfrac{1}{90} + 0.15 \dfrac{1}{200} = 0.007416667$$
 
+Por tanto:
+
+$$P(J|N) = \dfrac{0.00200}{0.00200 + 0.00300 + 0.00167 + 0.00075} = 0.2696629 $$
+$$P(L|N) = \dfrac{0.00300}{0.00200 + 0.00300 + 0.00167 + 0.00075} = 0.4044944$$
+$$P(M|N) = \dfrac{0.00167}{0.00200 + 0.00300 + 0.00167 + 0.00075} = 0.2247191$$
+$$P(S|N) = \dfrac{0.00075}{0.00200 + 0.00300 + 0.00167 + 0.00075} = 0.1011236$$
 
 ```{r}
 x=c(0.4,0.3,0.15,0.15)
 y=c(1/200,1/100,1/90,1/200)
-
-
 (x*y)/sum(x*y)
 ```
+
+Por los resultados anteriores el obrero más probable de haber cometido el error es LUIS, con una probabilidad de 0.404
 
 
 <br/><br/><br/>

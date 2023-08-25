@@ -1128,28 +1128,31 @@ es el más probable culpable de esta omisión?</p>
 </tr>
 </tbody>
 </table>
-<table>
-<colgroup>
-<col width="30%" />
-<col width="69%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="right">N = (J N) (L N) (M N) (S N) <span
-class="math display">\[
-\]</span>P(N) = P(J N) + P(L N) + P(M N) + P(S N) <span
-class="math display">\[
-\]</span>P(N) = P(J)P(N</td>
-<td align="left">J) + P(L)P(N</td>
-</tr>
-</tbody>
-</table>
+<p><br/></p>
+<p>En terninos de conjuntos podemos escribir:</p>
+<p><span class="math display">\[N = (J \cap N) \cup (L \cap N) \cup (M
+\cap N) \cup (S \cap N) \]</span> <br/><br/></p>
+<p>Ahora en terminos de probabilidad:</p>
+<p><span class="math display">\[P(N) = P(J \cap N) + P(L \cap N) + P(M
+\cap N) + P(S \cap N) \]</span> <span class="math display">\[P(N) =
+P(J)P(N|J) + P(L)P(N|L) + P(M)P(N|M) + P(S)P(N|S)\]</span> <span
+class="math display">\[P(N) = 0.40 \dfrac{1}{200} + 0.30 \dfrac{1}{100}
++ 0.15 \dfrac{1}{90} + 0.15 \dfrac{1}{200} = 0.007416667\]</span></p>
+<p>Por tanto:</p>
+<p><span class="math display">\[P(J|N) = \dfrac{0.00200}{0.00200 +
+0.00300 + 0.00167 + 0.00075} = 0.2696629 \]</span> <span
+class="math display">\[P(L|N) = \dfrac{0.00300}{0.00200 + 0.00300 +
+0.00167 + 0.00075} = 0.4044944\]</span> <span
+class="math display">\[P(M|N) = \dfrac{0.00167}{0.00200 + 0.00300 +
+0.00167 + 0.00075} = 0.2247191\]</span> <span
+class="math display">\[P(S|N) = \dfrac{0.00075}{0.00200 + 0.00300 +
+0.00167 + 0.00075} = 0.1011236\]</span></p>
 <pre class="r"><code>x=c(0.4,0.3,0.15,0.15)
 y=c(1/200,1/100,1/90,1/200)
-
-
 (x*y)/sum(x*y)</code></pre>
 <pre><code>[1] 0.2696629 0.4044944 0.2247191 0.1011236</code></pre>
+<p>Por los resultados anteriores el obrero más probable de haber
+cometido el error es LUIS, con una probabilidad de 0.404</p>
 <p><br/><br/><br/></p>
 <p>Aplicaciones :</p>
 <p><strong>Árboles de decisión</strong></p>
