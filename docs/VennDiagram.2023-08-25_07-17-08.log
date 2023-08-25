@@ -1,0 +1,9 @@
+INFO [2023-08-25 07:17:08] $x
+INFO [2023-08-25 07:17:08] list(Enfermedad = c(1), Prueba = c(1, 1))
+INFO [2023-08-25 07:17:08] 
+INFO [2023-08-25 07:17:08] $category.names
+INFO [2023-08-25 07:17:08] c("Enfermedad", "Prueba")
+INFO [2023-08-25 07:17:08] 
+INFO [2023-08-25 07:17:08] $filename
+INFO [2023-08-25 07:17:08] NULL
+INFO [2023-08-25 07:17:08] 

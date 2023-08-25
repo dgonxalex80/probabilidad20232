@@ -36,6 +36,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -444,7 +446,7 @@ div.tocify {
     </li>
     <li class="divider"></li>
     <li>
-      <a href="recurso201.html">Código 2.1</a>
+      <a href="codigo201.html">Código 2.1</a>
     </li>
     <li>
       <a href="taller211.html">Taller 211</a>
@@ -699,17 +701,17 @@ barplot(table(suma), las=1,cex.axis=0.7)</code></pre>
 <p><img src="codigo201_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <pre class="r"><code>data.frame(prop.table(table(suma)))</code></pre>
 <pre><code>   suma  Freq
-1     2 0.025
-2     3 0.050
-3     4 0.110
-4     5 0.090
-5     6 0.180
-6     7 0.165
-7     8 0.120
-8     9 0.090
-9    10 0.070
-10   11 0.060
-11   12 0.040</code></pre>
+1     2 0.035
+2     3 0.075
+3     4 0.065
+4     5 0.115
+5     6 0.090
+6     7 0.160
+7     8 0.195
+8     9 0.115
+9    10 0.080
+10   11 0.065
+11   12 0.005</code></pre>
 <p></br></p>
 <p>Procedimiento alternativo</p>
 <pre class="r"><code>t=sapply(1:200, function(x){sum(sample(1:6,2,rep=T))})
@@ -731,10 +733,10 @@ siguiente ejemplo :</p>
 </ul></li>
 </ul>
 <pre class="r"><code>sample(c(1,2,3),2,rep=T,prob=c(3,5,4))</code></pre>
-<pre><code>[1] 2 1</code></pre>
+<pre><code>[1] 3 2</code></pre>
 <p>La misma simulación con palabras</p>
 <pre class="r"><code>sample(c(&quot;Blanca&quot;,&quot;Roja&quot;,&quot;Azul&quot;),2,rep=T,prob=c(3,5,4))</code></pre>
-<pre><code>[1] &quot;Roja&quot; &quot;Azul&quot;</code></pre>
+<pre><code>[1] &quot;Azul&quot;   &quot;Blanca&quot;</code></pre>
 <p></br></br><br/></p>
 </div>
 </div>
@@ -786,21 +788,204 @@ Vendedor      0.5555556 0.2272727</code></pre>
 <p><br/><br/></p>
 <p><img src="img/ej2.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
 <p><br/><br/></p>
-<div id="ubicación-por-estado-contagiados-de-covid-en-colombia"
-class="section level3">
-<h3>Ubicación por estado contagiados de Covid en Colombia</h3>
-<pre class="r"><code># Colombia= readRDS(&quot;data/Colombia.RDS&quot;)
-#t21=table(Colombia$ubicacion, Colombia$estado)
-#(t22=addmargins(t21))</code></pre>
+<!-- ### Ubicación por estado contagiados de Covid en Colombia -->
+<!-- ```{r} -->
+<!-- # Colombia= readRDS("data/Colombia.RDS") -->
+<!-- #t21=table(Colombia$ubicacion, Colombia$estado) -->
+<!-- #(t22=addmargins(t21)) -->
+<!-- ``` -->
+<!-- <br/> -->
+<!-- La tabla de frecuencias la convertimos en tabla de probabilidades -->
+<!-- ```{r} -->
+<!-- #t23=prop.table(t21) -->
+<!-- #round(t23, 4) -->
+<!-- ``` -->
+<!-- ```{r, echo=FALSE, out.width="10%", fig.align = "left"} -->
+<!-- knitr::include_graphics("img/nota.png") -->
+<!-- ``` -->
+<!-- En el módulo 3 se presentan otro tipo de simulaciones partiendo del supuesto de un modelo de probabilidad y del conocimiento de las probabilidades de algunos eventos -->
+<p>Supongamos que tenemos una enfermedad rara que afecta al 1% de la
+población. También sabemos que una prueba médica tiene una precisión del
+95% para detectar la enfermedad cuando está presente, pero también puede
+dar falsos positivos en un 3% de los casos en los que la enfermedad no
+está presente. Se desea calcular la probabilidad de que una persona
+tenga la enfermedad dado que la prueba dio positivo.</p>
+<p>Primero, establezcamos algunas notaciones:</p>
+<p>A: La persona tiene la enfermedad. B: La prueba da positivo.</p>
+<p>Queremos calcular <span class="math inline">\(P(A|B)\)</span>, es
+decir, la probabilidad de que la persona tenga la enfermedad dado que la
+prueba dio positivo.</p>
+<p>Para dar solución al problemas empleamos el Teorema de Bayes</p>
+<p><span class="math display">\[P(A|B) = \dfrac{P(B|A) .
+P(A)}{P(B)}\]</span></p>
+<p>Donde</p>
+<ul>
+<li><span class="math inline">\(P(A|B)\)</span> :probabilidad de que la
+prueba dé positivo dado que la persona tiene la enfermedad (precisión de
+la prueba).</li>
+<li><span class="math inline">\(P(A)\)</span> : probabilidad de que una
+persona tenga la enfermedad (1% en este caso).</li>
+<li><span class="math inline">\(P(B)\)</span> : probabilidad de que la
+prueba dé positivo.</li>
+</ul>
+<p>Para calcular <span class="math inline">\(P(B)\)</span> usamos la
+regla de probabilidad total:</p>
+<p><span class="math display">\[P(B) = P(B|A) . P(A) + P(B|A&#39;).
+P(A&#39;)\]</span></p>
+<pre class="r"><code># Probabilidades dadas
+Prob_A &lt;- 0.01   # Probabilidad de tener la enfermedad
+Prob_B_dado_A &lt;- 0.95   # Precisión de la prueba (dar positivo dado que tiene la enfermedad)
+Prob_B_dado_noA &lt;- 0.03   # Falsos positivos (dar positivo dado que no tiene la enfermedad)
+
+# Calculamos P(not A)
+Prob_noA &lt;- 1 - Prob_A
+
+# Calculamos P(B)
+Prob_B &lt;- Prob_B_dado_A * Prob_A + Prob_B_dado_noA * Prob_noA
+
+# Calculamos P(A|B) usando el Teorema de Bayes
+Prob_A_dado_B &lt;- (Prob_B_dado_A * Prob_A) / Prob_B
+
+# Imprimimos el resultado
+cat(&quot;Probabilidad de tener la enfermedad dado que la prueba dio positivo:&quot;, Prob_A_dado_B, &quot;\n&quot;)</code></pre>
+<pre><code>Probabilidad de tener la enfermedad dado que la prueba dio positivo: 0.2423469 </code></pre>
+<p><br/><br/></p>
+<p>Tabla cruzada</p>
+<pre class="r"><code># Cargar librería
+library(kableExtra)</code></pre>
+<pre><code>
+Attaching package: &#39;kableExtra&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:dplyr&#39;:
+
+    group_rows</code></pre>
+<pre class="r"><code># Crear la tabla cruzada
+tabla_cruzada &lt;- matrix(c(0.95 * 0.01, 0.03 * 0.99, 0.05 * 0.01, 0.97 * 0.99), nrow = 2, byrow = TRUE)
+colnames(tabla_cruzada) &lt;- c(&quot;Enfermedad&quot;, &quot;No Enfermedad&quot;)
+rownames(tabla_cruzada) &lt;- c(&quot;Prueba Positiva&quot;, &quot;Prueba Negativa&quot;)
+
+# Imprimir la tabla cruzada con estilo
+tabla_estilizada &lt;- kable(tabla_cruzada) %&gt;%
+  kable_styling(bootstrap_options = &quot;striped&quot;, full_width = FALSE)
+
+tabla_estilizada</code></pre>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Enfermedad
+</th>
+<th style="text-align:right;">
+No Enfermedad
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Prueba Positiva
+</td>
+<td style="text-align:right;">
+0.0095
+</td>
+<td style="text-align:right;">
+0.0297
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Prueba Negativa
+</td>
+<td style="text-align:right;">
+0.0005
+</td>
+<td style="text-align:right;">
+0.9603
+</td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/><br/></p>
+<p><img src="img/ej3.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><strong>Convergencia de Probabilidad al Lanzar Dos Dados</strong></p>
+<p>En el siguiente problema, exploraremos cómo la probabilidad de
+obtener una suma de 7 al lanzar dos dados converge a su valor teórico a
+medida que aumentamos el número de lanzamientos. Se sabe que cuando se
+lanzan dos dados equilibrados, la suma más probable es 7.</p>
 <p><br/></p>
-<p>La tabla de frecuencias la convertimos en tabla de probabilidades</p>
-<pre class="r"><code>#t23=prop.table(t21)
-#round(t23, 4)</code></pre>
-<p><img src="img/nota.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
-<p>En el módulo 3 se presentan otro tipo de simulaciones partiendo del
-supuesto de un modelo de probabilidad y del conocimiento de las
-probabilidades de algunos eventos</p>
-</div>
+<ol style="list-style-type: decimal">
+<li><strong>Teoría:</strong> Si lanzamos dos dados equilibrados, la suma
+más probable es 7, ya que hay más combinaciones posibles para obtener
+<span class="math inline">\(7\)</span> (<span
+class="math inline">\(1+6\)</span>, <span
+class="math inline">\(2+5\)</span>, <span
+class="math inline">\(3+4\)</span>, <span
+class="math inline">\(4+3\)</span>, <span
+class="math inline">\(5+2\)</span>, <span
+class="math inline">\(6+1\)</span>) que para cualquier otra suma. La
+probabilidad teórica de obtener una suma de <span
+class="math inline">\(7\)</span> es:</li>
+</ol>
+<p><span class="math display">\[\dfrac{6}{36} = \frac{1}{6} \approx
+0.1667\]</span></p>
+<p><br/></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p><strong>Simulación:</strong> Utilizaremos R para simular
+lanzamientos de dos dados y calcular la probabilidad de obtener una suma
+de <span class="math inline">\(7\)</span>. Luego, graficaremos cómo esta
+probabilidad converge a su valor teórico a medida que aumentamos el
+número de lanzamientos.</p></li>
+<li><p><strong>Reto:</strong> Ejecutar la simulación con diferentes
+tamaños de muestra y observar cómo la probabilidad de obtener una suma
+de <span class="math inline">\(7\)</span> cambia. Luego, crea un gráfico
+que muestre esta convergencia. ¿En qué punto la probabilidad simulada se
+acerca al valor teórico?</p></li>
+</ol>
+<p><br/></p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Instrucciones:</strong></li>
+</ol>
+<ul>
+<li>Utiliza el código de simulación proporcionado y ajusta los tamaños
+de muestra según las indicaciones.</li>
+<li>Ejecuta la simulación para diferentes tamaños de muestra y registra
+los resultados.</li>
+<li>Crea un gráfico que muestre cómo la probabilidad simulada cambia con
+el tamaño de muestra.</li>
+<li>Analiza el gráfico y compara la probabilidad simulada con el valor
+teórico.</li>
+<li>Escribe una breve conclusión sobre cómo la probabilidad converge a
+medida que aumenta el tamaño de muestra.</li>
+</ul>
+<p><br/><br/></p>
+<p><strong>Código R</strong></p>
+<pre class="r"><code># Función para simular lanzamientos de dos dados y calcular la probabilidad de suma 7
+simulate_probability &lt;- function(n_lanzamientos) {
+  dados_1 &lt;- sample(1:6, n_lanzamientos, replace = TRUE)
+  dados_2 &lt;- sample(1:6, n_lanzamientos, replace = TRUE)
+  suma_dados &lt;- dados_1 + dados_2
+  prob_suma_7 &lt;- sum(suma_dados == 7) / n_lanzamientos
+  return(prob_suma_7)
+}
+
+# Tamaños de muestra a considerar
+tamanos_muestra &lt;- seq(100, 100000, by = 100)
+
+# Vector para almacenar probabilidades
+probabilidades &lt;- numeric(length(tamanos_muestra))
+
+# Simulación y cálculo de probabilidades para diferentes tamaños de muestra
+for (i in 1:length(tamanos_muestra)) {
+  probabilidades[i] &lt;- simulate_probability(tamanos_muestra[i])
+}
+
+# Gráfico de convergencia
+plot(tamanos_muestra, probabilidades, type = &quot;l&quot;,
+     xlab = &quot;Tamaño de Muestra&quot;, ylab = &quot;Probabilidad de Suma 7&quot;,
+     main = &quot;Convergencia de Probabilidad de Suma 7 al Lanzar Dos Dados&quot;)
+abline(h=6/36, col=&quot;red&quot;)</code></pre>
+<p><img src="codigo201_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 </div>
 
 

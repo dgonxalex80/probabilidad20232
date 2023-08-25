@@ -178,27 +178,165 @@ knitr::include_graphics("img/ej2.png")
 
 <br/><br/>
 
-### Ubicación por estado contagiados de Covid en Colombia
+<!-- ### Ubicación por estado contagiados de Covid en Colombia -->
+
+<!-- ```{r} -->
+<!-- # Colombia= readRDS("data/Colombia.RDS") -->
+<!-- #t21=table(Colombia$ubicacion, Colombia$estado) -->
+<!-- #(t22=addmargins(t21)) -->
+
+<!-- ``` -->
+
+<!-- <br/> -->
+
+<!-- La tabla de frecuencias la convertimos en tabla de probabilidades -->
+
+<!-- ```{r} -->
+<!-- #t23=prop.table(t21) -->
+<!-- #round(t23, 4) -->
+<!-- ``` -->
+
+
+<!-- ```{r, echo=FALSE, out.width="10%", fig.align = "left"} -->
+<!-- knitr::include_graphics("img/nota.png") -->
+<!-- ``` -->
+
+<!-- En el módulo 3 se presentan otro tipo de simulaciones partiendo del supuesto de un modelo de probabilidad y del conocimiento de las probabilidades de algunos eventos -->
+
+
+Supongamos que tenemos una enfermedad rara que afecta al 1% de la población. También sabemos que una prueba médica tiene una precisión del 95% para detectar la enfermedad cuando está presente, pero también puede dar falsos positivos en un 3% de los casos en los que la enfermedad no está presente. Se desea calcular la probabilidad de que una persona tenga la enfermedad dado que la prueba dio positivo.
+
+Primero, establezcamos algunas notaciones:
+
+A: La persona tiene la enfermedad.
+B: La prueba da positivo.
+
+Queremos calcular $P(A|B)$, es decir, la probabilidad de que la persona tenga la enfermedad dado que la prueba dio positivo.
+
+Para dar solución al problemas empleamos el Teorema de Bayes
+
+$$P(A|B) = \dfrac{P(B|A) . P(A)}{P(B)}$$
+
+Donde 
+
+* $P(A|B)$ :probabilidad de que la prueba dé positivo dado que la persona tiene la enfermedad (precisión de la prueba).
+* $P(A)$ : probabilidad de que una persona tenga la enfermedad (1% en este caso).
+* $P(B)$ : probabilidad de que la prueba dé positivo.
+
+Para calcular $P(B)$ usamos la regla de probabilidad total:
+
+$$P(B) = P(B|A) . P(A) + P(B|A'). P(A')$$
+
 
 ```{r}
-# Colombia= readRDS("data/Colombia.RDS")
-#t21=table(Colombia$ubicacion, Colombia$estado)
-#(t22=addmargins(t21))
+# Probabilidades dadas
+Prob_A <- 0.01   # Probabilidad de tener la enfermedad
+Prob_B_dado_A <- 0.95   # Precisión de la prueba (dar positivo dado que tiene la enfermedad)
+Prob_B_dado_noA <- 0.03   # Falsos positivos (dar positivo dado que no tiene la enfermedad)
+
+# Calculamos P(not A)
+Prob_noA <- 1 - Prob_A
+
+# Calculamos P(B)
+Prob_B <- Prob_B_dado_A * Prob_A + Prob_B_dado_noA * Prob_noA
+
+# Calculamos P(A|B) usando el Teorema de Bayes
+Prob_A_dado_B <- (Prob_B_dado_A * Prob_A) / Prob_B
+
+# Imprimimos el resultado
+cat("Probabilidad de tener la enfermedad dado que la prueba dio positivo:", Prob_A_dado_B, "\n")
 
 ```
+
+<br/><br/>
+
+Tabla cruzada
+
+```{r}
+# Cargar librería
+library(kableExtra)
+
+# Crear la tabla cruzada
+tabla_cruzada <- matrix(c(0.95 * 0.01, 0.03 * 0.99, 0.05 * 0.01, 0.97 * 0.99), nrow = 2, byrow = TRUE)
+colnames(tabla_cruzada) <- c("Enfermedad", "No Enfermedad")
+rownames(tabla_cruzada) <- c("Prueba Positiva", "Prueba Negativa")
+
+# Imprimir la tabla cruzada con estilo
+tabla_estilizada <- kable(tabla_cruzada) %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE)
+
+tabla_estilizada
+
+```
+
+
+<br/><br/><br/>
+
+```{r, echo=FALSE, out.width="10%", fig.align = "left"}
+knitr::include_graphics("img/ej3.png")
+```
+
+
+
+**Convergencia de Probabilidad al Lanzar Dos Dados**
+
+En el siguiente problema, exploraremos cómo la probabilidad de obtener una suma de 7 al lanzar dos dados converge a su valor teórico a medida que aumentamos el número de lanzamientos. Se sabe que cuando se lanzan dos dados equilibrados, la suma más probable es 7.
 
 <br/>
 
-La tabla de frecuencias la convertimos en tabla de probabilidades
+1. **Teoría:** Si lanzamos dos dados equilibrados, la suma más probable es 7, ya que hay más combinaciones posibles para obtener $7$ ($1+6$, $2+5$, $3+4$, $4+3$, $5+2$, $6+1$) que para cualquier otra suma. La probabilidad teórica de obtener una suma de $7$ es:  
+
+$$\dfrac{6}{36} = \frac{1}{6} \approx 0.1667$$
+
+<br/>
+
+2. **Simulación:** Utilizaremos R para simular lanzamientos de dos dados y calcular la probabilidad de obtener una suma de $7$. Luego, graficaremos cómo esta probabilidad converge a su valor teórico a medida que aumentamos el número de lanzamientos.
+
+3. **Reto:** Ejecutar la simulación con diferentes tamaños de muestra y observar cómo la probabilidad de obtener una suma de $7$ cambia. Luego, crea un gráfico que muestre esta convergencia. ¿En qué punto la probabilidad simulada se acerca al valor teórico?
+
+<br/>
+
+4. **Instrucciones:**
+
+* Utiliza el código de simulación proporcionado y ajusta los tamaños de muestra según las indicaciones.
+* Ejecuta la simulación para diferentes tamaños de muestra y registra los resultados.
+* Crea un gráfico que muestre cómo la probabilidad simulada cambia con el tamaño de muestra.
+* Analiza el gráfico y compara la probabilidad simulada con el valor teórico.
+* Escribe una breve conclusión sobre cómo la probabilidad converge a medida que aumenta el tamaño de muestra.
+
+
+<br/><br/>
+
+**Código R**
+
 
 ```{r}
-#t23=prop.table(t21)
-#round(t23, 4)
+# Función para simular lanzamientos de dos dados y calcular la probabilidad de suma 7
+simulate_probability <- function(n_lanzamientos) {
+  dados_1 <- sample(1:6, n_lanzamientos, replace = TRUE)
+  dados_2 <- sample(1:6, n_lanzamientos, replace = TRUE)
+  suma_dados <- dados_1 + dados_2
+  prob_suma_7 <- sum(suma_dados == 7) / n_lanzamientos
+  return(prob_suma_7)
+}
+
+# Tamaños de muestra a considerar
+tamanos_muestra <- seq(100, 100000, by = 100)
+
+# Vector para almacenar probabilidades
+probabilidades <- numeric(length(tamanos_muestra))
+
+# Simulación y cálculo de probabilidades para diferentes tamaños de muestra
+for (i in 1:length(tamanos_muestra)) {
+  probabilidades[i] <- simulate_probability(tamanos_muestra[i])
+}
+
+# Gráfico de convergencia
+plot(tamanos_muestra, probabilidades, type = "l",
+     xlab = "Tamaño de Muestra", ylab = "Probabilidad de Suma 7",
+     main = "Convergencia de Probabilidad de Suma 7 al Lanzar Dos Dados")
+abline(h=6/36, col="red")
+
+
 ```
 
-
-```{r, echo=FALSE, out.width="10%", fig.align = "left"}
-knitr::include_graphics("img/nota.png")
-```
-
-En el módulo 3 se presentan otro tipo de simulaciones partiendo del supuesto de un modelo de probabilidad y del conocimiento de las probabilidades de algunos eventos
