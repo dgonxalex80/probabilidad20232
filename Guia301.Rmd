@@ -46,7 +46,7 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de IDENTIFICAR, C
 
 ## **Duración**
 
-La presente  unidad será desarrollada durante la semana séptima del semestre ( 6  al 12 de marzo  de 2023). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightsce hasta el  12 de marzo.
+La presente  unidad será desarrollada durante la semana séptima del semestre ( 04  al 10 de septiembre  de 2023). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightsce hasta el  10 de septiembre.
 
 Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
 <br/><br/>
@@ -56,7 +56,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |Actividad      | Descripción                    | 
 |:--------------|:-----------------------------  |
-|Individual     |[**Taller311**](https://dgonxalex80.github.io/web00520231.io/taller311.html): El siguiente taller recoge los principales conceptos relacionados con variables aleatorias, tanto discretas como continuas y sus aplicaciones en la estimación de probabilidades|
+|Individual     |[**Taller311**](https://dgonxalex80.github.io/probabilidad20232/taller311.html): El siguiente taller recoge los principales conceptos relacionados con variables aleatorias, tanto discretas como continuas y sus aplicaciones en la estimación de probabilidades|
 |Reursos        | recursos 3.1 | 
 |               |Capitulo  2 Navidi. Navidi, W. estadística para ingenieros y científicos. Editorial Mc Graw Hill. 2006. |
 |               | Capitulos  3 y 4 Walpole. Walpole, R. Myers, R. Myers, S. Ye, K. Probabilidad y Estadística para ingeniería y Ciencias.8 Ed. Editorial Pearson. 2007 |
@@ -79,7 +79,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |                   |                                       |
 |:------------------|:--------------------------------------|
 |**Taller 311.pdf** | El taller tiene un valor de 30 puntos si es resuelto completamente y enviado dentro de los tiempos establecidos |
-| Fecha             | Domingo 12  de marzo de 2023 |
+| Fecha             | Domingo 10  de septiembre de 2023 |
 | Hora límite       | 23:59  hora  local           |
 
 <br/><br/><br/><br/>

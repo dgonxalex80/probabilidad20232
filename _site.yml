@@ -86,31 +86,31 @@ navbar:
           href: Modulo3.html
         - text: "---------"
         - text: "Guía 3.1"
-          href: recurso000.html
+          href: recurso301.html
         - text: "Guía 3.2"
           href: recurso000.html
         - text: "Guía 3.3"
           href: recurso000.html             
         - text: "---------"  
         - text: "Recursos 3.1"
-          href: recurso000.html  
+          href: recurso301.html  
         - text: "Recursos 3.2"
           href: recurso000.html  
         - text: "Recursos 3.3"
           href: recurso000.html 
         - text: "---------"            
         - text: "Monitoria 3"
-          href: recurso000.html
+          href: monitoria3.html
         - text: "---------"   
         - text: "Código 3.1"
-          href: recurso000.html
+          href: codigo301.html
         - text: "Código 3.2"
           href: recurso000.html
         - text: "Código 3.3"
           href: recurso000.html 
         - text: "---------"            
         - text: "Taller 311"
-          href: recurso000.html 
+          href: taller311.html 
         - text: "---------"                
         - text: "Actividad 331"
           href: recurso000.html 
