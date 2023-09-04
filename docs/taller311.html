@@ -788,7 +788,7 @@ una cara tenga doble de probabilidad de ocurrir que un sello.</p>
 es una variable aleatoria que tiene función de densidad,</p>
 <p><span class="math display">\[f_{_{X}}(x) = \left \{
                 \begin{matrix}
-                \dfrac{2000}{(x+100)^{3}}, &amp; \mbox{  }  x \geq 0\\
+                \dfrac{20000}{(x+100)^{3}}, &amp; \mbox{  } x \geq 0\\
                 &amp; \\
                 0 , &amp; \mbox{en cualquier otro caso }
                 \end{matrix}\right.  
@@ -917,10 +917,30 @@ restaurante es,</p>
 <p><br/><br/><br/></p>
 <div id="nota" class="section level3">
 <h3><span style="color:#db524f"><strong>NOTA</strong></span></h3>
-<p><strong>En todos los casos</strong> represente gráficamente la
+<ul>
+<li><p><strong>En todos los casos</strong> represente gráficamente la
 función de probabilidad correspondiente y en ella resalte las
-probabilidades solicitadas.</p>
-<p>Problemas seleccionados de Walpole(2012).</p>
+probabilidades solicitadas.</p></li>
+<li><p>Problemas seleccionados de Walpole(2012).
+<br/><br/><br/></p></li>
+</ul>
+</div>
+<div id="ayudas" class="section level3">
+<h3><span style="color:#686868"><strong>AYUDAS</strong></span></h3>
+<pre class="r"><code>#-----------------------------------------------------------------------
+x=0:2
+sum(choose(2,x)*choose(3,3-x))</code></pre>
+<pre><code>[1] 10</code></pre>
+<pre class="r"><code># Definir la función ----------------------------------------------------
+fx7 &lt;- function(x) {
+  20000 / (x + 100)^3
+}
+# Calcular la integral definida desde 0 hasta infinito
+result &lt;- integrate(fx7, lower = 0, upper = Inf)
+
+# Imprimir el resultado
+result</code></pre>
+<pre><code>1 with absolute error &lt; 4.7e-07</code></pre>
 </div>
 </div>
 

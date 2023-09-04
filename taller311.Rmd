@@ -89,7 +89,7 @@ La vida útil en días, para frascos de cierta medicina de prescripción es una 
 
 $$f_{_{X}}(x) = \left \{ 
 				\begin{matrix} 
-				\dfrac{2000}{(x+100)^{3}}, & \mbox{  }	x \geq 0\\ 
+				\dfrac{20000}{(x+100)^{3}}, & \mbox{  }	x \geq 0\\ 
 				& \\
 				0 , & \mbox{en cualquier otro caso }
 				\end{matrix}\right.  
@@ -198,9 +198,30 @@ $$f(x) = \binom{25}{x} (0.80)^{x} (0.20)^{25−x}  \text{,  } x = 0, 1, . . . , 
 
 ### <span style="color:#db524f">**NOTA**</span>
 
-**En todos los casos** represente gráficamente la función de probabilidad correspondiente y en ella resalte las probabilidades solicitadas.
+* **En todos los casos** represente gráficamente la función de probabilidad correspondiente y en ella resalte las probabilidades solicitadas. 
 
-Problemas seleccionados de Walpole(2012).
-  
+* Problemas seleccionados de Walpole(2012).
+<br/><br/><br/>
 
+### <span style="color:#686868">**AYUDAS**</span>
+
+```{r}
+#-----------------------------------------------------------------------
+x=0:2
+sum(choose(2,x)*choose(3,3-x))
+```
+
+
+```{r}
+# Definir la función ----------------------------------------------------
+fx7 <- function(x) {
+  20000 / (x + 100)^3
+}
+# Calcular la integral definida desde 0 hasta infinito
+result <- integrate(fx7, lower = 0, upper = Inf)
+
+# Imprimir el resultado
+result
+
+```
 
