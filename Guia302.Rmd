@@ -57,7 +57,7 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de IDENTIFICAR, C
 
 <br/>
 
-La presente  unidad será desarrollada durante la semana séptima del semestre ( 13al 19 de marzo de 2023). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  25 de septiembre.
+La presente  unidad será desarrollada durante la semana séptima del semestre ( 11 al 17 de septiembre de 2023). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  17 de septiembre.
 
 Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
 
@@ -70,11 +70,11 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |Actividad        | Descripción                    | 
 |:----------------|:-----------------------------  |
 |Actividad 321    |
-|Trabajo en grupo (2 estudiates) | [**Taller 321**](https://github.com/dgonxalex80/web00520231.io/blob/main/pdf/taller321.pdf) El siguiente taller recoge los principales conceptos relacionados con variables aleatorias, tanto discretas como continuas y sus aplicaciones en la estimación de probabilidades. Actividad realizada en grupos de dos estudiantes. |
+|Trabajo en grupo (2 estudiates) | [**Taller 321**](https://github.com/dgonxalex80/probabilidad20232/blob/main/pdf/taller321.pdf) El siguiente taller recoge los principales conceptos relacionados con variables aleatorias, tanto discretas como continuas y sus aplicaciones en la estimación de probabilidades. Actividad realizada en grupos de dos estudiantes. |
 |Recursos         | Capitulo  2 Navidi (Navidi, W. estadística para ingenieros y científicos. Editorial Mc Graw Hill. 2006. ) |
 |                 | Capítulos  3 y 4 Walpole  (Walpole, R. Myers, R. Myers, S. Ye, K. Probabilidad y Estadística para ingeniería y Ciencias.8 Ed. Editorial Pearson. 2007)|
 |||
-|Fecha            |  20 de marzo de 2023
+|Fecha            |  17 de septiembre de 2023
 |Hora             |  al finalizar sesión de clase
 
 <br/><br/>
@@ -98,7 +98,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 <br/>
 
-Fecha :  20 de marzo de 2023 <br/>
+Fecha :  17 de septiembre de 2023 <br/>
 Hora  :  al finalizar sesión de clase <br/>
 
 <br/><br/><br/><br/>
