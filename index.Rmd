@@ -78,6 +78,10 @@ knitr::include_graphics("img/CALENDARIO20232.png")
 # **Atención a Estudiantes**
 
 
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+knitr::include_graphics("img/atencion.png")
+```
+
 <br/><br/>
 
 # **Información supletorios**
@@ -144,6 +148,7 @@ summarytools::descr(datos$pp)
 # Instala y carga el paquete ggplot2 si aún no está instalado
 #  install.packages("ggplot2")
 library(ggplot2)
+library(plotly)
 
 # Define los datos
 datos <- data.frame(
@@ -167,4 +172,7 @@ plotly_grafico <- ggplotly(ggplot_grafico)
 plotly_grafico
 ```
 
+```{r}
+cor(datos$proaca, datos$pp)
+```
 
