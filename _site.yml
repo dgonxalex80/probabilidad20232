@@ -110,7 +110,9 @@ navbar:
           href: recurso000.html 
         - text: "---------"            
         - text: "Taller 311"
-          href: taller311.html 
+          href: taller311.html
+        - text: "Taller 323"
+          href: taller323.html           
         - text: "---------"                
         - text: "Actividad 331"
           href: taller311.html 

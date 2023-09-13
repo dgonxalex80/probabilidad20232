@@ -9,15 +9,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="dgonzalez" />
+<meta name="author" content="dgonzalez80" />
 
 
-<title>Módulo 0- Unidad 0.3</title>
+<title>Taller 323</title>
 
 <script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -502,6 +502,9 @@ div.tocify {
     <li>
       <a href="taller311.html">Taller 311</a>
     </li>
+    <li>
+      <a href="taller323.html">Taller 323</a>
+    </li>
     <li class="divider"></li>
     <li>
       <a href="taller311.html">Actividad 331</a>
@@ -625,46 +628,57 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore"><span style="color:#b0394a"><strong>Módulo
-0- Unidad 0.3</strong></span></h1>
-<h4 class="author">dgonzalez</h4>
+<h1 class="title toc-ignore"><span style="color:#8acfe6"><strong>Taller
+323</strong></span></h1>
+<h4 class="author">dgonzalez80</h4>
 
 </div>
 
 
-<p><span style="color:#b0394a"><strong>En
-construcción</strong></span></p>
-<p><img src="img/banner0.png" /></p>
-<p><br/><br/></p>
-<div id="introducción" class="section level1">
-<h1><strong>Introducción</strong></h1>
+<p><img src="img/banner3.png" /></p>
 <p><br/></p>
-<p>Unas de las funciones más utilizadas en Estadística son :la
-exponencial y logaritmica, de allí que es de mucha importancia recordar
-sus diferentes formas y propiedades al igual que su representación
-gráfica</p>
-</div>
-<div id="función-exponencial" class="section level1">
-<h1><strong>Función exponencial</strong></h1>
-<p>Aunque en matemáticas se define la función exponecial de manera
-general como <span class="math inline">\(f(x)=a b^{cx+d}\)</span>, en
-este caso nos interesa aquellos casos donde <span
-class="math inline">\(b=e= 2.71828....\)</span></p>
-<p>Definición:</p>
-<p><span class="math inline">\(e^{x} = exp\{x\} =
-\displaystyle\sum_{k=0}^{\infty} \dfrac{x^{k}}{k!} = 1 + x +
-\dfrac{x^{2}}{2}+\dfrac{x^{3}}{6}+\dfrac{x^{4}}{24}+ \dots\)</span></p>
-<pre class="r"><code>x=seq(0,5,0.2)
-fx=exp(x)
-plot(x,fx, las=1, type =&quot;l&quot;, ylab = &quot;f(x) = exp(x)&quot;)</code></pre>
-<p><img src="Guia003_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<div id="algunas-propiedades" class="section level2">
-<h2>Algunas propiedades</h2>
+<p><br/><br/></p>
+<!-- # <span style="color:#8acfe6">**Problema**</span> -->
+<p><img src="img/chocolatosos.png" width="100%" style="display: block; margin: auto auto auto 0;" /></p>
+<p>Una compañia dulcera distribuye cajas de chocolates con un surtido de
+<strong>cremas</strong>, <strong>chiclosos</strong> y
+<strong>envinados</strong>. Suponga que el peso de cada caja es 1
+kilogramo; pero los pesos individuales de cremas, chiclosos y envinados
+varian de una caja a otra. Para una caja seleccionada al azar, sea <span
+class="math inline">\(X\)</span> y <span
+class="math inline">\(Y\)</span> los pesos de las cremas y los
+chiclosos, respectivamente, y suponga que la función de densidad
+conjunta de estas variables está representada por:</p>
+<p><br/></p>
+<p><span class="math display">\[
+f(x,y) =
+\begin{cases}
+24 xy,\hspace{.5cm}\text{si } &amp; 0 \leq x \leq 1,\\
+                   &amp; 0 \leq y \leq1, \\
+                   &amp; x+y\leq 1\\
+0 \hspace{1.2cm} &amp; \text{en cualquier otro caso} \\
+\end{cases}
+\]</span> <br/></p>
 <ul>
-<li></li>
+<li>Encuentre la probabilidad de que en una caja dada los envinados
+representen más de la mitad del peso</li>
 </ul>
-</div>
-</div>
+<p><br/></p>
+<ul>
+<li>Encuentre la función de densidad marginal para el peso de las
+cremas</li>
+</ul>
+<p><br/></p>
+<ul>
+<li>Encuentre la probabilidad de que el peso de los chiclosos en una
+caja sea menor que 1/8 de kilogramo, si se sabe que las cremas
+constituyen más de 3/4 del peso.</li>
+</ul>
+<p><br/></p>
+<ul>
+<li>Encuentre la correlación entre ambas variables.</li>
+</ul>
+<p><br/><br/><br/></p>
 
 
 
