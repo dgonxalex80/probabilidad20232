@@ -149,63 +149,72 @@ Ejercicios tomados de Navidi(2006)
 
 # **Asignación de problemas**
 
-|	id	|	nombre                    	|	problema1	|	problama2	|
-|----:|:----------------------------|:---------:|:---------:|
-|	1	|	Pedroza Barrios,Edinson Steve	|	5	|	2	|
-|	2	|	Abadia Caballero,Carlos Adolfo	|	4	|	1	|
-|	3	|	Arcila Avirama,Santiago	|	2	|	5	|
-|	4	|	Aristizabal Figueroa,Duvan Esteban	|	2	|	3	|
-|	5	|	Aristizabal Murillo,Juan Sebastian	|	4	|	2	|
-|	6	|	Bejarano Osorio,Anny Victoria	|	2	|	3	|
-|	7	|	Benavides Ocampo,Laura Sofia	|	4	|	3	|
-|	8	|	Bolaños Santacruz,Santiago	|	1	|	2	|
-|	9	|	Buitrago Orozco,Maria Jose	|	1	|	3	|
-|	10	|	Cabrera Cardona,Darwin	|	3	|	1	|
-|	11	|	Chavarriaga Delgadillo,Valentina	|	1	|	2	|
-|	12	|	Diaz Sarabia,Denisse Valentina	|	5	|	4	|
-|	13	|	Gomez Cifuentes,Diego Francisco	|	3	|	2	|
-|	14	|	Gomez Pavajeau,Marianne	|	4	|	5	|
-|	15	|	Gonzalez Noreña,Juan Pablo	|	5	|	3	|
-|	16	|	Herrera Viveros,Fulvio Alexander	|	3	|	1	|
-|	17	|	Martinez Luque,Juan Esteban	|	3	|	2	|
-|	18	|	Mendez Camelo,Juan Jose	|	1	|	3	|
-|	19	|	Monroy Lasso,Juan	|	2	|	3	|
-|	20	|	Montero Guzman,Marlon Damian	|	3	|	5	|
-|	21	|	Ortega Bastidas,Santiago	|	4	|	2	|
-|	22	|	Perez Roman,Kevin	|	2	|	3	|
-|	23	|	Peña,Yony Alejandro	|	2	|	5	|
-|	24	|	Ramírez Salazar,Katherine	|	1	|	5	|
-|	25	|	Restrepo Maldonado,Karol Daniela	|	3	|	4	|
-|	26	|	Rojas Gomez,Maria Camila	|	5	|	3	|
-|	27	|	Saya Home,Maria Camila	|	5	|	3	|
-|	28	|	Taborda Madrid,Jhon Alejandro	|	5	|	1	|
-|	29	|	Valencia Rojas,Sebastian	|	3	|	4	|
-|	30	|	Vasquez Campiño,Maria Natalia	|	3	|	2	|
-|	31	|	Vergara Burbano,Fabio	|	2	|	4	|
-|	32	|	Avila Preciado,Ashley Karoline	|	3	|	1	|
-|	33	|	Bados Armero,Miguel Angel	|	5	|	1	|
-|	34	|	Bernal Castillo,Maria Camila	|	3	|	4	|
-|	35	|	Burgos Alvarez,Brayan Alexander	|	5	|	4	|
-|	36	|	Castaño Rueda,Allison Tatiana	|	5	|	3	|
-|	37	|	Duque Gonzalez,Juan Jose	|	1	|	4	|
-|	38	|	Gomez Paz,Santiago	|	3	|	5	|
-|	39	|	Gualdron Lopez,Diego Alejandro	|	2	|	4	|
-|	40	|	Legarda Betancourth,Deivy Hernan	|	1	|	3	|
-|	41	|	Londoño Arciniegas,Mateo	|	4	|	3	|
-|	42	|	Muñoz Sanchez,Juan Fernando	|	2	|	4	|
-|	43	|	Ocoro Perez,Juan Tomas	|	1	|	3	|
-|	44	|	Ordoñez Loboa,Juan Alejandro	|	1	|	4	|
-|	45	|	Ordoñez Meneses,Laura Catalina	|	3	|	5	|
-|	46	|	Rosero Fernandez,Juan Sebastian	|	3	|	5	|
-|	47	|	Segura Hoyos,Carlos Andres	|	4	|	1	|
-|	48	|	Silva Vinasco,Santiago	|	2	|	1	|
-|	49	|	Unigarro Pabon,Juan Daniel	|	2	|	4	|
-
-
+|	id	|	nombre	|	problema	|
+|----:|:------------------------------------|:-------------|
+|	1	|	Astaiza Barriga,Santiago	|	1	|
+|	2	|	Becerra Carmona,Jheiden	|	2	|
+|	3	|	Bermeo Herrera,Victor Manuel	|	3	|
+|	4	|	Bryon Karaman,Juan Martin	|	4	|
+|	5	|	Cruz Torres,Natalia	|	5	|
+|	6	|	Dorado Varon,Juan Camilo	|	1	|
+|	7	|	Escobar Falla,Mariana	|	2	|
+|	8	|	Fernandez Fernandez,Santiago	|	3	|
+|	9	|	Garcia Sanchez,Juan Daniel	|	4	|
+|	10	|	Gordillo Martinez,Juan Pablo	|	5	|
+|	11	|	Iriarte Soltau,German David	|	1	|
+|	12	|	Montenegro Jimenez,Juan Fernando	|	2	|
+|	13	|	Morales Buritica,Soffia	|	3	|
+|	14	|	Muñoz Torijano,Juan Felipe	|	4	|
+|	15	|	Orduz Guacaneme,Carlos Andres	|	5	|
+|	16	|	Ortega Bastidas,Santiago	|	1	|
+|	17	|	Ortiz Galarza,Sarha Lorieth	|	2	|
+|	18	|	Pabon Andrade,Juan Jose	|	3	|
+|	19	|	Pantoja Londoño,Ingrid Nathalia	|	4	|
+|	20	|	Pava Echeverry,Maria Jose	|	5	|
+|	21	|	Posso Molano,Mariana	|	1	|
+|	22	|	Ramirez Delgado,Jose Daniel	|	2	|
+|	23	|	Rosero Manquillo,Daniel	|	3	|
+|	24	|	Ruano Urresta,Josue David	|	4	|
+|	25	|	Sanchez Paez,Miguel Angel	|	5	|
+|	26	|	Satizabal Tascon,Sara	|	1	|
+|	27	|	Tello Cajiao,Jhon Alejandro	|	2	|
+|	28	|	Truque Ospina,Angie Lorena	|	3	|
+|	29	|	Valencia Payan,Nicolas	|	4	|
+|	30	|	Zabala Muñoz,Erica Sofia	|	5	|
+|	31	|	Bolaños Rengifo,Juan Andres	|	1	|
+|	32	|	Castro Muñoz,Juan Diego	|	2	|
+|	33	|	Garcia Lopez,Jose Manuel	|	3	|
+|	34	|	Gil Solis,Sofia	|	4	|
+|	35	|	Giraldo Giraldo,Julian Andres	|	5	|
+|	36	|	Gomez Quenguan,Juan Esteban	|	1	|
+|	37	|	Gonzalez Anzasoy,Carlos Manuel	|	2	|
+|	38	|	Guerra Segura,Laura Sofia	|	3	|
+|	39	|	Guerrero Pantoja,Juan Alejandro	|	4	|
+|	40	|	Herazo Montoya,Juan Martin	|	5	|
+|	41	|	Hernandez Sinisterra,Jesus Stiven	|	1	|
+|	42	|	Ibañez Sambony,Ronal Camilo	|	2	|
+|	43	|	Lenis Salazar,Sebastian	|	3	|
+|	44	|	Loaiza Cifuentes,Carlos Mario	|	4	|
+|	45	|	Lozano Tabares,Laura Catalina	|	5	|
+|	46	|	Marrugo Arias,Miguel Angel	|	1	|
+|	47	|	Martinez Munevar,Luis Felipe	|	2	|
+|	48	|	Montoya Solano,Sebastian	|	3	|
+|	49	|	Muñoz Diaz,Manuel Santiago	|	4	|
+|	50	|	Ossa Montoya,Daniela	|	5	|
+|	51	|	Parra Albornoz,Christian Felipe	|	1	|
+|	52	|	Posada Camacho,Jose Fernando	|	2	|
+|	53	|	Ramirez Castro,Juan Esteban	|	3	|
+|	54	|	Rodriguez Astaiza,Laura Maria	|	4	|
+|	55	|	Rodriguez Rodriguez,Alvaro Jose	|	5	|
+|	56	|	Rojas Cardenas,Laura Isabella	|	1	|
+|	57	|	Rojas Mejia,Juan Miguel	|	2	|
+|	58	|	Torres Murcia,Brenda Dayanna	|	3	|
+|	59	|	Victoria Henriquez,Isabella	|	4	|
+|	60	|	Yaber Macea,Zharick	|	5	|
 </br></br>
 
 ### **Entregable**
 
-* archivo pdf con el contenido solicitado y anexo código R
+* Enlace de RPub con solución del problema asignado, entregado en Bs 
 
 

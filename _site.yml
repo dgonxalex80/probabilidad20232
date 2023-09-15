@@ -114,8 +114,6 @@ navbar:
         - text: "Taller 323"
           href: taller323.html           
         - text: "---------"                
-        - text: "Actividad 311"
-          href: taller311.html 
         - text: "Actividad 331"
           href: Actividad331.html 
         - text: "Actividad 332"
