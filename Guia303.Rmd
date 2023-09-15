@@ -50,8 +50,8 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de  IDENTIFICAR, 
 
 ## **Duración**
 
-La presente  unidad será desarrollada durante la comprendida entre 22 de marzo  al 17 de abril      
-Ademas del material suministrado  contaran con el acompañamiento del profesor en las  sesiones descritas en el calentadario y de manera asincrónica con  foro de actividades académicas. Los entegables  de la actividad 302 para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  17 de abril.
+La presente  unidad será desarrollada durante la comprendida entre 18 al 29 de septiembre      
+Ademas del material suministrado  contaran con el acompañamiento del profesor en las  sesiones descritas en el calentadario y de manera asincrónica con  foro de actividades académicas. Los entegables  de la actividad 302 para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  1 de octubre.
 
 Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
 
@@ -62,23 +62,21 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |Actividad        | Descripción                                                             | 
 |:----------------|:------------------------------------------------------------------------|
-|[**Actividad 331**](https://dgonxalex80.github.io/sitioweb00520231.io/Actividad331.html)   |            |    
-|**Poster**       | Construir un poster en formato A1 (841x594)  para el modelo asignado que contenga sus principales características   |
-|Fechas           | abril  12 de 2023 (fecha de revisión por pares)                         |            
-|                 | abril 14 de 2023 (entrega y presentación)                               |
-|Hora             | segun horario de clase                                                  |
+|[**Actividad 331**](https://dgonxalex80.github.io/probabilidad20232/Actividad331.html)|    |    
+|**Video **       | Construir un video y subirlo a youtube                                  |
+|Fechas           | 25 de septiembre  de 2023 (fecha de revisión por pares)                 |            
+|                 | 1 de octubre 2023 (entrega )                                            |
+|Hora             | 23:59                                                                   |
 
-
-Los documentos construidos por todos serán publicados en una página para la revisión de todos, para lo cual se requiere entrega de archivo pdf
 
 <br/><br/>
 
 |                |                                                                         | 
 |:---------------|:------------------------------------------------------------------------|
-|[**Activiad 332**](https://dgonxalex80.github.io/sitioweb00520231.io/Actividad332.html) | De manera individual deberá resolver lo problemas asignado   con ayuda computacional. La presentacion de los resultados acompañados de los enunciados se debe publicar en **RPub**. Su enlace copiado en la **actividad 331** de la plataforma **Bs**                                         |
-|               | Trabajo individual                                                      |
-|Fecha          | 17 de abril                                                             |
-|Hora           | 23:59                                                                   |
+|[**Activiad 332**](https://dgonxalex80.github.io/probabilidad20232/Actividad332.html) | De manera individual deberá resolver el problema asignado   con ayuda computacional. La presentacion de los resultados acompañados de los enunciados se debe publicar en **RPub**. Su enlace copiado en la **actividad 331** de la plataforma **Bs** |
+|               | Trabajo individual                                                       |
+|Fecha          | 1 de octubre                                                             |
+|Hora           | 23:59                                                                    |
 
 <br/><br/>
 
@@ -101,7 +99,7 @@ Los documentos construidos por todos serán publicados en una página para la re
 
 |Actividad      | Descripción                      | 
 |:--------------|:---------------------------------|
-|Actividad 331  | poster impreso y presentación del mismo |
+|Actividad 331  | enlace de video                  |
 |Actividad 332  | enlace de Rmd publicado en **RPub** con el desarrollo del problema asignado |
 
 

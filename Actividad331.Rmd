@@ -24,53 +24,22 @@ c5= "#db524f"
 
 ![](img/banner3.png)
 
+
+<br/><br/>
+
+## **Construcción del Video**
+
+<br/>
+
+
 ##  **Descripción actividad ** 
 
-<br/><br/>
 
-## **Construcción del Poster**
-
-<br/>
-
-### **Paso 1**
-
-**R** posee librerias para la construcción de posters como : `posterdown`, `drposter`, las cuales despues de ser instaladas generan una plantilla que se puede obtener de la siguiente manera:
-
-<br/>
-**File** / **New File** / **Rmarkdown** / **From Template** / Posterdown HTML {posterdown}
-
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/poster4.png")
-```
+A cada estudiante se le asignará un modelo de probabilidad, para el cual deberá construir un video y subirlo a YouTube y entregar en Bs el enlace correspondiente.
 
 <br/><br/>
 
-#### **Ejemplo poster en Rmd**
-
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/poster1.png")
-```
-
-#### **Nota**
-
-* [Qué es un poster científico](https://es.wikipedia.org/wiki/P%C3%B3ster_cient%C3%ADfico)
-* El poster deberáser construido en  un formato  **A1**  
-
-<br/><br/>
-
-#### **Paso 2**
-
-Cada estudiante aportará al trabajo realizado por uno de sus compañeros mediante dos contribuciones:
-
-* **plus** : realizará por lo menos un aporte que permita mejorar el trabajo sustancialmente y que aun no está claramente incorporado al trabajo
-
-* **delta** : dentro de los elementos contenidos  en el trabajo deberá realizar sugerencias que lo potencie para un mejor resultado
-
-Nota: Esta actividad será realizada el dia 12 de abril y los pares se asignarán en la misma sesión.
-
-<br/><br/>
-
-### **Contenido del Poster**
+### **Contenido del Video**
 
 * Origen de la distribución
 * Características principales : f(x), F(x), E[X], V[X], representación gráfica....
@@ -98,15 +67,16 @@ Nota: Esta actividad será realizada el dia 12 de abril y los pares se asignará
 | 11         | Cauchy           | 12     | lognormal	           |
 | 13         | beta             | 14     | Erlang	               |
 | 15         | Gumbel	          | 16     | logistic              |
+| 17         | Rectangular      | 18     | Laplace               |
+| 19         | Bernoulli        | 20     | Pareto                |
+| 21         | Rayleigh         | 22     | Valor extremo         |
 
 
-La asignación se realizará por sorteo en sesión de clase el dia lunes 10  de abril  de 2023. A los estudiantes no presentes el profesor realizará la asignatura de la distribución
+L<br/><br/>
 
-<br/><br/>
+### **Entrega del video** 
 
-### **Entrega y presentación de posters** 
-
-*  Abril  14 de 2023
+*  Octubre 1 de 2023
 
 <br/><br/><br/>
 
@@ -116,89 +86,68 @@ La asignación se realizará por sorteo en sesión de clase el dia lunes 10  de 
 
 ### **Tabla 2 : Asignación de id por estudiante**
 
-|	id	|	nombre	                         |
-|----:|:---------------------------------|
-|	1	|	Pedroza Barrios,Edinson Steve	     |
-|	2	|	Abadia Caballero,Carlos Adolfo	|
-|	3	|	Arcila Avirama,Santiago	|
-|	4	|	Aristizabal Figueroa,Duvan Esteban	|
-|	5	|	Aristizabal Murillo,Juan Sebastian	|
-|	6	|	Bejarano Osorio,Anny Victoria	|
-|	7	|	Benavides Ocampo,Laura Sofia	|
-|	8	|	Bolaños Santacruz,Santiago	|
-|	9	|	Buitrago Orozco,Maria Jose	|
-|	10	|	Cabrera Cardona,Darwin	|
-|	11	|	Chavarriaga Delgadillo,Valentina	|
-|	12	|	Diaz Sarabia,Denisse Valentina	|
-|	13	|	Gomez Cifuentes,Diego Francisco	|
-|	14	|	Gomez Pavajeau,Marianne	|
-|	15	|	Gonzalez Noreña,Juan Pablo	|
-|	16	|	Herrera Viveros,Fulvio Alexander	|
-|	17	|	Martinez Luque,Juan Esteban	|
-|	18	|	Mendez Camelo,Juan Jose	|
-|	19	|	Monroy Lasso,Juan	|
-|	20	|	Montero Guzman,Marlon Damian	|
-|	21	|	Ortega Bastidas,Santiago	|
-|	22	|	Perez Roman,Kevin	|
-|	23	|	Peña,Yony Alejandro	|
-|	24	|	Ramírez Salazar,Katherine	|
-|	25	|	Restrepo Maldonado,Karol Daniela	|
-|	26	|	Rojas Gomez,Maria Camila	|
-|	27	|	Saya Home,Maria Camila	|
-|	28	|	Taborda Madrid,Jhon Alejandro	|
-|	29	|	Valencia Rojas,Sebastian	|
-|	30	|	Vasquez Campiño,Maria Natalia	|
-|	31	|	Vergara Burbano,Fabio	|
-|	32	|	Avila Preciado,Ashley Karoline	|
-|	33	|	Bados Armero,Miguel Angel	|
-|	34	|	Bernal Castillo,Maria Camila	|
-|	35	|	Burgos Alvarez,Brayan Alexander	|
-|	36	|	Castaño Rueda,Allison Tatiana	|
-|	37	|	Duque Gonzalez,Juan Jose	|
-|	38	|	Gomez Paz,Santiago	|
-|	39	|	Gualdron Lopez,Diego Alejandro	|
-|	40	|	Legarda Betancourth,Deivy Hernan	|
-|	41	|	Londoño Arciniegas,Mateo	|
-|	42	|	Muñoz Sanchez,Juan Fernando	|
-|	43	|	Ocoro Perez,Juan Tomas	|
-|	44	|	Ordoñez Loboa,Juan Alejandro	|
-|	45	|	Ordoñez Meneses,Laura Catalina	|
-|	46	|	Rosero Fernandez,Juan Sebastian	|
-|	47	|	Segura Hoyos,Carlos Andres	|
-|	48	|	Silva Vinasco,Santiago	|
-|	49	|	Unigarro Pabon,Juan Daniel	|
-
-
-
-<br/><br/>
-
-### **Asignación modelo**
-
-### **Tabla 3 : Asignación de distribución por id**
-
-|	id   |  modelo| id   |modelo  | id   |modelo  |  id    |modelo  |
-|:----:|:------:|:----:|:------:|:----:|:------:|:------:|:------:|
-|	1	   |	9	    |	13	 |	10	  |	25	 |	10	  |  37    |  7     |
-|	2	   |	14	  |	14 	 |	15	  |	26	 |	1	    |  38    |  2     |
-|	3	   |	11	  |	15	 |	1	    |	27	 |	5	    |  39    |  3     |
-|	4	   |	2	    |	16	 |	2	    |	28	 |	8   	|  40    |  5     |
-|	5  	 |	7	    |	17	 |	9	    |	29	 |	3	    |  41    | 12     |
-|	6	   |	3	    |	18	 |	12	  |	30	 |	11	  |  42    |  8     |
-|	7	   |	16	  |	19	 |	4	    |	31	 |	12  	|  43    | 13     |
-|	8	   |	4	    |	20	 |	7	    |	32	 |	5	    |  44    |  9     |
-|	9	   |	16	  |	21	 |	6	    |	33	 |	7	    |  45    | 14     |
-|	10	 |	3	    |	22	 |	15	  |	34	 |	14 	  |  46    | 15     |
-|	11	 |	6	    |	23	 |	13	  |	35	 |	5	    |  47    | 16     |
-|	12	 |	8	    |	24	 |	1	    |	36	 |	13	  |  48    |  6     |
-|      |        |      |        | 37   |   8    |  49    | 10     |
-
-
-<br/><br/>
-
-#### **Nota**:
-
-Como ejemplo da la asignación de los modelos, el **id = 1** corresponde al primer estudiante de la **Tabla 2**  (Pedroza Barrios,Edinson Steve)  al cual le corresponde el **modelo 9** : gamma** de la **Tabla 1**. Lo cual indica que a  le corresponde realizar un poster sobre el modelo gamma
-
+|	id	|	nombre	                            | distribución |
+|----:|:------------------------------------|:-------------|
+|	1	  |	Astaiza Barriga,Santiago	          |	1	           |
+|	2	  |	Becerra Carmona,Jheiden	            |	2            |
+|	3	  |	Bermeo Herrera,Victor Manuel	      |	3            |
+|	4	  |	Bryon Karaman,Juan Martin	          |	4          	 |
+|	5	  |	Cruz Torres,Natalia               	|	4            |
+|	6	  |	Dorado Varon,Juan Camilo	          |	5	           |
+|	7	  |	Escobar Falla,Mariana	              |	6	           |
+|	8	  |	Fernandez Fernandez,Santiago	      |	7	|
+|	9	  |	Garcia Sanchez,Juan Daniel	        |	8	|
+|	10	|	Gordillo Martinez,Juan Pablo	      |	9	|
+|	11	|	Iriarte Soltau,German David	        |	10	|
+|	12	|	Montenegro Jimenez,Juan Fernando	  |	11	|
+|	13	|	Morales Buritica,Soffia	            |	12	|
+|	14	|	Muñoz Torijano,Juan Felipe	        |	13	|
+|	15	|	Orduz Guacaneme,Carlos Andres	      |	14	|
+|	16	|	Ortega Bastidas,Santiago          	|	15 |
+|	17	|	Ortiz Galarza,Sarha Lorieth	        |	16	|
+|	18	|	Pabon Andrade,Juan Jose            	|	17	|
+|	19	|	Pantoja Londoño,Ingrid Nathalia	    |	18	|
+|	20	|	Pava Echeverry,Maria Jose	          |	19	|
+|	21	|	Posso Molano,Mariana	              |	20	|
+|	22	|	Ramirez Delgado,Jose Daniel	        |	21	|
+|	23	|	Rosero Manquillo,Daniel	            |	22	|
+|	24	|	Ruano Urresta,Josue David	          |	3	|
+|	25	|	Sanchez Paez,Miguel Angel          	|	4	|
+|	26	|	Satizabal Tascon,Sara	              |	5	|
+|	27	|	Tello Cajiao,Jhon Alejandro       	|	6	|
+|	28	|	Truque Ospina,Angie Lorena         	|	7	|
+|	29	|	Valencia Payan,Nicolas	            |	8	|
+|	30	|	Zabala Muñoz,Erica Sofia	          |	9	|
+|	31	|	Bolaños Rengifo,Juan Andres	        |	10	|
+|	32	|	Castro Muñoz,Juan Diego	            |	11	|
+|	33	|	Garcia Lopez,Jose Manuel	          |	12	|
+|	34	|	Gil Solis,Sofia	                    |	13	|
+|	35	|	Giraldo Giraldo,Julian Andres	      |	14	|
+|	36	|	Gomez Quenguan,Juan Esteban	        |	15	|
+|	37	|	Gonzalez Anzasoy,Carlos Manuel	    |	16	|
+|	38	|	Guerra Segura,Laura Sofia	          |	17	|
+|	39	|	Guerrero Pantoja,Juan Alejandro	    |	18	|
+|	40	|	Herazo Montoya,Juan Martin	        |	19	|
+|	41	|	Hernandez Sinisterra,Jesus Stiven 	|	20	|
+|	42	|	Ibañez Sambony,Ronal Camilo	        |	21	|
+|	43	|	Lenis Salazar,Sebastian	            |	1	|
+|	44	|	Loaiza Cifuentes,Carlos Mario	      |	2	|
+|	45	|	Lozano Tabares,Laura Catalina	      |	3	|
+|	46	|	Marrugo Arias,Miguel Angel	        |	4	|
+|	47	|	Martinez Munevar,Luis Felipe      	|	5	|
+|	48	|	Montoya Solano,Sebastian	          |	6	|
+|	49	|	Muñoz Diaz,Manuel Santiago	        |	7	|
+|	50	|	Ossa Montoya,Daniela	              |	8	|
+|	51	|	Parra Albornoz,Christian Felipe	    |	9	|
+|	52	|	Posada Camacho,Jose Fernando	      |	10	|
+|	53	|	Ramirez Castro,Juan Esteban	        |	11	|
+|	54	|	Rodriguez Astaiza,Laura Maria	      |	12	|
+|	55	|	Rodriguez Rodriguez,Alvaro Jose	    |	13	|
+|	56	|	Rojas Cardenas,Laura Isabella	      |	14	|
+|	57	|	Rojas Mejia,Juan Miguel	            |	15	|
+|	58	|	Torres Murcia,Brenda Dayanna	      |	16	|
+|	59	|	Victoria Henriquez,Isabella        	|	17	|
+|	60	|	Yaber Macea,Zharick	                |	18	|
 
 
 
