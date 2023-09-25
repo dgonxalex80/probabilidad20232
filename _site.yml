@@ -126,24 +126,24 @@ navbar:
           href: Modulo4.html
         - text: "---------"
         - text: "Guía 4.1"
-          href: recurso000.html 
+          href: Guia401.html 
         - text: "Guía 4.2"
           href: recurso000.html 
         - text: "Guía 4.3"
           href: recurso000.html          
         - text: "---------"          
         - text: "Recursos 4.1"
-          href: recurso000.html 
+          href: recurs401.html 
         - text: "Recursos 4.2"
           href: recurso000.html 
         - text: "Recursos 4.3"
           href: recurso000.html 
         - text: "---------"  
         - text: "Monitoria 4"
-          href: recurso000.html 
+          href: monitoria4.html 
         - text: "---------"   
         - text: "Código 4.1"
-          href: recurso000.html 
+          href: codigo401.html 
         - text: "Código 4.2"
           href: recurso000.html 
         - text: "Código 4.3"
