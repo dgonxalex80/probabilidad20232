@@ -449,7 +449,7 @@ Por otro lado la gráfica 3 representa el estimador con las mejores condiciones,
 
 Para una muestra obtenida de una población exponencial con parámetro $\beta$ ( $E[X]=\beta$, $V[X]=\beta^{2}$). Examinar los siguientes estimadores para una muestra de $n=4$ ($X_{1}$, $X_{2}$, $X_{3}$, $X_{4}$)
 
-+ $\widehat{\theta}_{1} = \dfrac{1}{6}(X_{1}+X_{2}) \dfrac{1}{3}(X_{3}+X_{4})$
++ $\widehat{\theta}_{1} = \dfrac{1}{6}(X_{1}+X_{2}) + \dfrac{1}{3}(X_{3}+X_{4})$
 
 <br/>
 
@@ -462,7 +462,42 @@ Para una muestra obtenida de una población exponencial con parámetro $\beta$ (
 
 Como se puede verificar  $\widehat{\theta}_{3}$ es el mejor estimador de los tres, siendo insesgado y eficiente
 
-<br/><br/><br/><br/>
+```{r}
+# Se simulan 4 variables de la misma población
+n=1000
+x1234 = data.frame(x1= rexp(n,1/5),
+                   x2= rexp(n,1/5),
+                   x3= rexp(n,1/5),
+                   x4= rexp(n,1/5))
+# Se estiman los tres estimadores
+f1 = function(x){1/6*(x[1]+x[2])+ 1/3*(x[3]+x[4])} 
+f2 = function(x){1/10*(x[1]+2*x[2]+3*x[3]+4*x[4])} 
+f3 = function(x){1/4*(x[1]+x[2]+ x[3]+x[4])} 
+
+T1 = apply(x1234, 1, f1)
+T2 = apply(x1234, 1, f2)
+T3 = apply(x1234, 1, f3)
+
+# Se visualiza el resultado obtenido
+
+T123 =data.frame(T1,T2,T3)
+boxplot(T123)
+abline(h=5, col = "red")
+
+# Se calulan las medias
+apply(T123,2, mean)
+
+# Se calculan las varianzas
+apply(T123,2, var)
+```
+
+
+<br/>
+
+El mojor estimador de acuerdo a los resultados es $T_3$, que tiene un promedio más cercano a 5 y posee la menor varianza
+
+
+<br/><br/><br/>
 
 ## **Distribuciones muestrales**
 
