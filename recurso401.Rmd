@@ -481,7 +481,7 @@ T3 = apply(x1234, 1, f3)
 # Se visualiza el resultado obtenido
 
 T123 =data.frame(T1,T2,T3)
-boxplot(T123)
+boxplot(T123, las=1)
 abline(h=5, col = "red")
 
 # Se calulan las medias

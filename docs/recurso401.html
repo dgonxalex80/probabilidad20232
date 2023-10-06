@@ -1335,17 +1335,17 @@ T3 = apply(x1234, 1, f3)
 # Se visualiza el resultado obtenido
 
 T123 =data.frame(T1,T2,T3)
-boxplot(T123)
+boxplot(T123, las=1)
 abline(h=5, col = &quot;red&quot;)</code></pre>
 <p><img src="recurso401_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <pre class="r"><code># Se calulan las medias
 apply(T123,2, mean)</code></pre>
 <pre><code>      T1       T2       T3 
-5.154087 5.166776 5.094100 </code></pre>
+5.174650 5.179100 5.205817 </code></pre>
 <pre class="r"><code># Se calculan las varianzas
 apply(T123,2, var)</code></pre>
 <pre><code>      T1       T2       T3 
-7.670273 8.148610 6.480213 </code></pre>
+7.471445 7.946051 7.019883 </code></pre>
 <p><br/></p>
 <p>El mojor estimador de acuerdo a los resultados es <span
 class="math inline">\(T_3\)</span>, que tiene un promedio más cercano a
