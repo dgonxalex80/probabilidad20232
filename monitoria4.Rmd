@@ -352,6 +352,7 @@ Utilice un nivel de significancia del $0.01$ y pruebe la hipótesis de que el ti
 
 Un investigador realizó un estudio para determinar si la incidedencia de cierto tipo de delitos varia de una parte de una gran ciudad a otra. Los crímines específicos de interés eran el asalto, el robo de casas, el hurto y el homicidio. La siguiente tabla muestra el número de delitos cometidos en cuatro áreas de la ciudad durante el año pasado:
 
+<br/>
 
 |Comuna | Asalto |Robo en casa| Hurto   | Homicidio|
 |:-----:|-------:|-----------:|--------:|---------:|
@@ -368,6 +369,7 @@ Un investigador realizó un estudio para determinar si la incidedencia de cierto
 
 Se lleva a cobo una investigación en dos ciudades del Valle para determinar la opinión de los votantes respecto a dos candidatos a la presidencia paras proximas elecciones presidenciales. En cada cuidad se seleccionaron 500 personas votantes al azar y se registraron los siguientes datos :
 
+<br/>
 
 |Opinión del votante | Ciudad 1    |     Ciudad 2 |
 |:------------------:|------------:|-------------:|
@@ -383,6 +385,8 @@ A un nivel de significancia del $0.05$ pruebe la hipótesis nula de quelas las p
 ## **punto 5**
 
 El departamento de Bienestar Universitario realizó un estudio para determinar si 8 semanes de entrenamiento realmente reducen los niveles de colesterol de los participantes . A un grupo de tratamiento que consta de 15 colaboradores se les dieron conferencias dos veces a la semana acerca de cómo reducir el nivel de colesterol. Otro grupo de 18 colaboradores de edad similar, fue seleccionado al azar como el grupo control. Se registraron los siguientes niveles de colesterol de todos los participantes del programa de 8 semanas.
+
+<br/>
 
 `Tratamiento:` `129, 131,154,172, 115, 126, 175, 171, 122, 238, 159, 156, 176, 175, 126`
 
@@ -402,6 +406,8 @@ El sitio web de la compañía Mars publica los siguientes porcentajes de los dis
 knitr::include_graphics("img/peanutmm.jpg")
 ```
 
+<br/>
+
 |café  | amarillo | rojo | azul | naranja | verde |
 |:----:|:--------:|:----:|:----:|:-------:|:------|
 | 13%  | 14%      | 13%  | 24%  | 20%     | 16%   |
@@ -411,7 +417,7 @@ Con la información recogia por los estudiantes en la hoja electrónica ubicada 
 
 <br/><br/><br/>
 
-# **Taller 343**
+# **Taller 433**
 
 <br/>
 
@@ -431,9 +437,14 @@ Si además se desea estimar la proporción de jóvenes que son vegetarianos ¿qu
 
 Las investigadores del punto anterio selecionaron dos grupos de 400 jóvenes cada uno y reunieron la siguiente información sobre los hábitos de consumo de carne de res actuales y de hace 10 años.
 
+<br/>
+
 |                              | Hace 10 años |  Este año     |
-| media muestral               |  73          |  63           |
-| desviación estandar muestral |  25          |  28           |
+|:-----------------------------|-------------:|--------------:|
+| media muestral    ($\bar{x}$)|  73          |  63           |
+| desviación estandar muestral ($s$)|  25     |  28           |
+
+<br/>
 
 A los investigadores les gustaria poder mosrar que el consumo de carne percapita se redujo en los últomos 10 años, mediante a construcción de un intervalo de confianza. Con la información obtenida y el intervalo de confianza construido a qué conclusión se podría llegar?
 
@@ -441,8 +452,76 @@ A los investigadores les gustaria poder mosrar que el consumo de carne percapita
 
 ## **punto 3**
 
-Uno de los problemas más frecuentes en los jóvenes universitarios 
+Uno de los problemas más frecuentes en los jóvenes universitarios es la alta tensión que generan las evaluaciones parciales, las cuales en algunos casos genera dolores de cabeza. La tensión muscular en la región de la cabeza se ha asociado con los dolores de cabeza. Es razonable pensar que so la tensión muscular disminuye, es probable que los dolores de cabezase reduzcan o desaparezcan. Un grupo de investigadores diseña un experimento en el cual participan nueve estudiantes que presentan dolores de cabeza durante la semana de evaluación (GE : Grupo experimental). Posteriormente un grupo de profesionales del Medio Universitrio los entrenan con el fin de que puedan aprender a reducir la tensión muscular en la tensión de la cabeza utilizando un dispositivode bioretroalaimentación. Para este experimento,  el dispositivo mensionado se conecta en la región frontal de la cara. El dispositivo indica al estudiante la cantidad de tensión que existe en el musculo al cual está unido (en este caso al frontal) y le ayuda a reducir los niveles de tensión. Despues de 6 meses de entrenamiento, los jóvenes han logrado mantener baja la tensión en el musculo frontal; entonces se lleva nuevamente un registro de los dolores de cabeza que sufren durante las dos semanan de evaluaciones. La información recogida se muestra a continuación:
 
+<br/>
+
+<!-- |Sujeto     |1    |2    |3    |4    |5    |6    |7    |8    |9    | -->
+<!-- |:----------|----:|----:|----:|----:|----:|----:|----:|----:|----:| -->
+<!-- |$GE_A$     |   17|   13|    6|    5|    5|   10|    8|    9|    7| -->
+<!-- |$GE_D$     |    3|    7|    2|    3|    6|    2|    1|    0|    2| -->
+
+<!-- <br/> -->
+
+
+
+```{r, echo=FALSE}
+library(formattable)
+
+df <- data.frame(
+  Sujeto = c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  GEa = c(17, 13, 6, 5, 5, 10, 8, 9, 7),
+  GEd = c(3, 7, 2, 3, 6, 2, 1, 0, 2)
+)
+
+
+formattable(df,
+            list(GEa = color_bar("pink", fun = "proportion"),
+                 GEd = color_bar("pink", fun = "proportion")
+            ))
+```
+
+* $GE_A$ : Grupo experimental antes
+* $GE_D$ : Grupo experimental después del entrenamiento
+
+Dado que pueden existir problemas ede interpretación en el planteamiento anterior, debido a que los resultados aparentemente muestra una disminución de los dolores de cabeza, es posible que esta disminución no se deba al entrenamiento realizado con la utilización del dispositivo, sino a algún otro factor tambien presente en la situación, como por ejemplo el momento en que se realizan las mediciones (primeros parciales, segundos parciales, examenes finales), los investigadores incorporan un grupo que se denomina grupo control (GC ). Este segundo grupo que también presenta dolores de cabeza fue medido durante los mismos momentos del primer grupo (GE). Durante el periodo intermendio el grupo control no fue entrenado con el dispositivo para controlar la tensión . El número de dolores de cabeza para el segundo grupo (GC) durante los dos momentos son los siguiente
+
+<br/>
+
+<!-- |Sujeto     |1    |2    |3    |4    |5    |6    |7    |8    |9    | -->
+<!-- |:----------|----:|----:|----:|----:|----:|----:|----:|----:|----:| -->
+<!-- |$GC_A$     |    5|    8|   14|   16|    6|    5|    8|   10|    9| -->
+<!-- |$GC_D$     |    4|    9|   12|   15|    4|    3|    7|    6|    7| -->
+
+
+
+```{r, echo=FALSE}
+library(formattable)
+
+df <- data.frame(
+  Sujeto = c(1, 2, 3,  4, 5, 6, 7,  8, 9),
+  GCa = c(5 ,8,14, 16, 6, 5, 8, 10, 9),
+  GCd = c(4, 9,12, 15, 4, 3, 7,  6, 7)
+)
+
+formattable(df,
+            list(GCa = color_bar("pink", fun = "proportion"),
+                 GCd = color_bar("pink", fun = "proportion")
+            ))
+```
+
+
+<br/>
+
+Se puede concluir que el entrenamiento realizado con el dispositivo disminuye los dolores de cabeza?
+
+<br/><br/>
+
+### **Nota**:
+
+Suponga que el número de dolores de cabeza se distribuye aproximadamente normal.
+
+Tomado de Roberto Pangano (2006).
 
 <br/><br/><br/>
 
