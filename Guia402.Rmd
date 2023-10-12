@@ -65,7 +65,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |Actividad      | Descripción                    | https://github.com/dgonxalex80
 |:--------------|:-----------------------------  |
-|**Actividad 421**    |Resuelva las preguntas y problemas planteadas en  el  **Taller 421** y entregue su solución  en formato  pdf en el enlace correspondiente de  Brightspace|
+|**Actividad 421**    |Resuelva las preguntas y problemas planteadas en  el  [**Taller 421**](https://github.com/dgonxalex80/probabilidad20232/blob/main/pdf/Taller412.pdf) y entregue su solución  en formato  pdf en el enlace correspondiente de  Brightspace|
 |Trabajo individual |  |
 |Fecha          | 23 de octubre de 2023 |
 |Hora           | 23:59 hora local       |
