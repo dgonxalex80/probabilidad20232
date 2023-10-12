@@ -128,14 +128,14 @@ navbar:
         - text: "Guía 4.1"
           href: Guia401.html 
         - text: "Guía 4.2"
-          href: recurso000.html 
+          href: Guia402.html 
         - text: "Guía 4.3"
           href: recurso000.html          
         - text: "---------"          
         - text: "Recursos 4.1"
           href: recurso401.html 
         - text: "Recursos 4.2"
-          href: recurso000.html 
+          href: recurso402.html 
         - text: "Recursos 4.3"
           href: recurso000.html 
         - text: "---------"  
@@ -145,15 +145,10 @@ navbar:
         - text: "Código 4.1"
           href: codigo401.html 
         - text: "Código 4.2"
-          href: recurso000.html 
+          href: codigo402.html 
         - text: "Código 4.3"
-          href: recurso000.html 
+          href: codigo403.html 
         - text: "---------"            
-        - text: "Taller 421"
-          href: recurso000.html 
-        - text: "Taller 435"
-          href: recurso000.html            
-          
     - text: "Módulo 5"
       menu:
         - text: "Módulo 5"

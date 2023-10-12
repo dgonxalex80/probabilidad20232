@@ -54,7 +54,7 @@ que le permita seleccionar la mejor alternativa para la estimación de un parám
 
 ## **Duración**
 
-La presente  unidad será desarrollada del 24 de abril  al 01  de mayo  2023 . Ademas del material suministrado  contaran con el acompañamiento del profesor durante las sesiones de clase  y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  03 de mayo  de 2023 
+La presente  unidad será desarrollada del 13 al 20  octubre de 2023 . Ademas del material suministrado  contaran con el acompañamiento del profesor durante las sesiones de clase  y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  03 de mayo  de 2023 
 
 Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
 
@@ -67,7 +67,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |:--------------|:-----------------------------  |
 |**Actividad 421**    |Resuelva las preguntas y problemas planteadas en  el  **Taller 421** y entregue su solución  en formato  pdf en el enlace correspondiente de  Brightspace|
 |Trabajo individual |  |
-|Fecha          | 03  de mayo de 2023 |
+|Fecha          | 23 de octubre de 2023 |
 |Hora           | 23:59 hora local       |
 
 
@@ -82,6 +82,6 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |               |                              | 
 |:--------------|:-----------------------------|
 | Actividad 421 | Solucionario taller 421 de problemas sobre intervalos de confianza| 
-|Fecha          | 3 de mayo  de 2023 |
+|Fecha          | 23 de octubre de 2023 |
 |Hora           | 23:59 hora local       |
 
