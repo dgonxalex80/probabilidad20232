@@ -52,7 +52,7 @@ Al finalizar la unidad el estudiante estará en capacidad de IDENTIFICAR, CALCUL
 
 ## **Duración**
 
-La presente  unidad será desarrollada durante la comprendida entre 8  y 24 de mayo  de 2023.   
+La presente  unidad será desarrollada durante la comprendida entre 25 de octubre  y 3 de noviembre  de 2023.   
 Ademas del material suministrado  contaran con el acompañamiento del profesor y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  6 de noviembre.
 
 Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
@@ -69,7 +69,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |:-----------------|:-----------------------------  |
 |**Actividad 431** | Resuelva las preguntas y problemas planteadas en el [**Taller 431**](https://github.com/dgonxalex80/pye20222/blob/main/pdf/Taller_para_entregar_PdeH.pdf) y entregue su solución  en formato  pdf en el enlace correspondiente de  Brightspace   |
 |Trabajo individual|                                |
-|Fecha             | mayo 24  de 2023            |
+|Fecha             | noviembre 5  de 2023            |
 |Hora              | 23:59 hora local               |
 
 <br/><br/>
@@ -88,7 +88,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |               |                              | 
 |:--------------|:-----------------------------|
 | Actividad 431 | Solucionario taller 431 de problemas sobre pruebas de hipótesis| 
-| Fecha         | 24 de mayo  de 2023 |
+| Fecha         | 5 de noviembre de 2023 |
 | Hora          | 23:59 hora local       |
 
 <br/><br/>

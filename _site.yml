@@ -130,14 +130,14 @@ navbar:
         - text: "Guía 4.2"
           href: Guia402.html 
         - text: "Guía 4.3"
-          href: recurso000.html          
+          href: Guia403.html          
         - text: "---------"          
         - text: "Recursos 4.1"
           href: recurso401.html 
         - text: "Recursos 4.2"
           href: recurso402.html 
         - text: "Recursos 4.3"
-          href: recurso000.html 
+          href: recurso403.html 
         - text: "---------"  
         - text: "Monitoria 4"
           href: monitoria4.html 
