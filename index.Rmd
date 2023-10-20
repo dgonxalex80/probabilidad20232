@@ -144,7 +144,7 @@ summarytools::descr(datos$pp)
 
 ### Relación de la nota del primer parcial con el promedio académico
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+```{r, echo=FALSE, out.width="100%", fig.align = "center", message=FALSE, warning=FALSE}
 # Instala y carga el paquete ggplot2 si aún no está instalado
 #  install.packages("ggplot2")
 library(ggplot2)
@@ -176,3 +176,32 @@ plotly_grafico
 cor(datos$proaca, datos$pp)
 ```
 
+<br/><br/>
+
+## Segundos parciales
+ 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+sp=c(2.8,2.8,3.7,3.3,3.9,2.9,3.8,3.7,5.0,3.0,3.4,3.3,3.0,3.3,2.9,3.0,2.8,2.9,3.3,4.0,2.3,3.0,1.8,3.0,3.6,4.2,3.3,5.0,2.8,3.0,NA,3.6,0.7,4.7,NA,4.7,4.0,3.0,2.3,2.2,3.9,NA,4.5,3.8,1.9,5.0,4.4,4.7,5.0,2.2,2.5,4.8,NA,4.6,2.3,2.8,4.8,3.8,NA,2.0,4.2)
+grup = rep(c("A", "E"), each = 31)
+grup = grup[1:61] 
+
+datos = data.frame(sp, grup)
+
+# Instala y carga los paquetes necesarios
+# install.packages("ggplot2")
+library(ggplot2)
+
+# Crear el boxplot con ggplot2 y añadir puntos
+ggplot(datos, aes(x = grup, y = sp, fill = grup)) +
+  geom_boxplot(alpha = 0.5, width = 0.5) +
+  geom_jitter(position = position_jitter(width = 0.3), color = "darkblue", alpha = 0.5) +
+  geom_hline(yintercept = 3, color = "red") +
+  labs(title = " ",
+       x = "Grupo",
+       y = "Nota") +
+  scale_fill_manual(values = c("#FDA300", "#1F4762")) +
+  theme_minimal()
+
+
+```
