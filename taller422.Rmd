@@ -52,6 +52,11 @@ B=c(4.7, 3.9, 4.5, 5.5, 4.0, 5.3, 4.3, 6.0, 5.2, 3.7, 5.5, 6.2, 5.1, 5.4, 4.8)
 boxplot(data.frame(A,B), col=c("#264653", "#f4a261"), las=1,
         main="Tiempo de secado por tipo de pintura")
 grid()
+cat("medias", "\n")
+apply(data.frame(A,B),2, mean)
+cat("\n")
+cat("varianzas", "\n")
+apply(data.frame(A,B),2, var)
 ```
 
 Suponga que el tiempo de secado se distribuye normal . Calcule un intervalo de confianza para la diferencia de medias e interprete su resultado
@@ -90,6 +95,13 @@ Se afirma que una persona podrá reducir su peso en un periodo de dos semanas un
 ```{r}
 pesant=c(58.2, 60.3, 61.3, 69.0, 64.0, 62.6, 56.7)
 pesdes=c(60.0, 54.9, 58.1, 62.1, 58.5, 59.9, 54.4)
+d= pesant -pesdes
+d
+cat("medias", "\n")
+mean(d)
+cat("\n")
+cat("varianzas", "\n")
+var(d)
 ```
 
 Pruebe la afirmacion sobrela dieta calculando un intervalo de confianza del 95% para la diferencia de medias . Suponga que las diferencias de los pesos se distribuyen aproximadamente normal.
@@ -130,6 +142,23 @@ trabajan para el sector privado. Los pronósticos entregado por los ingenieros s
 Por su parte los especialistas en finanzas pronosticaron:
 5.7 %, 6.1 %, 5.2 %, 4.9 %, 4.6 %, 4.5 %, 5.2 %, 5.5 %. ¿Estan los especialistas (ingenieros y financieros) realizando pronósticos similares? . Suponga que los pronósticos realizados tienen distribucion normal. Construye un intervalo de confianza para la diferencia de los promedios realizados por los ingenieros y los especializadas en finanzas del 95%. Concluya a partir de los resultados.
 
+```{r}
+ing = c(4.2, 5.1, 3.9, 4.7, 4.8, 5.8)
+fin =c(5.7, 6.1, 5.2, 4.9, 4.6, 4.5, 5.2, 5.5)
+
+cat("resumen ingenieros", "\n")
+summary(ing)
+cat("varianza ingenieros", "\n")
+var(ing)
+
+cat("\n")
+cat("resumen financieros", "\n")
+summary(fin)
+cat("varianza financieros", "\n")
+var(fin)
+
+
+```
 
 <br/><br/>
 
@@ -138,12 +167,12 @@ Por su parte los especialistas en finanzas pronosticaron:
 Los siguientes datos corresponden a las notas finales del curso de matematicas fundamentales.
 
 ```{r}
-nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 
-     3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 
-     3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 
-     3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 
-     3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 
-     3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
+nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
+
+cat("resumen 'notas", "\n")
+summary(nf)
+cat("varianza notas", "\n")
+var(nf)
 ```
 
 Construya un intervalo del 95% confianza para el promedio de la nota final del curso de matematicas fundamentales. Interprete su resultado
@@ -156,6 +185,11 @@ Una muestra de siete bloques de concreto tienen la siguiente fuerza de compresi�
 
 ```{r}
 x=c(1367.6, 1411.5, 1318.7, 1193.6, 1406.2, 1425.7, 1572.4)
+
+cat("resumen ", "\n")
+summary(x)
+cat("varianza ", "\n")
+var(x)
 ```
 
 Estime un intervalo de confianza del 95% para la media de la fuerza de compresion de los bloques de concreto
@@ -169,6 +203,12 @@ Los directivos de una ensambladora de automóviles de gran tamaño están tratan
 ```{r}
 A=c(  55145, 58026, 58795, 54660, 61153, 56969, 61764, 59094, 60456, 54557, 52484, 59600)
 B=c(60970, 62409, 60546, 58508, 58974, 56682, 59483, 58048, 73107, 61977, 55974, 58522)
+
+cat("medias", "\n")
+apply(data.frame(A,B),2, mean)
+cat("\n")
+cat("varianzas", "\n")
+apply(data.frame(A,B),2, var)
 ```
 
 

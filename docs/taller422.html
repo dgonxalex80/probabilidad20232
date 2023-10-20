@@ -687,6 +687,17 @@ boxplot(data.frame(A,B), col=c(&quot;#264653&quot;, &quot;#f4a261&quot;), las=1,
         main=&quot;Tiempo de secado por tipo de pintura&quot;)
 grid()</code></pre>
 <p><img src="taller422_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>cat(&quot;medias&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>medias </code></pre>
+<pre class="r"><code>apply(data.frame(A,B),2, mean)</code></pre>
+<pre><code>   A    B 
+3.82 4.94 </code></pre>
+<pre class="r"><code>cat(&quot;\n&quot;)</code></pre>
+<pre class="r"><code>cat(&quot;varianzas&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>varianzas </code></pre>
+<pre class="r"><code>apply(data.frame(A,B),2, var)</code></pre>
+<pre><code>        A         B 
+0.6074286 0.5682857 </code></pre>
 <p>Suponga que el tiempo de secado se distribuye normal . Calcule un
 intervalo de confianza para la diferencia de medias e interprete su
 resultado</p>
@@ -697,7 +708,7 @@ attr(,&quot;conf.level&quot;)
 <p>Como el IC para la razón de varianzas (0.3588543; 3.1837492)
 contienen a 1, asumimos que las varianzas son iguales</p>
 <pre class="r"><code>t.test(A,B, var.equal=T,paired=F)$conf.int</code></pre>
-<pre><code>[1] -1.3922636 -0.8477364
+<pre><code>[1] -1.6934843 -0.5465157
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
 <p>Como el intervalo resultante es (-,-), indica que <span
@@ -733,7 +744,19 @@ semanas un promedio de 4.5 kilogramos con una nueva dieta. Los pesos de
 7 mujeres de siguieron esta dieta se registraron antes y después de un
 periodo de dos semanas.</p>
 <pre class="r"><code>pesant=c(58.2, 60.3, 61.3, 69.0, 64.0, 62.6, 56.7)
-pesdes=c(60.0, 54.9, 58.1, 62.1, 58.5, 59.9, 54.4)</code></pre>
+pesdes=c(60.0, 54.9, 58.1, 62.1, 58.5, 59.9, 54.4)
+d= pesant -pesdes
+d</code></pre>
+<pre><code>[1] -1.8  5.4  3.2  6.9  5.5  2.7  2.3</code></pre>
+<pre class="r"><code>cat(&quot;medias&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>medias </code></pre>
+<pre class="r"><code>mean(d)</code></pre>
+<pre><code>[1] 3.457143</code></pre>
+<pre class="r"><code>cat(&quot;\n&quot;)</code></pre>
+<pre class="r"><code>cat(&quot;varianzas&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>varianzas </code></pre>
+<pre class="r"><code>var(d)</code></pre>
+<pre><code>[1] 8.23619</code></pre>
 <p>Pruebe la afirmacion sobrela dieta calculando un intervalo de
 confianza del 95% para la diferencia de medias . Suponga que las
 diferencias de los pesos se distribuyen aproximadamente normal.</p>
@@ -789,18 +812,45 @@ que los pronósticos realizados tienen distribucion normal. Construye un
 intervalo de confianza para la diferencia de los promedios realizados
 por los ingenieros y los especializadas en finanzas del 95%. Concluya a
 partir de los resultados.</p>
+<pre class="r"><code>ing = c(4.2, 5.1, 3.9, 4.7, 4.8, 5.8)
+fin =c(5.7, 6.1, 5.2, 4.9, 4.6, 4.5, 5.2, 5.5)
+
+cat(&quot;resumen ingenieros&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>resumen ingenieros </code></pre>
+<pre class="r"><code>summary(ing)</code></pre>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  3.900   4.325   4.750   4.750   5.025   5.800 </code></pre>
+<pre class="r"><code>cat(&quot;varianza ingenieros&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>varianza ingenieros </code></pre>
+<pre class="r"><code>var(ing)</code></pre>
+<pre><code>[1] 0.451</code></pre>
+<pre class="r"><code>cat(&quot;\n&quot;)</code></pre>
+<pre class="r"><code>cat(&quot;resumen financieros&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>resumen financieros </code></pre>
+<pre class="r"><code>summary(fin)</code></pre>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  4.500   4.825   5.200   5.213   5.550   6.100 </code></pre>
+<pre class="r"><code>cat(&quot;varianza financieros&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>varianza financieros </code></pre>
+<pre class="r"><code>var(fin)</code></pre>
+<pre><code>[1] 0.2983929</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="problema-11" class="section level1">
 <h1><strong>Problema 11</strong></h1>
 <p>Los siguientes datos corresponden a las notas finales del curso de
 matematicas fundamentales.</p>
-<pre class="r"><code>nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 
-     3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 
-     3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 
-     3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 
-     3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 
-     3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)</code></pre>
+<pre class="r"><code>nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
+
+cat(&quot;resumen &#39;notas&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>resumen &#39;notas </code></pre>
+<pre class="r"><code>summary(nf)</code></pre>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  1.600   2.700   3.100   3.137   3.600   4.300 </code></pre>
+<pre class="r"><code>cat(&quot;varianza notas&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>varianza notas </code></pre>
+<pre class="r"><code>var(nf)</code></pre>
+<pre><code>[1] 0.3529101</code></pre>
 <p>Construya un intervalo del 95% confianza para el promedio de la nota
 final del curso de matematicas fundamentales. Interprete su
 resultado</p>
@@ -810,7 +860,17 @@ resultado</p>
 <h1><strong>Problema 12</strong></h1>
 <p>Una muestra de siete bloques de concreto tienen la siguiente fuerza
 de compresión medida en MPa . Los resultados obtenidos son:</p>
-<pre class="r"><code>x=c(1367.6, 1411.5, 1318.7, 1193.6, 1406.2, 1425.7, 1572.4)</code></pre>
+<pre class="r"><code>x=c(1367.6, 1411.5, 1318.7, 1193.6, 1406.2, 1425.7, 1572.4)
+
+cat(&quot;resumen &quot;, &quot;\n&quot;)</code></pre>
+<pre><code>resumen  </code></pre>
+<pre class="r"><code>summary(x)</code></pre>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   1194    1343    1406    1385    1419    1572 </code></pre>
+<pre class="r"><code>cat(&quot;varianza &quot;, &quot;\n&quot;)</code></pre>
+<pre><code>varianza  </code></pre>
+<pre class="r"><code>var(x)</code></pre>
+<pre><code>[1] 13209.88</code></pre>
 <p>Estime un intervalo de confianza del 95% para la media de la fuerza
 de compresion de los bloques de concreto</p>
 <p><br/><br/></p>
@@ -824,7 +884,19 @@ decisión se realiza un experimento en el que se usan 12 neumáticos de
 cada marca. Los neumáticos se utilizan hasta que se desgastan
 completamente. Los resultados son los siguientes:</p>
 <pre class="r"><code>A=c(  55145, 58026, 58795, 54660, 61153, 56969, 61764, 59094, 60456, 54557, 52484, 59600)
-B=c(60970, 62409, 60546, 58508, 58974, 56682, 59483, 58048, 73107, 61977, 55974, 58522)</code></pre>
+B=c(60970, 62409, 60546, 58508, 58974, 56682, 59483, 58048, 73107, 61977, 55974, 58522)
+
+cat(&quot;medias&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>medias </code></pre>
+<pre class="r"><code>apply(data.frame(A,B),2, mean)</code></pre>
+<pre><code>       A        B 
+57725.25 60433.33 </code></pre>
+<pre class="r"><code>cat(&quot;\n&quot;)</code></pre>
+<pre class="r"><code>cat(&quot;varianzas&quot;, &quot;\n&quot;)</code></pre>
+<pre><code>varianzas </code></pre>
+<pre class="r"><code>apply(data.frame(A,B),2, var)</code></pre>
+<pre><code>       A        B 
+ 8752256 19749960 </code></pre>
 <p>¿Que marca de neumáticos escogería entre las dos opciones de acuerdo
 a la anterior informacion? Suponga que las poblaciones se distribuyen de
 forma aproximadamente normal .</p>
