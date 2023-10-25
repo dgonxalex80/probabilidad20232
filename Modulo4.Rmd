@@ -41,5 +41,5 @@ Al finalizar el módulo el estudiante estará en capacidad de RECONOCER, INFERIR
 
 # **Mapa**
 
-![](img/mapU4.png)
+![](img/mapU4B.png)
 
