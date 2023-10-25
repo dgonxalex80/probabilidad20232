@@ -44,7 +44,7 @@ Los estudiantes deberán realizar un proyecto que les permita poner en práctica
   
 En **equipos** de hasta cuatro estudiantes deberán desarrollar un trabajo que corresponda a un problema de  interés para el  grupo, que permita la aplicación de la Estadística en un tema específico. 
 
-El producto de este trabajo deberá ser entregado en formato  **poster** impreso y en formato pdf  y ser presentado por los integrantes del grupo, contando de un tiempo de 10 minutos para ello.
+El producto de este trabajo deberá ser entregado en formato  **poster** $A1$ (Ancho: 594 mm, Alto: 841 mm) impreso y en formato pdf  y ser presentado por los integrantes del grupo, contando de un tiempo de 10 minutos para ello.
 
 <br/><br/><br/>
   
@@ -54,7 +54,7 @@ El producto de este trabajo deberá ser entregado en formato  **poster** impreso
 
 + Seleccionar un problema de interés propio para el grupo que  permita la aplicación de los conocimientos de estadística vistos en el curso. El tema propuesto deberá contar con el visto bueno del profesor.
 
-+  El contenido del **poster** deberá utilizar por lo menos 6 resultados producto de la inferencia estadística (intervalos de confianza o pruebas de hipótesis) que respalden los resultados presentados
++  El contenido del **poster** deberá utilizar por lo menos 6 resultados producto de la inferencia estadística (intervalos de confianza o pruebas de hipótesis, regresión lineal) que respalden los resultados .
 
 + Al final los estudiantes deberán realizar una presentación del trabajo y de los principales hallazgos.
 
@@ -75,7 +75,7 @@ El producto de este trabajo deberá ser entregado en formato  **poster** impreso
   
 ### **Primera Entrega : Informe parcial** 
 
-Documento con propuesta seleccionada (problema) 
+Documento en formato pdf que contenga la propuesta seleccionada (problema) 
     
 * Titulo
     
@@ -90,7 +90,7 @@ Documento con propuesta seleccionada (problema)
 
 ### **Entrega del informe final y presentación oral por parte del equipo:**
 
-* **Poster** en formato pdf 
+* **Poster** en formato impreso  
 
 * Fecha :  noviembre 11 de 2023
 
