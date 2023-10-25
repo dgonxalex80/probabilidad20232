@@ -42,7 +42,7 @@ Los estudiantes deberán realizar un proyecto que les permita poner en práctica
   
 ## **Temática** 
   
-En equipos de hasta cuatro estudiantes deberán desarrollar un trabajo que corresponda a un problema de  interés para el  grupo, que permita la aplicación de la Estadística en un tema específico. 
+En **equipos** de hasta cuatro estudiantes deberán desarrollar un trabajo que corresponda a un problema de  interés para el  grupo, que permita la aplicación de la Estadística en un tema específico. 
 
 El producto de este trabajo deberá ser entregado en formato  **poster** impreso y en formato pdf  y ser presentado por los integrantes del grupo, contando de un tiempo de 10 minutos para ello.
 
@@ -54,7 +54,7 @@ El producto de este trabajo deberá ser entregado en formato  **poster** impreso
 
 + Seleccionar un problema de interés propio para el grupo que  permita la aplicación de los conocimientos de estadística vistos en el curso. El tema propuesto deberá contar con el visto bueno del profesor.
 
-+  El contenido del poster deberá utilizar por lo menos 6 resultados producto de la inferencia estadística (intervalos de confianza o pruebas de hipótesis) que respalden los resultados presentados
++  El contenido del **poster** deberá utilizar por lo menos 6 resultados producto de la inferencia estadística (intervalos de confianza o pruebas de hipótesis) que respalden los resultados presentados
 
 + Al final los estudiantes deberán realizar una presentación del trabajo y de los principales hallazgos.
 
@@ -83,31 +83,18 @@ Documento con propuesta seleccionada (problema)
     
 * Metodología
 
-Fecha :  abril  14 de 2023
-Hora : 23.59
+  * Fecha :  octubre 30 de 2023
+  * Hora : 23:59
   
 <br/><br/>  
 
-
-### **Segunda entrega : Informe parcial**
-
-Adicional del informe anterior:
-
-   * Ficha técnica de la información
-
-   * Análisis descriptivo de la información
-
-Fecha :  mayo 5 de 2023
-  
-  <br/><br/>
-  
-### **Entrega del informe final y presentación:**
+### **Entrega del informe final y presentación oral por parte del equipo:**
 
 * **Poster** en formato pdf 
 
-* **video** o enlace de video con la sustentación del trabajo (requisito cámara prendida)
+* Fecha :  noviembre 11 de 2023
 
-Fecha: mayo 19 de mayo de 2023 <br/>
+* Espacio : última sesión de clases
 
 <br/><br/><br/>
   
@@ -131,16 +118,8 @@ El proyecto se puede basar en los datos contenidos en las plataformas de bases d
 * [**Datos abiertos Colombia**](https://www.datos.gov.co/)
 * [**kaggle**](https://www.kaggle.com/)
 * [**Biología: Bases de datos**](https://biblioguias.uam.es/biologia/bases_datos)
-* [**Tabla de repositorios de datos abiertos** ](https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/sites/agencia-gobierno-electronico-sociedad-informacion-conocimiento/files/documentos/noticias/Tabla%20de%20Repositorios%20de%20datos%20abiertos_0.pdf)
 
 
-<!-- ## **Criterios de evaluación** -->
 
-
-<!-- <br/><br/> -->
-
-<!-- ## **Grupos** -->
-
-<!-- <br/><br/> -->
   
 
