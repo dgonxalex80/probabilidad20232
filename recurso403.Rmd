@@ -94,13 +94,13 @@ Es la hipótesis a probar, ésta NO se rechaza si de la muestra no se obtiene su
 
 ### **Hipótesis Alterna (Ha)** 
 
-La hipótesis $Ho$ se contrasta con la hipótesis Ha, y ésta última corresponde a valores alternativos del parámetro planteados en la hipótesis nula. La hipótesis $Ha$ se considera cierta si existe suficiente evidencia para rechazar la hipótesis nula.
+La hipótesis `Ho` se contrasta con la hipótesis Ha, y ésta última corresponde a valores alternativos del parámetro planteados en la hipótesis nula. La hipótesis $Ha$ se considera cierta si existe suficiente evidencia para rechazar la hipótesis nula.
 
 <br/><br/>
 
 ### **Estadístico de Prueba**  
 
-Es una función de la muestra que contiene información sobre el parámetro de interés, la que nos permite decidir sobre el rechazo de la hipótesis nula, $Ho$ . Es tambien una variable aleatoria que sigue una función de distribución conocida como por ejemplo:
+Es una función de la muestra que contiene información sobre el parámetro de interés, la que nos permite decidir sobre el rechazo de la hipótesis nula, `Ho` . Es tambien una variable aleatoria que sigue una función de distribución conocida como por ejemplo:
 
 Para una muestra determinada se obtiene un valor del estadístico de prueba, a partir del cálculo y se determina el rechazo o no, de la hipótesis nula.
 
@@ -108,7 +108,7 @@ Para una muestra determinada se obtiene un valor del estadístico de prueba, a p
 
 ### **Región de Rechazo (RdeR)**  
 
-También llamada región crítica (RC), define los valores del estadístico de prueba para los cuales la información muestral contradice la hipótesis nula. Estos valores nos permitirán adoptar una regla de decisión consistente. Una prueba de una hipótesis estadística es un procedimiento que permite, mediante el contraste entre la información muestral y lo propuesto en una hipótesis, decidir sobre
+También llamada región crítica (`RC`), define los valores del estadístico de prueba para los cuales la información muestral contradice la hipótesis nula. Estos valores nos permitirán adoptar una regla de decisión consistente. Una prueba de una hipótesis estadística es un procedimiento que permite, mediante el contraste entre la información muestral y lo propuesto en una hipótesis, decidir sobre
 su rechazo. 
 
 Una prueba de una hipótesis estadística es un procedimiento que permite, mediante el contraste entre la información muestral y lo propuesto en una hipótesis, decidir sobre
@@ -118,7 +118,7 @@ su rechazo.
 
 ### **Regla de Decisión (RD)**  
 
-De esta manera, como una regla de decisión, si para una muestra particular el estadístico de prueba (valor calculado) cae dentro de la región crítica, rechazaremos la hipótesis nula $H_{o}$ en favor de la hipótesis alternativa $H_{a}$. En cambio, si el valor calculado no cae dentro de la RC, no podremos rechazar la hipótesis nula y por tanto decimos que la información contenida en la muestra no ofrece suficiente evidencia estadística que nos permita rechazar $Ho$, ASUMIMOS que la hipótesis nula es cierta. 
+De esta manera, como una regla de decisión, si para una muestra particular el estadístico de prueba (valor calculado) cae dentro de la región crítica, rechazaremos la hipótesis nula `Ha` en favor de la hipótesis alternativa `Ha`. En cambio, si el valor calculado no cae dentro de la RC, no podremos rechazar la hipótesis nula y por tanto decimos que la información contenida en la muestra no ofrece suficiente evidencia estadística que nos permita rechazar` `Ho`, ASUMIMOS que la hipótesis nula es cierta. 
 
 <br/><br/>
 
@@ -127,20 +127,29 @@ De esta manera, como una regla de decisión, si para una muestra particular el e
 Cuando se decide ya sea en favor o en contra de una determinada prueba de hipótesis, es posible estar en una de las cuatro situaciones descritas en la siguiente tabla:
 
 
-|                   |  **Estado de la naturaleza**    |                                 |
-|:------------------|:--------------------------------|:--------------------------------|
-| **Decisión sobre la hipótesis**|                    |                                 |
-|Rechazar $Ho$      | **Error tipo I**                | **Decisión correcta**           |
-|                   | P(Error tipo I) = $\alpha$      | $1-\beta$ : Potencia            |
-|No rechazar $Ho$   | **Decisión correcta**           | **Error tipo II**               |
-|                   |                                 | P(Eror tipo II) =$\beta$        |
-|                   |                                 |                                 |
+<!-- |                   |  **Estado de la naturaleza**    |                                 | -->
+<!-- |:------------------|:--------------------------------|:--------------------------------| -->
+<!-- |                   |  **Ho es verdadera**            | **Ho es falsa**                 | -->
+<!-- | **Decisión sobre la hipótesis**|                    |                                 | -->
+<!-- |                   |                                 |                                 | -->
+<!-- |Rechazar $Ho$      | **Error tipo I**                | **Decisión correcta**           | -->
+<!-- |                   | P(Error tipo I) = $\alpha$      | $1-\beta$ : Potencia            | -->
+<!-- |                   |                                 |                                 | -->
+<!-- |No rechazar $Ho$   | **Decisión correcta**           | **Error tipo II**               | -->
+<!-- |                   |                                 | P(Eror tipo II) =$\beta$        | -->
+<!-- |                   |                                 |                                 | -->
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/errores.png")
+```
+
 
 Existen dos situaciones en las que se comenten errores después de tomar una decisión:
 
 <br/><br/>
 
-**Error tipo I**: Cuando se rechazamos una hipótesis nula que en realidad es verdadera. Tomando como simil la situación donde un médico desea determinar si un paciente está sano o enfermo ($Ho$: SANO vs $Ha$: ENFERMO), es posible que concluya que el paciente está enfermo (rechace $Ho$) cuando en verdad esta persona esta sana. En términos de probabilidad este error se debe de representar como:
+**Error tipo I**: Cuando se rechazamos una hipótesis nula que en realidad es verdadera. Tomando como simil la situación donde un médico desea determinar si un paciente está sano o enfermo (`Ho`: SANO vs `Ha`: ENFERMO), es posible que concluya que el paciente está enfermo (rechace `Ho`) cuando en verdad esta persona esta sana. En términos de probabilidad este error se debe de representar como:
 $$P(\text{Rechazar } Ho | Ho \text{ es verdadera})= \alpha$$
 
 
@@ -261,16 +270,16 @@ Para tomar una decisión sobre las hipótesis de acuerdo con los resultados pode
 
 <br/><br/>
 
-**Regla 1** : Si el **EdeP** cae en la **RdeR**, entonce se rechaza la $H_{0}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el **EdeP** NO cae en la **RdeR**, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{0}$ es verdad.
+**Regla 1** : Si el `EdeP` cae en la `RdeR`, entonce se RECHAZA la `Ho` y se **acepta** `Ha` como verdadera. Si por el contrario el `EdeP` NO cae en la `RdeR`, entonces NO SE RECHAZA `Ho`, no existe suficiente evidencia para rechazarla, **asumimos** que `Ho` es verdad.
 
 
-En este caso es necesario determinar la región de rechazo ($RdeR$) de acuerdo al tipo de hipótesis y a la distribución del estadistico de prueba. En esta caso estamos realizando una prueba de dos colas, para un estadistico de prueba con distribución t-Student con 99 grados de libertad.
+En este caso es necesario determinar la región de rechazo (`RdeR`) de acuerdo al tipo de hipótesis y a la distribución del estadistico de prueba. En esta caso estamos realizando una prueba de dos colas, para un estadistico de prueba con distribución t-Student con 99 grados de libertad.
 
 <br/><br/>
 
 **Región de Rechazo** 
 
-Para determinar la $RdeR$, a a prtir del nivel de significancia asumido, se buscan los percentiles $t_{0.025; v=59}$ y $t_{0.975;v=59}$ para la distribución t-Student.
+Para determinar la `RdeR`, a a prtir del nivel de significancia asumido, se buscan los percentiles $t_{0.025; v=59}$ y $t_{0.975;v=59}$ para la distribución t-Student.
 
 ```{r}
 qt(c(0.025,0.975),99)
@@ -294,18 +303,18 @@ knitr::include_graphics("img/RdeR1.png")
 
 <br/>
 
-**Conclusión**: Como el **EdeP** (`t = -0.39343`) NO cae en la **RdeR**, entonces NO rechazamos $Ho$, asuminos $Ho$ es verdadera, es decir $\mu$ de los precios es igual a 120 mil pesos. 
+**Conclusión**: Como el `EdeP` (`t = -0.39343`) NO cae en la `RdeR`, entonces NO rechazamos `Ho`, asuminos `Ho` es verdadera, es decir $\mu$ de los precios es igual a 120 mil pesos. 
 
 
 <br/><br/>
 
-**Regla 2**: Si $\alpha >$ **valor-p** entonces rechazamos $H_{0}$, se **acepta** $H_{a}$ como verdadera. Si por el contrario $\alpha <  $ **valor-p**, no rechazamos $H_{0}$, **asumimos** 	que $H_{0}$ es verdad. 
+**Regla 2**: Si $\alpha >$ **valor-p** entonces rechazamos $H_{0}$, se **acepta** `Ha` como verdadera. Si por el contrario $\alpha <$ `valor-p`, no rechazamos `Ho`, **asumimos** 	que `Ho` es verdad. 
 
 <br/><br/><br/>
 
 ### **Valor-p** 
 
-El valor-p corresponde al área delimitada por el $EdeP$ en el sentido que indica la $RdeR$ de la prueba a contrastar. Es decir que corresponde a la probilidad  máxima de cometer error tipo I.
+El valor-p corresponde al área delimitada por el `EdeP` en el sentido que indica la `RdeR` de la prueba a contrastar. Es decir que corresponde a la probilidad  máxima de cometer `error tipo I`.
 
 [Gil, Jacky F.; Castañeda, Javier A (2005)](https://www.redalyc.org/pdf/806/80634308.pdf) lo definen como :
 
@@ -313,15 +322,15 @@ El valor-p corresponde al área delimitada por el $EdeP$ en el sentido que indic
 
 <br/>
 
-**Conclusión** : Como el valor de $\alpha >$ valor-p  (0.05 > p-value = 0.6949) entonces No se rechaza $Ho$, se **asume** que 	$Ho$ es verdad. El promedio de los precios es igual a \$ 120.  
+**Conclusión** : Como el valor de $\alpha >$ `valor-p`  (0.05 > p-value = 0.6949) entonces No se rechaza `Ho`, se `ASUME` que 	`Ho` es verdad. El promedio de los precios es igual a \$ 120.  
 
 <br/><br/>
 
-**Regla 3** : El valor-p se interpreta como el error que puedo cometer al rechazar $Ho$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $Ho$, se **acepta** $Ha$. Si por el contrario se considera este valor grande, entonce no rechazo $Ho$, asumo que $Ho$ es verdad.
+**Regla 3** : El `valor-p` se interpreta como el error que puedo cometer al rechazar `Ho`, siendo esta verdadera (cometer `error tipo I`). Si este valor es considerado como pequeño, rechazo `Ho`, se `ACEPTA` `Ha`. Si por el contrario se considera este valor grande, entonce no rechazo `Ho`, asumo que `Ho` es verdad.
 
 <br/>
 
-**Conclusión** : En este caso valoramos si el valor-p (p-value = 0.6949) es grande o pequeño. En esta caso se puede considerar que su valor es muy grande y por lo tanto no nos atrevemos a rechazar $Ho$, asumimos que $Ho$ es verdadera, es decir que la media de los precios es igual a \$ 120. 
+**Conclusión** : En este caso valoramos si el `valor-p` (p-value = 0.6949) es grande o pequeño. En esta caso se puede considerar que su valor es muy grande y por lo tanto no nos atrevemos a rechazar `Ho`, asumimos que $Ho$ es verdadera, es decir que la media de los precios es igual a \$ 120. 
 
 |    |                                     |
 |:--:|:------------------------------------|

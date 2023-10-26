@@ -1,0 +1,49 @@
+---
+title: "Aplicaciones"
+author: "Daniel Gonzalez"
+date: "2023-10-25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+fine la interfaz de usuario de la aplicación
+ui <- fluidPage(
+  titlePanel("Estudio de Potencia de una Prueba de Hipótesis"),
+  sidebarLayout(
+    sidebarPanel(
+      numericInput("n", "Tamaño de la muestra:", value = 100, min = 10, max = 1000),
+      numericInput("alpha", "Nivel de Significancia (α):", value = 0.05, min = 0.01, max = 0.10, step = 0.01),
+      numericInput("effect_size", "Tamaño del Efecto (d):", value = 0.2, min = 0.1, max = 2, step = 0.1),
+      actionButton("calculate", "Calcular Potencia")
+    ),
+    mainPanel(
+      plotOutput("power_plot")
+    )
+  )
+)
+
+# Define el servidor de la aplicación
+server <- function(input, output) {
+  observeEvent(input$calculate, {
+    # Calcula la potencia
+    power <- pwr.2p.test(h = input$effect_size, n1 = input$n, sig.level = input$alpha)$power
+    cat("Potencia calculada:", power, "\n")
+    
+    # Gráfica de potencia
+    power_curve <- curve(pwr.2p.test(h = input$effect_size, n1 = input$n, sig.level = input$alpha)$power, from = 0, to = 1, xname = "Efecto")
+    
+    plot(power_curve, type = "l", xlab = "Tamaño del Efecto", ylab = "Potencia", main = "Curva de Potencia")
+  })
+}
+
+# Ejecuta la aplicación Shiny
+shinyApp(ui = ui, server = server)
+
+```
+
