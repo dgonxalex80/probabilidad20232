@@ -152,7 +152,9 @@ navbar:
         - text: "Tablas"
           href: tablas.html    
         - text: "Taller 422"
-          href: taller422.html             
+          href: taller422.html    
+        - text: "Taller 431"
+          href: taller431.html    
           
           
     - text: "Módulo 5"

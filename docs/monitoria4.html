@@ -565,6 +565,9 @@ div.tocify {
     <li>
       <a href="taller422.html">Taller 422</a>
     </li>
+    <li>
+      <a href="taller431.html">Taller 431</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -661,9 +664,6 @@ class="math inline">\(p &lt; 0.05\)</span></td>
 </tbody>
 </table>
 <p><br/></p>
-<pre class="r"><code>prop.test(x=3,n=40, p=0.05, conf.level=0.95, alternative = &quot;less&quot;)</code></pre>
-<pre><code>Warning in prop.test(x = 3, n = 40, p = 0.05, conf.level = 0.95, alternative =
-&quot;less&quot;): Chi-squared approximation may be incorrect</code></pre>
 <pre><code>
     1-sample proportions test with continuity correction
 
@@ -694,16 +694,9 @@ distintos de entrenamiento. El primer grupo lo componen 36 empleados,
 mientras que el segundo grupo por 40 empleados. Los resultados en
 calificaciones entre 0 y 10, se presentan a continuación:</p>
 <p><br/></p>
-<pre class="r"><code>c2=&quot;#6666FF&quot; # AZUL  
-c3=&quot;#4CBFBA&quot; # VERDE CLARO  
-
-g1=c(6.2,  5.0,  6.9,  7.5,  8.6,  9.0,  7.0,  6.3, 9.9,  7.2,  8.1,  6.3,  5.2,  7.7,  5.7,  7.1,  6.4,  7.1,  8.3,  8.2,  6.4,  7.0,  7.8,  6.9,  8.5,  7.7,  8.2,  5.9,  9.8,  5.9,  6.7,  6.3,  6.7,  5.4,  7.2,  6.4)
-
-g2=c(8.2,  6.7,  7.6,  8.3,  9.4,  7.3,  6.7,  7.2,  9.8,  9.6,  8.9,  7.3,  9.7,  7.9,  9.1,  9.0,  9.2, 7.4,  8.3,  8.6,  8.5,  9.2,  7.0,  6.6,  8.4, 8.3,  7.5,  6.8,  7.0,  7.3, 8.9,  6.2,  7.1,  8.5, 9.1,  7.9,  8.1,  8.6,  6.8,  9.0)
-
-par(mfrow = c(1, 2))
-boxplot(g1, las=1, col = c2, ylim=c(0,10))
-boxplot(g2, las=1, col = c3, ylim=c(0,10))</code></pre>
+<pre><code>grupos :   n     media     varianza </code></pre>
+<pre><code>grupo 1 :  36    7.125     1.415643 </code></pre>
+<pre><code>grupo 1 :  40    8.075     0.9798718 </code></pre>
 <p><img src="monitoria4_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p><br/></p>
 <p>En este caso se trata de una comparación de medias, para grupos
@@ -765,11 +758,22 @@ variable <span class="math inline">\(X_2\)</span>
 (<code>p-value = 0.1533</code>)</p>
 <p>Ahora se realiza la prueba de hipotesis para determinar si las
 varianzas de los dos grupos son iguales o diferentes</p>
-<p><br/> | | |:—————————| | <span class="math inline">\(Ho\)</span> :
-<span class="math inline">\(\sigma_{1}^{2} = \sigma_{2}^{2}\)</span> | |
-<span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(\sigma_{1}^{2} \neq \sigma_{2}^{2}\)</span> | |
-|</p>
+<p><br/></p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\sigma_{1}^{2} = \sigma_{2}^{2}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\sigma_{1}^{2} \neq \sigma_{2}^{2}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 <pre class="r"><code>var.test(g1,g2) </code></pre>
 <pre><code>
     F test to compare two variances
@@ -856,14 +860,9 @@ estadísticas, deciden realizar un experimento en el que usan 12
 neumáticos de cada marca. Los neumáticos se utilizan hasta su
 terminación . Los resultados obtenidos (en miles de kilometros) se
 presentan a continuación :</p>
-<pre class="r"><code>c2=&quot;#6666FF&quot; # AZUL  
-c3=&quot;#4CBFBA&quot; # VERDE CLARO  
-
-FB=c(41.8, 41.6, 31.5, 48.7, 40.8, 31.2, 36.5, 36.2, 32.8, 36.3, 38.6, 30.5)
-KT=c(40.5, 38.4, 44.0, 34.9, 44.0, 44.7, 44.0, 47.1, 39.8, 43.9, 38.5, 40.2)
-par(mfrow = c(1, 2))
-boxplot(FB, las=1, col = c2, ylim=c(0,50))
-boxplot(KT, las=1, col = c3, ylim=c(0,50))</code></pre>
+<pre><code>marcas  : n     media        varianza </code></pre>
+<pre><code>FB :      12    37.20833     29.33902 </code></pre>
+<pre><code>KT :      12    41.66667     12.13879 </code></pre>
 <p><img src="monitoria4_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>¿Cual de las marcas de neumáticos recomendaría comprar? ¿Que
 supuestos deberá confirmar?. Utilice un <span
@@ -919,10 +918,6 @@ ratio of variances
 <p><code>p-value = 0.1589</code>, resultante del contraste indica que
 podemos decir que las varianzas se asumen iguales</p>
 <p>Ahora procedemos a realizar el contraste de medias</p>
-<pre class="r"><code>t.test(FB,KT,                 # variables 
-       paired=FALSE,          # grupos independientes
-       var.equal=TRUE,        # varianzas iguales
-       conf.level=0.95)       # alpha = 0.05</code></pre>
 <pre><code>
     Two Sample t-test
 
@@ -940,11 +935,6 @@ class="math inline">\(Ha\)</span>, <span
 class="math inline">\(\mu_{_{FB}} \neq \mu_{_{KT}}\)</span></p>
 <p>Con este resultado procedemos a realizar una prueba de cola
 inferior</p>
-<pre class="r"><code>t.test(FB,KT,                 # variables 
-       paired=FALSE,          # grupos independientes
-       var.equal=TRUE,        # varianzas iguales
-       conf.level=0.95,       # alpha = 0.05
-       alternative = &quot;less&quot;  )</code></pre>
 <pre><code>
     Two Sample t-test
 
@@ -970,15 +960,9 @@ métodos diferentes de realizar el ensamble de una casa prefabricada.
 Para comprobarlo recogen información del tiempo empleado en el ensamble
 de una pieza para ambos métodos en horas, los cuales se presentan a
 continuación:</p>
-<pre class="r"><code>c2=&quot;#6666FF&quot; # AZUL  
-c3=&quot;#4CBFBA&quot; # VERDE CLARO  
-
-met.nue=c(32, 37, 35, 28, 41, 44, 35, 31, 34) 
-met.est=c(35, 31, 29, 25, 34, 40, 27, 32, 31)
-
-par(mfrow = c(1, 2))
-boxplot(met.nue, las=1, col = c2, ylim=c(0,45))
-boxplot(met.est, las=1, col = c3, ylim=c(0,45))</code></pre>
+<pre><code>métodos :   n    media        varianza </code></pre>
+<pre><code>nuevo    :  9    35.22222     24.44444 </code></pre>
+<pre><code>estandar :  9    31.55556     20.02778 </code></pre>
 <p><img src="monitoria4_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <p>Presentan los datos suficiente evidencia que permita afirmar que el
 nuevo método es mas eficiente que el método estándar? (Utilice un <span
@@ -994,8 +978,9 @@ personas que asisten habitualmente al gimnasio. Los siguientes datos
 corresponden a los pesos tomados al inicio del programa (<span
 class="math inline">\(x1\)</span>) y sus pesos al finalizar el programa
 (<span class="math inline">\(x2\)</span>)</p>
-<pre class="r"><code>x1=c(104, 89, 84, 106, 90, 96, 79, 90, 85, 76, 91, 82, 100, 89, 121, 72)
-x2=c( 98, 85, 85, 103, 88, 95, 79, 90, 82, 76, 89, 81,  99, 86, 111, 70)</code></pre>
+<pre><code>tiempo :   n     media      varianza </code></pre>
+<pre><code>inicio :  16    90.875      153.7167 </code></pre>
+<pre><code>final  :  16    88.5625     111.9958 </code></pre>
 <p>¿Que supuestos se deben verificar? ¿Se podría decir que las rutinas
 empleadas por el instructor producen los efectos indicados?</p>
 <p><br/><br/><br/></p>
@@ -1007,29 +992,20 @@ realización de inventarios y del lector utilizado actualmente, con el
 fin de decidir si se adquiere el primero. Se obtienen los datos sobre el
 número de códigos de barra leídos por segundo con el cada uno de los
 dispositivos.</p>
-<pre class="r"><code>c2=&quot;#6666FF&quot; # AZUL  
-c3=&quot;#4CBFBA&quot; # VERDE CLARO  
-
-lec.nue=c(35, 40, 36, 42, 41, 52, 36, 41, 49, 41, 45, 38, 31, 54, 37, 47, 38, 34, 46, 39, 45, 44, 41, 42, 36, 43, 35, 31, 38, 38, 41, 41, 44, 44, 35, 44, 38, 33, 38, 49, 45, 45,  38, 46, 28, 40, 41, 47, 43, 50, 39, 36, 39, 38, 37, 37, 47, 37, 41, 40, 35)
-lec.act=c(41, 33, 22, 27, 31, 25, 28, 36, 29, 32, 25, 31, 31, 30, 31, 36, 26, 29, 29, 26, 27, 27, 30, 34, 26, 30, 23, 22, 29, 31, 37, 32, 34, 25, 25, 36, 32, 30, 23, 31, 33, 27, 27, 29, 35, 36, 27, 29, 25, 34, 27, 25, 32, 37, 31, 33, 27, 31, 26, 25, 24)
-
-par(mfrow = c(1, 2))
-boxplot(lec.nue, las=1, col = c2, ylim=c(0,60))
-boxplot(lec.act, las=1, col = c3, ylim=c(0,60))</code></pre>
-<p><img src="monitoria4_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
-<pre class="r"><code>shapiro.test(lec.nue) </code></pre>
+<pre><code>instrumento :   n     media       varianza </code></pre>
+<pre><code>nuevo  :        61    40.5082     27.1541 </code></pre>
+<pre><code>actual :        61    29.54098    17.61913 </code></pre>
+<p><img src="monitoria4_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <pre><code>
     Shapiro-Wilk normality test
 
 data:  lec.nue
 W = 0.98691, p-value = 0.76</code></pre>
-<pre class="r"><code>shapiro.test(lec.act)  </code></pre>
 <pre><code>
     Shapiro-Wilk normality test
 
 data:  lec.act
 W = 0.97442, p-value = 0.2296</code></pre>
-<pre class="r"><code>var.test(lec.nue, lec.act) </code></pre>
 <pre><code>
     F test to compare two variances
 
@@ -1041,7 +1017,6 @@ alternative hypothesis: true ratio of variances is not equal to 1
 sample estimates:
 ratio of variances 
           1.541172 </code></pre>
-<pre class="r"><code>t.test(lec.nue,lec.act,  paired=FALSE, var.equal=TRUE, conf.level=0.95, alternative = &quot;greater&quot;)</code></pre>
 <pre><code>
     Two Sample t-test
 
@@ -1065,20 +1040,10 @@ salario fijo (grupo 1). El gerente piensa que si se cambia la forma del
 salario tendrán mejores resultados. Para verificarlo introduce cambios
 en la forma de pago a un segundo grupo (grupo 2) . El numero de
 artículos producidos por ambos grupos son los siguientes:</p>
-<pre class="r"><code>c2=&quot;#6666FF&quot; # AZUL  
-c3=&quot;#4CBFBA&quot; # VERDE CLARO  
-
-g1=c(75, 76, 74, 80, 72, 78, 76, 73, 72, 75)
-g2=c(86, 78, 86, 84, 81, 79, 78, 84, 88, 80)
-
-par(mfrow = c(1, 2))
-boxplot(g1, las=1, col = c2, ylim=c(70,90))
-boxplot(g2, las=1, col = c3, ylim=c(70,90))</code></pre>
-<p><img src="monitoria4_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
-<pre class="r"><code># dos poblaciones, de grupos independientes
-# Ho: var1 = var2
-# Ha: var1 != var2 
-var.test(g1,g2) # como el valor-p &gt;&gt; alpha, no rechazamos Ho, asumimos que las varianzas son iguales</code></pre>
+<pre><code>grupos :   n     media     varianza </code></pre>
+<pre><code>grupo 1 :  10    75.1     6.544444 </code></pre>
+<pre><code>grupo 2 :  10    82.4     13.37778 </code></pre>
+<p><img src="monitoria4_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <pre><code>
     F test to compare two variances
 
@@ -1090,9 +1055,6 @@ alternative hypothesis: true ratio of variances is not equal to 1
 sample estimates:
 ratio of variances 
          0.4892027 </code></pre>
-<pre class="r"><code># Ho: mu1 &gt;= mu2 
-# Ha: mu1 &lt;  mu2 
-t.test(g1,g2,  paired=FALSE, var.equal=TRUE, conf.level=0.95, alternative = &quot;less&quot;)</code></pre>
 <pre><code>
     Two Sample t-test
 
@@ -1456,14 +1418,6 @@ continuación:</p>
 <!-- |$GE_A$     |   17|   13|    6|    5|    5|   10|    8|    9|    7| -->
 <!-- |$GE_D$     |    3|    7|    2|    3|    6|    2|    1|    0|    2| -->
 <!-- <br/> -->
-<pre><code>
-Attaching package: &#39;formattable&#39;</code></pre>
-<pre><code>The following object is masked from &#39;package:plotly&#39;:
-
-    style</code></pre>
-<pre><code>The following object is masked from &#39;package:flextable&#39;:
-
-    style</code></pre>
 <table class="table table-condensed">
 <thead>
 <tr>

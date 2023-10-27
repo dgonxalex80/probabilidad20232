@@ -7,12 +7,14 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(shiny)
+library(rmarkdown)
 ```
 
 ## R Markdown
 
 ```{r}
-fine la interfaz de usuario de la aplicación
+# define la interfaz de usuario de la aplicación
 ui <- fluidPage(
   titlePanel("Estudio de Potencia de una Prueba de Hipótesis"),
   sidebarLayout(

@@ -1,0 +1,43 @@
+---
+title: "Mi documento R Markdown con Shiny"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# install.packages("shiny")
+#install.packages("rmarkdown")
+
+library(shiny)
+library(rmarkdown)
+```
+
+```{r}
+sidebarPanel(
+  sliderInput("obs", "Número de observaciones:", min = 1, max = 1000, value = 500)
+)
+
+server <- function(input, output) {
+  output$histogram <- renderPlot({
+    data <- rnorm(input$obs)
+    hist(data)
+  })
+}
+
+shinyApp(ui = fluidPage(sidebarLayout(sidebarPanel(), mainPanel())), server)
+
+```
+
+
+Este archivo R Markdown contiene tres secciones principales:
+
+1. El encabezado YAML que configura el título, la salida (en este caso, se utiliza `flexdashboard`), y el motor Shiny.
+2. La sección "Sidebar" define un panel lateral que contiene un control deslizante Shiny para seleccionar el número de observaciones.
+3. La sección "Plots" define el panel de gráficos donde se mostrará el histograma.
+4. La sección "Shiny Application" contiene el código del servidor Shiny que realiza la generación del histograma y la función `shinyApp` que combina la interfaz de usuario y el servidor.
+
+Puedes guardar este código en un archivo con extensión ".Rmd", y luego puedes utilizar RStudio u otro editor de texto para compilarlo y ver la aplicación Shiny incrustada en el documento R Markdown resultante.
+

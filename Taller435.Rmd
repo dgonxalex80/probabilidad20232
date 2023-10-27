@@ -21,6 +21,7 @@ library(knitr)
 <br/><br/>
 
 ### **1.** 
+
 Los jóvenes colombianos se han vuelto más consientes con respecto a la importancia de una buena nutrición acompañada de actividad deportiva para tener buena salud. Una asociación de médicos opina que quizás los jóvenes estén modificando sus dietas para para incluir menos carnes rojas y más frutas y verduras. 
 
 <center>
@@ -99,17 +100,17 @@ Se puede concluir que el tratamiento realizado con el dispivo disminuye los dolo
 
 Suponga que el número de dolores de cabeza se distribuye aproximadamente normal. (Basado  en Robert Pangano (2006))
 
-## **Solución**
+<!-- ## **Solución** -->
 
 
 
 
-```{r, echo=FALSE}
-library(htmltools)
+<!-- ```{r, echo=FALSE} -->
+<!-- library(htmltools) -->
 
-tags$iframe(
-  src = "pdf/taller435.pdf",
-  width = "100%",  
-  height = "800"  
-)
-```
+<!-- tags$iframe( -->
+<!--   src = "pdf/taller435.pdf", -->
+<!--   width = "100%",   -->
+<!--   height = "800"   -->
+<!-- ) -->
+<!-- ``` -->
