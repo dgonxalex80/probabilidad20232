@@ -13,7 +13,7 @@
 
 <meta name="date" content="2023-10-27" />
 
-<title>Taller 431</title>
+<title>Taller431</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -556,15 +556,61 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Taller 431</h1>
+<h1 class="title toc-ignore">Taller431</h1>
 <h4 class="author">Daniel Gonzalez</h4>
 <h4 class="date">2023-10-27</h4>
 
 </div>
 
 
-<div id="en-construcción" class="section level1">
-<h1><strong>EN CONSTRUCCIÓN</strong></h1>
+<p><br/></p>
+<div id="problema-1" class="section level2">
+<h2><strong>Problema 1</strong></h2>
+<p><br/></p>
+<p>Suponga que se estudia la compra de una nueva maquina para una
+empresa. Se comprara la maquina si la proporción de la producción que
+necesita ser reprocesados por tener defectos es inferior al 5 %. Se
+examina una muestra de 40 artículos construidos por la maquina y 3
+necesitan ser reprocesados . ¿ Que decisión se toma? ( Se compra o no la
+maquina?)</p>
+<p><br/></p>
+<p><strong>Solución</strong></p>
+<p><span class="math inline">\(Ho : p \geq 0.05\)</span> <br/> <span
+class="math inline">\(Ha : p &lt; 0.05\)</span></p>
+<p><br/><br/></p>
+<pre class="r"><code>prop.test(3,40, p=0.05, alternative =&quot;less&quot;)</code></pre>
+<pre><code>Warning in prop.test(3, 40, p = 0.05, alternative = &quot;less&quot;): Chi-squared
+approximation may be incorrect</code></pre>
+<pre><code>
+    1-sample proportions test with continuity correction
+
+data:  3 out of 40, null probability 0.05
+X-squared = 0.13158, df = 1, p-value = 0.6416
+alternative hypothesis: true p is less than 0.05
+95 percent confidence interval:
+ 0.0000000 0.1894048
+sample estimates:
+    p 
+0.075 </code></pre>
+<p>Como el p-value = 0.6416, es grande, no se rechaza Ho, se asume que
+es verdadera. Por tal motivo no se recomienda la compaera de la
+máquia.</p>
+<p><br/><br/></p>
+</div>
+<div id="problema-3" class="section level2">
+<h2><strong>Problema 3</strong></h2>
+<p>Los ingenieros de una ensambladora de automóviles requieren decidir
+sobre cuál de dos de las marcas de neumáticos deben comprar. La marca FB
+o la marca KT. Con el fin de tomar una decisión basada en evidencias
+estadísticas, deciden realizar un experimento en el que usan 12
+neumáticos de cada marca. Los neumáticos se utilizan hasta su
+terminación. Los resultados obtenidos son los siguientes:</p>
+<pre class="r"><code>FB =c(41.8, 41.6, 31.5, 48.7, 40.8, 31.2, 36.5, 36.2, 32.8, 36.3, 38.6, 30.5)
+KT =c(40.5, 38.4, 44.0, 34.9, 44.0, 44.7, 44.0, 47.1, 39.8, 43.9, 44.2, 40.2)</code></pre>
+<p><img src="taller431_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Cuál marca de neumáticos recomendaría comprar. Justifique su
+respuesta. Suponga que la distancia recorrida por un neumático se
+distribuye aproximadamente normal y un α = 0,05.</p>
 </div>
 
 

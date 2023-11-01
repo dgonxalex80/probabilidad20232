@@ -8,6 +8,7 @@ output:
     toc_depth: 2
     toc_float: yes
     theme: flatly
+    code_folding: hide   
 ---
 
 ```{r setup, include=FALSE}

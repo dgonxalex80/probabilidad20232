@@ -1,12 +1,72 @@
 ---
-title: "Taller 431"
+title: "Taller431"
 author: "Daniel Gonzalez"
 date: "2023-10-27"
 output: html_document
+code_folding: TRUE
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
 
-#  **EN CONSTRUCCIÓN**
+
+<br/>
+
+## **Problema 1**
+
+<br/>
+
+Suponga que se estudia la compra de una nueva maquina para una empresa. Se comprara la maquina si la proporción de la producción que necesita ser reprocesados por tener defectos es inferior al 5 %. Se examina una muestra de 40 artículos construidos por la maquina y 3 necesitan ser reprocesados . ¿ Que decisión se toma? ( Se compra o no la maquina?)
+
+<br/>
+
+**Solución**
+
+$Ho : p \geq 0.05$ <br/>
+$Ha : p < 0.05$ 
+
+<br/><br/>
+
+```{r}
+prop.test(3,40, p=0.05, alternative ="less")
+```
+
+Como el p-value = 0.6416, es grande, no se rechaza Ho, se asume que es verdadera. Por tal motivo no se recomienda la compaera de la máquia.
+
+
+<br/><br/>
+
+
+## **Problema 3**
+
+Los ingenieros de una ensambladora de automóviles requieren decidir sobre cuál de dos de las marcas de neumáticos deben comprar. La marca FB o la marca KT. Con el fin de tomar una decisión basada en evidencias estadísticas, deciden realizar un experimento en el que usan 12 neumáticos de cada marca. Los neumáticos se utilizan hasta su terminación. Los resultados obtenidos son los siguientes:
+
+```{r}
+FB =c(41.8, 41.6, 31.5, 48.7, 40.8, 31.2, 36.5, 36.2, 32.8, 36.3, 38.6, 30.5)
+KT =c(40.5, 38.4, 44.0, 34.9, 44.0, 44.7, 44.0, 47.1, 39.8, 43.9, 44.2, 40.2)
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Cargar la librería ggplot2
+library(ggplot2)
+
+# Crear un data frame con los datos
+data <- data.frame(Marca = rep(c("FB", "KT"), each = 12),
+                   Valor = c(41.8, 41.6, 31.5, 48.7, 40.8, 31.2, 36.5, 36.2, 32.8, 36.3, 38.6, 30.5,
+                            40.5, 38.4, 44.0, 34.9, 44.0, 44.7, 44.0, 47.1, 39.8, 43.9, 44.2, 40.2))
+
+# Crear el boxplot con ggplot2
+ggplot(data, aes(x = Marca, y = Valor, fill = Marca)) +
+  geom_boxplot() +
+  geom_point(position = position_jitterdodge(jitter.width = 0.2), size = 3) +
+  labs(x = "Marca", y = "Valor") +
+  scale_fill_manual(values = c("FB" = "lightblue", "KT" = "lightgreen")) +
+  theme_minimal()
+
+
+
+```
+
+Cuál marca de neumáticos recomendaría comprar. Justifique su respuesta. Suponga que la distancia recorrida por un neumático
+se distribuye aproximadamente normal y un α = 0,05.

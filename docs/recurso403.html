@@ -34,6 +34,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
@@ -223,6 +224,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -629,6 +633,14 @@ div.tocify {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore"><span style="color:#646420">
@@ -747,7 +759,7 @@ descritas en la siguiente tabla:</p>
 <!-- |No rechazar $Ho$   | **Decisión correcta**           | **Error tipo II**               | -->
 <!-- |                   |                                 | P(Eror tipo II) =$\beta$        | -->
 <!-- |                   |                                 |                                 | -->
-<p><img src="img/errores.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="img/errores.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Existen dos situaciones en las que se comenten errores después de
 tomar una decisión:</p>
 <p><br/><br/></p>
@@ -1976,10 +1988,10 @@ día:</td>
 <thead>
 <tr class="header">
 <th align="right">Producto</th>
-<th align="center">Parmalat</th>
-<th align="center">Uno A</th>
+<th align="center">Alpina</th>
+<th align="center">Alqueria</th>
 <th align="center">Colanta</th>
-<th align="center">Purace</th>
+<th align="center">Proleche</th>
 </tr>
 </thead>
 <tbody>
@@ -2008,7 +2020,7 @@ día:</td>
 </table>
 <p><strong>Solución</strong>:</p>
 <p>Ho: Las ventas se distribuyen de manera uniforme (cantidad demandada
-es igual para todas las marcas) Ha: Las ventas no tienen una
+es igual para todas las marcas) <br/> Ha: Las ventas no tienen una
 distribución uniforme</p>
 <pre class="r"><code>obs=c(33,22,21,24)
 esp=c(0.25,0.25,0.25,0.25)
@@ -3030,6 +3042,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {

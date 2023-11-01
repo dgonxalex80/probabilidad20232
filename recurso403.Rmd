@@ -8,6 +8,7 @@ output:
     toc_depth: 2
     toc_float: yes
     theme: flatly
+    code_folding: hide    
 ---
 
 ```{r setup, include=FALSE}
@@ -140,7 +141,7 @@ Cuando se decide ya sea en favor o en contra de una determinada prueba de hipót
 <!-- |                   |                                 |                                 | -->
 
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+```{r, echo=FALSE, out.width="80%", fig.align = "center"}
 knitr::include_graphics("img/errores.png")
 ```
 
@@ -734,15 +735,15 @@ SIGN.test(x.img,md=15,alternative = "greater")
 |:--:|:------------------------------------|
 | ![](img/ej9.png) | El dueño de una panadería tiene la posibilidad de controlar los niveles de inventarios de leche para cuatro marcas diferentes. Con el fin de establecer políticas para la realización de nuevos pedidos requiere saber si la demanda de estas marcas son iguales (distribución uniforme). Con este propósito tomo la información de un día: |
 
-|Producto            | Parmalat | Uno A   | Colanta   | Purace | 
-|-------------------:|:--------:|:-------:|:---------:|:------:|
-|ventas (obs)        |33        |22       |21         |24      |
-|prob.esperada (esp) | 0.25     |0.25     | 0.25      | 0.25   |
-|de acuerdo a Ho     |          |         |           |        |
+|Producto            | Alpina   | Alqueria| Colanta   | Proleche| 
+|-------------------:|:--------:|:-------:|:---------:|:-------:|
+|ventas (obs)        |33        |22       |21         |24       |
+|prob.esperada (esp) | 0.25     |0.25     | 0.25      | 0.25    |
+|de acuerdo a Ho     |          |         |           |         |
 
 **Solución**:
 
-Ho: Las ventas se distribuyen de manera uniforme (cantidad demandada es igual para todas las marcas)
+Ho: Las ventas se distribuyen de manera uniforme (cantidad demandada es igual para todas las marcas) <br/>
 Ha: Las ventas no tienen una distribución uniforme
 
 
