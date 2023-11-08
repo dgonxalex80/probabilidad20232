@@ -161,24 +161,9 @@ navbar:
       menu:
         - text: "Módulo 5"
           href: Modulo5.html
-        - text: "---------"
-        - text: "Guía 5.1"
-          href: recurso000.html 
-        - text: "Guía 5.2"
-          href: recurso000.html 
         - text: "---------"          
         - text: "Recursos 5.1"
           href: recurso501.html 
-        - text: "Recursos 5.2"
-          href: recurso000.html 
-        - text: "---------"            
-        - text: "Monitoria 5"
-          href: recurso000.html 
-        - text: "---------"           
-        - text: "Código 5.1"
-          href: CODIGO501.html 
-        - text: "Código 5.2"
-          href: recurso502.html 
     - text: "Proyecto"
       menu:
         - text: "Guía proyecto"

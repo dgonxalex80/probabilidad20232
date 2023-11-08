@@ -48,7 +48,7 @@ Tomado de : https://es.wikipedia.org/wiki/Regresi%C3%B3n_lineal
 En unidades anteriores se estudiaron relaciones entre dos variables aleatorias, las cuales se puede medir a través del coeficiente de correlación ($\rho$),  el cual puede presentar valores desde  -1  hasta 1 como se representa en las siguientes gráficas :
 	
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.height=4, fig.width=9}
 gen.corr.data<- function(rho,n){
   x <- rnorm(n)
   z <- rnorm(n)
@@ -58,72 +58,72 @@ gen.corr.data<- function(rho,n){
 }
 par(mfrow = c(1, 2),
     mar = c(5, 4, 4, 2) + 0.1,
-                cex.lab=.5,  # tamaño de etiqueta ejes
-                cex.axis=.5, # tamaño escalas de los ejes 
-                cex.main=.5, # tamaño del titulo
-                cex.sub=.5)
+                cex.lab=.8,  # tamaño de etiqueta ejes
+                cex.axis=.8, # tamaño escalas de los ejes 
+                cex.main=1, # tamaño del titulo
+                cex.sub=.8)
 
 muestra<-gen.corr.data(-1,200)
 x=muestra[,2]+100
 y=muestra[,1]+100
-plot(x,y, pch=19,main="Correlación Rho=-1.0")
+plot(x,y, pch=19,main="Correlación Rho=-1.0", las=1)
 grid()
 
 muestra<-gen.corr.data(-0.90,200)
 x=muestra[,2]+100
 y=muestra[,1]+100
-plot(x,y, pch=19,main="Correlación Rho=-0.9")
+plot(x,y, pch=19,main="Correlación Rho=-0.9", las=1)
 grid()
 
 muestra<-gen.corr.data(-0.7,200)
 x=muestra[,2]+100
 y=muestra[,1]+100
-plot(x,y, pch=19,main="Correlación Rho=-0.70")
+plot(x,y, pch=19,main="Correlación Rho=-0.70", las=1)
 grid()
 
 muestra<-gen.corr.data(-0.50,200)
 x=muestra[,2]+100
 y=muestra[,1]+100
-plot(x,y, pch=19,main="Correlación Rho=-0.50")
+plot(x,y, pch=19,main="Correlación Rho=-0.50", las=1)
 grid()
 
 muestra<-gen.corr.data(-0.25,200)
 x=muestra[,2]+100
 y=muestra[,1]+100
-plot(x,y, pch=19,main="Correlación Rho=-0.25")
+plot(x,y, pch=19,main="Correlación Rho=-0.25", las=1)
 grid()
 
 muestra<-gen.corr.data(0,200)
 x=muestra[,2]+100
 y=muestra[,1]+100
-plot(x,y, pch=19,main="Correlación Rho=0")
+plot(x,y, pch=19,main="Correlación Rho=0", las=1)
 grid()
 
 
 muestra<-gen.corr.data(0.3,200)
 x=muestra[,2]+100
 y=muestra[,1]+100
-plot(x,y, pch=19,main="Correlación Rho=0.30")
+plot(x,y, pch=19,main="Correlación Rho=0.30", las=1)
 grid()
 
 
 muestra<-gen.corr.data(0.60,200)
 x=muestra[,2]+100
 y=muestra[,1]+100
-plot(x,y, pch=19,main="Correlación Rho=0.60")
+plot(x,y, pch=19,main="Correlación Rho=0.60", las=1)
 grid()
 
 
 muestra<-gen.corr.data(0.8,200)
 x=muestra[,2]+100
 y=muestra[,1]+100
-plot(x,y, pch=19,main="Correlación Rho=0.80")
+plot(x,y, pch=19,main="Correlación Rho=0.80", las=1)
 grid()
 
 muestra<-gen.corr.data(1,200)
 x=muestra[,2]+100
 y=muestra[,1]+100
-plot(x,y, pch=19,main="Correlación Rho=1.0")
+plot(x,y, pch=19,main="Correlación Rho=1.0", las=1)
 grid()
 
 ```	
@@ -411,8 +411,17 @@ Prueba de Goldfeld-Quandt
 
 
 ```{r}
-lmtest::gqtest(y~x)
+
+# lmtest::gqtest(y~x)
 ```
+
+<pre>
+	Goldfeld-Quandt test
+
+data:  y ~ x
+GQ = 0.19285, df1 = 4, df2 = 4, p-value = 0.93
+alternative hypothesis: variance increases from segment 1 to 2
+</pre>
 
 
 <br/><br/>
@@ -428,9 +437,14 @@ Los errores se distribuyen normal $u\sim$ $N(0,\sigma^{2})$}
 |$Ha$ : $u no \sim  norm$                                   |
 
 ```{r}
-shapiro.test(u)
+# shapiro.test(u)
 ```
+<pre>
+	Shapiro-Wilk normality test
 
+data:  u
+W = 0.94569, p-value = 0.5751
+</pre>
 	
 <br/><br/>
 
@@ -446,8 +460,17 @@ Los errores son independientes $E[u_i,u_j]=0$
 
 
 ```{r}
-lmtest::dwtest(y~x)
+# lmtest::dwtest(y~x)
 ```
+	
+<pre>
+	Durbin-Watson test
+
+data:  y ~ x
+DW = 1.5517, p-value = 0.1769
+alternative hypothesis: true autocorrelation is greater than 0
+
+</pre>	
 	
 <br/><br/><br/>
 
@@ -693,9 +716,18 @@ Listado 2   Supuesto de no autocorrelación de errores
 
 ```{r, warning=FALSE, message=FALSE}
 # Es necesario cargar el paquete 
-library(lmtest)
-dwtest(y~x)
+# library(lmtest)
+# dwtest(y~x)
 ```
+
+<pre>
+	Durbin-Watson test
+
+data:  y ~ x
+DW = 1.518, p-value = 0.07668
+alternative hypothesis: true autocorrelation is greater than 0
+
+</pre>
 Los resultados indican que no se cumple el supuesto de no autocorrelacion, los errores estan correlacionados
 
 Listado 3 Supuesto de normalidad de los errores
@@ -772,16 +804,45 @@ y=c(2.745, 2.700, 2.690, 2.680, 2.675, 2.670, 2.665, 2.660, 2.655, 2.655, 2.650,
 ```
 
 
-```{r}
+```{r, eval=FALSE}
 # validación de supuestos del modelo
-		residuos=rstandard(regresion)
-		valores.ajustados <- fitted(regresion)
-		plot(valores.ajustados, residuos)
-		lmtest::dwtest(y~x)
-		lmtest::bgtest(y~x)
-		lmtest::resettest(y~x , power=2, type="regressor")
-		shapiro.test(residuos)
+#		residuos=rstandard(regresion)
+#		valores.ajustados <- fitted(regresion)
+#		plot(valores.ajustados, residuos)
+#		lmtest::dwtest(y~x)
+#		lmtest::bgtest(y~x)
+#		lmtest::resettest(y~x , power=2, type="regressor")
+#		shapiro.test(residuos)
 ```
+
+<pre>
+	Durbin-Watson test
+
+data:  y ~ x
+DW = 1.518, p-value = 0.07668
+alternative hypothesis: true autocorrelation is greater than 0
+
+
+	Breusch-Godfrey test for serial correlation of order up to 1
+
+data:  y ~ x
+LM test = 1.4445, df = 1, p-value = 0.2294
+
+
+	RESET test
+
+data:  y ~ x
+RESET = 0.18173, df1 = 1, df2 = 22, p-value = 0.674
+
+
+	Shapiro-Wilk normality test
+
+data:  residuos
+W = 0.9658, p-value = 0.5415
+
+</pre>
+
+
 
 <br/><br/>
 

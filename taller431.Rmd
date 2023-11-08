@@ -1,9 +1,14 @@
 ---
 title: "Taller431"
-author: "Daniel Gonzalez"
-date: "2023-10-27"
-output: html_document
-code_folding: TRUE
+author: "dgonzalez"
+date: "2023"
+output: 
+  html_document:
+    code_folding: hide
+
+
+
+
 ---
 
 ```{r setup, include=FALSE}
@@ -19,9 +24,7 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 
 Suponga que se estudia la compra de una nueva maquina para una empresa. Se comprara la maquina si la proporción de la producción que necesita ser reprocesados por tener defectos es inferior al 5 %. Se examina una muestra de 40 artículos construidos por la maquina y 3 necesitan ser reprocesados . ¿ Que decisión se toma? ( Se compra o no la maquina?)
 
-<br/>
-
-<br/><br/>
+<br/><br/><br/>
 
 
 ## **Problema 3**
@@ -29,48 +32,59 @@ Suponga que se estudia la compra de una nueva maquina para una empresa. Se compr
 Los ingenieros de una ensambladora de automóviles requieren decidir sobre cuál de dos de las marcas de neumáticos deben comprar. La marca FB o la marca KT. Con el fin de tomar una decisión basada en evidencias estadísticas, deciden realizar un experimento en el que usan 12 neumáticos de cada marca. Los neumáticos se utilizan hasta su terminación. Los resultados obtenidos son los siguientes:
 
 ```{r}
+library(ggplot2)
 FB =c(41.8, 41.6, 31.5, 48.7, 40.8, 31.2, 36.5, 36.2, 32.8, 36.3, 38.6, 30.5)
 KT =c(40.5, 38.4, 44.0, 34.9, 44.0, 44.7, 44.0, 47.1, 39.8, 43.9, 44.2, 40.2)
-```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-# Cargar la librería ggplot2
-library(ggplot2)
-
-# Crear un data frame con los datos
-data <- data.frame(Marca = rep(c("FB", "KT"), each = 12),
-                   Valor = c(41.8, 41.6, 31.5, 48.7, 40.8, 31.2, 36.5, 36.2, 32.8, 36.3, 38.6, 30.5,
-                            40.5, 38.4, 44.0, 34.9, 44.0, 44.7, 44.0, 47.1, 39.8, 43.9, 44.2, 40.2))
+llantas = data.frame(rendimiento =c(FB, KT),
+                     marca = rep(c("FB","KT"), each=12 ))
 
 # Crear el boxplot con ggplot2
-ggplot(data, aes(x = Marca, y = Valor, fill = Marca)) +
+ggplot(llantas, aes(x = marca, y = rendimiento, fill = marca)) +
   geom_boxplot() +
   geom_point(position = position_jitterdodge(jitter.width = 0.2), size = 3) +
-  labs(x = "Marca", y = "Valor") +
+  labs(x = "Marca", y = "rendimiento") +
   scale_fill_manual(values = c("FB" = "lightblue", "KT" = "lightgreen")) +
   theme_minimal()
 
 
-
 ```
+
 
 Cuál marca de neumáticos recomendaría comprar. Justifique su respuesta. Suponga que la distancia recorrida por un neumático se distribuye aproximadamente normal y un $\alpha$ = 0,05.
 
+<br/><br/><br/>
 
 ## **Problema 4**
 
-Un ingeniero desea establecer si existen diferencias entre dos métodos diferentes de realizar el ensamble de una casa prefabricada. Para comprobarlo recoge información de ambos métodos que se presentan a continuación: \\
+Un ingeniero desea establecer si existen diferencias entre dos métodos diferentes de realizar el ensamble de una casa prefabricada. Para comprobarlo recoge información la producción de ambos métodos que se presentan a continuación: \\
 
 ```{r}
+
 x1 = c(32, 37, 35, 28, 41, 44, 35, 31, 34) # Procedimiento estándar:
 x2 = c(35, 31, 29, 25, 34, 40, 27, 32, 31) # Nuevo procedimiento:
+
+datos = data.frame(metodo = rep(c("método 1", "método 2"), each= 9),
+                   produccion = c(x1,x2))
+
+# Crear el boxplot con ggplot2
+ggplot(datos, aes(x = metodo, y = produccion, fill = metodo)) +
+  geom_boxplot() +
+  geom_point(position = position_jitterdodge(jitter.width = 0.2), size = 3) +
+  labs(x = "método", y = "prodicción") +
+  scale_fill_manual(values = c("método 1" = "lightblue", "método 2" = "lightgreen")) +
+  theme_minimal()
+
+
+
 ```
 	
 
 	
 Presentan los datos suficiente evidencia estadística para afirmar que el nuevo método es más eficiente que el estándar? (utilice un $\alpha=0.05$).
 
-	
+<br/><br/><br/>
+
 ## **Problema 5**
 
 Un director de un gimnasio quiere determinar si un instructor de ejercicio debe ser contratado o no para su campaña estrella “Reducción de peso”, Para tomar la decisión le dice que pruebe con 16 de las personas que habitualmente concurren tomadas al azar. Los datos que se tomaron antes ($x_{1}$) y después ($x_{2}$) de haber realizado un mes de ejercicios son los siguientes:
@@ -79,9 +93,14 @@ Un director de un gimnasio quiere determinar si un instructor de ejercicio debe 
 |------:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|                 
 |$x_{1}$|104 | 89 | 84 | 106| 90 | 96 | 79 | 90 | 85 | 76 | 91 | 82 | 100| 89 | 121| 72 | 
 |$x_{2}$| 98 | 85 | 85 | 103| 88 | 95 | 79 | 90 | 82 | 76 | 89 | 81 |  99| 86 | 111| 70 | 
+
+
+
 		
 Emplee y realice las pruebas de hipótesis a un nivel de significancia del 0.01 para determinar si el programa que ofrece el nuevo instructor es eficaz. Suponga que la variable peso se distribuye aproximadamente normal.
-	
+
+<br/><br/><br/>
+
 ## **Problema 6**
 
 Se realizan pruebas de un nuevo lector láser manual para uso en inventarios y el lector utilizado actualmente, con el fin de decidir si se adquiere el primero. Se obtienen los datos siguientes sobre el número de códigos de barra de 7 pulgadas que pueden leerse por segundo. Sea $X_{1}$: número de códigos leído por segundo con el dispositivo nuevo y $X_{2}$ el correspondiente al dispositivo antiguo.
@@ -94,6 +113,29 @@ $n_{2}=61$ ; \hspace{1cm}$\bar{x}_{2}=29$ ;\hspace{1cm} $s^{2}_{2}=22.7$
 De acuerdo con la información suministrada, es posible preferir alguno de ellos?. En caso de poderlo realizar con cual se quedaría? Justifique su respuesta. En cada caso determine las pruebas de hipótesis, el estadístico de prueba apropiado, el $valor-p$ obtenido y las conclusiones resultantes.
 	
 	
+<br/><br/>
+	
+### **Ayuda**
+
+<pre>
+n1=61
+n2=61
+mx1=40
+mx2=29
+vx1=24.9
+vx2=22.7
+
+F=vx1/vx2
+qf(c(0.025,0.975),60,60)
+
+sp2=(n1*vx1+n2*vx2)/sqrt(n1+n2-2)
+T=(mx1-mx2)/sqrt(sp2*(1/n1+1/n2)
+qt(c(0.025,0.975), n1+n2-2)
+</pre>
+<br/><br/>
+
+<br/><br/><br/>
+
 ## **Problema 7**
 
 Un empresario registro el número de artículos producidos durante 10 días, para un grupo de 15 obreros que trabajaban con base en un salario fijo (Grupo 1). El industrial introdujo un plan de incentivos para otros 15 obreros y registro su producción durante otros 10 días (Grupo 2). El número de artículos producidos por cada uno de los grupos fue :   \\
@@ -106,11 +148,14 @@ Un empresario registro el número de artículos producidos durante 10 días, par
 	
 Suponiendo que los salarios pagados a cada grupo son equivalentes. Se puede concluir que el plan de incentivos es efectivo?
 
+<br/><br/><br/>
+
 ## **Problema 8**
 
 En una muestra de 200 clientes, el 20\% indica una preferencia por tamaño especial de pizza.  Con posterioridad a una campaña publicitaria realizada en radio y televisión promoviendo dicho producto, se selecciono una muestra de igual tamaño.  En esta ultima muestra el 22\% de los clientes indico preferencia por el producto. De acuerdo con estos resultados y un nivel de significancia del 5\% , podría decirse que la campaña publicitaria no fue efectiva? 
 
-	
+<br/><br/><br/>
+
 ## **Problema 9**	
 
 Los siguientes son los datos de las horas hombre que se pierden en promedio por accidentes en 10 plantas industriales antes (A) y después (D) de la implantación de un programa de seguridad industrial:\\
@@ -122,15 +167,24 @@ Los siguientes son los datos de las horas hombre que se pierden en promedio por 
 
 Utilice un nivel de significancia de 0.05 para probar si el programa de seguridad implantado es eficaz. Suponga que esta variable se distribuye aproximadamente normal.
 
-	
+<br/><br/><br/>
+
 ## **Problema 10**	
 
 
-La compañía de dulces Mars publica en su sitio web información relacionada con los porcentajes de los distintos colores de sus dulces M\|M para la variedad de chocolate con leche.\\
-	
-|Color contenido en la bolsa | café       | amarillo  | rojo    | azul     | naranja  | verde     |
-|:---------------------------|:----------:|:---------:|:-------:|:--------:|:---------|:---------:|
-|Porcentaje (\%)             | 13         | 14        | 13      | 24       | 20       | 16        |
+La compañía de dulces Mars publica en su sitio web información relacionada con los porcentajes de los distintos colores de sus dulces M\|M para la variedad de chocolate con leche.
+
+<br/><br/>
+
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
+knitr::include_graphics("img/tabla_p10.png")
+```
+
+<br/><br/>
+
+<!-- |Color contenido en la bolsa | café       | amarillo  | rojo    | azul     | naranja  | verde     | -->
+<!-- |:---------------------------|:----------:|:---------:|:-------:|:--------:|:---------|:---------:| -->
+<!-- |Porcentaje (\%)             | 13         | 14        | 13      | 24       | 20       | 16        | -->
 
 	
 Se realiza una verificación mediante el conteo delos dulces contenidos e n una bolsa de 14 onzas de dulces M\|M, obteniendo los siguientes resultados: 70 duces cafés, 72 amarillos, 61 rojos, 118 azules, 108 naranjas y 85 verdes. 
@@ -138,33 +192,32 @@ Se realiza una verificación mediante el conteo delos dulces contenidos e n una 
 Se podria afirmar que los datos anteriores respaldan la información suministrada por la compañía en su sitio web? Sustente su respuesta.
 	
 
-	
+<br/><br/><br/>
+
 ## **Problema 11**	
 
 En una línea de producción los artículos se inspeccionan en forma periódica con el fin de detectar defectos. La siguiente secuencia de artículos defectuosos (D) y no defectuosos (N) corresponde a la producción de uno de los turnos. 
 ```{r}
-c(D, D, N, N, N, N, D, N, N, D, D, N, N, N, N, N, D, D, D, D, N, N, D, N, N, N, N, D, N, D, N, N, N, N, N, N, D, N, N, N, D, D, N, N, N, N, N, N, D, N, D, N, N, N, N, D, D, D, D, D, N, D, D, N, N, N, N, N, N, N, D, D, D, D, D, D, D, D, ,D, N, N, N, N, N, N, D, D, N)
+inspeccion = sample(c("D", "N"), 50, replace = TRUE)
+inspeccion
 ```
-
-
 
 
 Se puede afirmar que los datos no presentan patrón alguno y que la generación de artículos defectuosos se debe al azar? . Utilice un  $\alpha= 0.05$.
 
+<br/><br/><br/>
 
-	## **Problema 12**
+## **Problema 12**
 	
-En una planta ensambladora de camiones la supervisión diaria de las soldaduras generó la siguiente información :\\
-	\begin{center}
-		\begin{tabular}{c|ccc}
-			| \multicolumn{3}{c}{Número de soldaduras}\\
-			| Alta    | Moderada |  Baja    \\
-			Turno | calidad | calidad  |  calidad \\
-			\hline
-			dia   | 470     | 191      | 42 \\
-			tarde | 445     | 171      | 28 \\
-			noche | 257     | 129      | 17 \\
+En una planta ensambladora de camiones la supervisión diaria de las soldaduras generó la siguiente información :
 
+<br/><br/>
+
+```{r, echo=FALSE, out.width="35%", fig.align = "center"}
+knitr::include_graphics("img/tabla_p12.png")
+```
+
+<br/><br/>
 
 ```{r}
 x=c(470,445,257,191,171,139,42,28,17)
@@ -177,6 +230,7 @@ m
 
 ¿Se puede concluir que la calidad varia con los turnos?, en otras palabras se puede concluir que la calidad de las soldaduras es independiente de los turnos? . Utilice un nivel de significancia $\alpha=0.05$.
 	
+<br/><br/><br/>
 
 ## **Problema 13**
 
@@ -190,126 +244,154 @@ x
 	
 ```
 	
-	
+<br/><br/><br/>
+
 ## **FORMULARIO PRUEBAS DE HIPÓTESIS PARAMÉTRICAS**
+
+
+<br/><br/>
 
 ###  Una población
 
-\begin{eqnarray}
-Z_{o}|=|\dfrac{\bar{X}-\mu_{o}}{\sigma/\sqrt{n}}\sim N(0,1) 
-\end{eqnarray}
-\begin{eqnarray}
-Z_{o}|=|\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim N(0,1)
-\end{eqnarray}
-\begin{eqnarray}
-T_{o}|=|\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim t_{v=n-1} 
-\end{eqnarray}
-\begin{eqnarray}
-X^{2}_{o}|=|\dfrac{(n-1)S^{2}}{\sigma_{o}^{2}} \sim \chi^{2}_{v=n-1} 
-\end{eqnarray}
-\begin{eqnarray}
-Z_{o}|=| \dfrac{X-n \hspace{.1cm} p_{o}}{\sqrt{n \hspace{.1cm }p_{o}}} \sim N(0,1)
-\end{eqnarray}
-\begin{eqnarray*}
-Z_{o}|=|\dfrac{\widehat{p}-p_{0}}{\sqrt{p_{o}(1-p_{o})/n}} \sim N(0,1)
-\end{eqnarray*}
-\begin{eqnarray}
-Z_{o}|=|\dfrac{(\bar{x}_{1}-\bar{x}_{2})- \Delta_{o}}{\sqrt{\dfrac{\sigma_{1}^{2}}{n_{1}}+\dfrac{\sigma_{2}^{2}}{n_{2}}}} \sim N(0,1)
-\end{eqnarray}
-\begin{eqnarray}
-T_{o}|=| \dfrac{(\bar{x}_{1}-\bar{x}_{2})-\Delta_{o}}{s_{p}\sqrt{\dfrac{1}{n_{1}} + \dfrac{1}{n_{2}}}} \sim t_{v=n_{1}+n_{2}-2}
-\end{eqnarray}
-\begin{center}
-donde: $s^{2}_{p}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s^{2}_{2}}{n_{1}+n_{2}-2}$
-\end{center}
-\begin{eqnarray}
-T_{o}|=| \dfrac{(\bar{x}_{1}-\bar{x}_{2}-\Delta_{o}}{\sqrt{\dfrac{s^{2}_{1}}{n_{1}}+\dfrac{s^{2}_{2}}{n_{2}}}} \sim t_{v^{*}}
-\end{eqnarray}
-%\begin{eqnarray*}
-\begin{center}
-donde: $v^{*}= \dfrac{(s^{2}_{1}/n_{1} + s^{2}_{2}/n_{2})^{2}}{\dfrac{(s^{2}_{1}/n_{1})^{2}}{n_{1}-1}+\dfrac{(s^{2}_{2}/n_{2})^{2}}{n_{2}-1}}$
-\end{center}
-%\end{eqnarray*}
-\begin{eqnarray}
-T_{o}|=| \dfrac{\bar{d}-\Delta_{o}}{s_{d}^{2}} \sim t_{v=n-1}
-\end{eqnarray}
-%\begin{eqnarray*}
-\begin{center}
-donde: $\bar{d}=\dfrac{1}{n}\displaystyle\sum_{i=1}^{n}d_{i} \hspace{.2cm}\text{ y } \hspace{.2cm} d_{i} = x_{1}-x_{2}$
-\end{center}
-%\end{eqnarray*}
+$$Z_{o} = \dfrac{\bar{X}-\mu_{o}}{\sigma/\sqrt{n}}\sim N(0,1)$$
+
+<br/><br/>
+
+$$Z_{o} = \dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim N(0,1)$$
+
+
+<br/><br/>
+
+$$T_{o}=\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim t_{v=n-1}$$ 
+
+<br/><br/>
+
+$$X^{2}_{o}=\dfrac{(n-1)S^{2}}{\sigma_{o}^{2}} \sim \chi^{2}_{v=n-1}$$ 
+
+<br/><br/>
+
+$$Z_{o}= \dfrac{X-n \hspace{.1cm} p_{o}}{\sqrt{n \hspace{.1cm }p_{o}}} \sim N(0,1)$$
+<br/><br/>
+
+$$Z_{o}=\dfrac{\widehat{p}-p_{0}}{\sqrt{p_{o}(1-p_{o})/n}} \sim N(0,1)$$
+
+<br/><br/>
+
+$$Z_{o}|=|\dfrac{(\bar{x}_{1}-\bar{x}_{2})- \Delta_{o}}{\sqrt{\dfrac{\sigma_{1}^{2}}{n_{1}}+\dfrac{\sigma_{2}^{2}}{n_{2}}}} \sim N(0,1)$$
+<br/><br/>
+
+$$T_{o}= \dfrac{(\bar{x}_{1}-\bar{x}_{2})-\Delta_{o}}{s_{p}\sqrt{\dfrac{1}{n_{1}} + \dfrac{1}{n_{2}}}} \sim t_{v=n_{1}+n_{2}-2}$$
+
+$$ \text{donde:} \hspace{1cm} s^{2}_{p}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s^{2}_{2}}{n_{1}+n_{2}-2}$$
+
+<br/><br/>
+
+$$T_{o}= \dfrac{(\bar{x}_{1}-\bar{x}_{2}-\Delta_{o}}{\sqrt{\dfrac{s^{2}_{1}}{n_{1}}+\dfrac{s^{2}_{2}}{n_{2}}}} \sim t_{v^{*}}$$
+
+<br/><br/>
+
+$$\text{donde:} \hspace{1cm} v^{*}= \dfrac{(s^{2}_{1}/n_{1} + s^{2}_{2}/n_{2})^{2}}{\dfrac{(s^{2}_{1}/n_{1})^{2}}{n_{1}-1}+\dfrac{(s^{2}_{2}/n_{2})^{2}}{n_{2}-1}}$$
+<br/><br/>
+
+$$T_{o}= \dfrac{\bar{d}-\Delta_{o}}{s_{d}^{2}} \sim t_{v=n-1}$$
+
+$$\text{donde:} \hspace{1cm} \bar{d}=\dfrac{1}{n}\displaystyle\sum_{i=1}^{n}d_{i} \hspace{.5cm}\text{ y } \hspace{.5cm} d_{i} = x_{1}-x_{2}$$
+
  
-\begin{eqnarray}
-Z_{o}|=| \dfrac{(\widehat{p_{1}}-\widehat{p_{2}})-\Delta_{o}}{\sqrt{\widehat{p}\widehat{q}(1/n_{1}+1/n_{2})}}
-\end{eqnarray}
-\begin{center}
-donde: $\widehat{p}=\dfrac{x_{1}+x_{2}}{n_{1}+n_{2}}$ \hspace{.2cm} $\widehat{q}=1-\widehat{p}$, \hspace{.2cm}
-$\widehat{p_{1}}=\dfrac{x_{1}}{n_{1}} \hspace{.1cm} \text{ y } \hspace{.1cm}\widehat{p_{2}}=\dfrac{x_{2}}{n_{2}}$
-\end{center}
-\begin{eqnarray}
-F|=| \dfrac{s_{1}^{2}}{s_{2}^{2}} \sim F_{v_{1}:n_{1}-1; v_{2}: n_{2}-1}
-\end{eqnarray}
-\\
-\\
-%\end{multicols} 
-%$H_{o}: \theta \leq \theta_{o}$ vs $H_{a}: \theta > \theta_{o}$ | ----------------xxx\\
-%\rule{9cm}{1pt} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textcolor{col3}{\bf \large Regla1}:  \hspace{.3cm}Si el $EdeP$ cae en la $RdeR$, entonce se rechaza la $H_{0}$ y se {\bf acepta} $H_{a}$ como verdadera. Si por el contrario el $EdeP$ NO cae en la $RdeR$, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, {\bf asumimos} que $H_{0}$ es verdad.\\
+<br/><br/>
+$$Z_{o} =  \dfrac{(\widehat{p_{1}}-\widehat{p_{2}})-\Delta_{o}}{\sqrt{\widehat{p}\widehat{q}(1/n_{1}+1/n_{2})}}$$
 
-\textcolor{col5}{\bf \large  Regla2}: \hspace{.3cm}Si $\alpha >$ valor-p entonces rechazamos $H_{0}$, se {\bf acepta} $H_{a}$. Si por el contrario $\alpha <$ $valor-p$, no rechazamos $H_{0}$, {\bf asumimos} 	que $H_{0}$ es verdad.\\
+$$\text{donde:}\hspace{1cm} \widehat{p}=\dfrac{x_{1}+x_{2}}{n_{1}+n_{2}}\hspace{.5cm} \widehat{q}=1-\widehat{p} \hspace{.5cm} \widehat{p_{1}}=\dfrac{x_{1}}{n_{1}} \hspace{.5cm} \text{ y } \hspace{.5cm}\widehat{p_{2}}=\dfrac{x_{2}}{n_{2}}$$
+<br/><br/>
 
-\textcolor{col3}{\bf \large Regla3}: \hspace{.3cm} El $valor-p$ se interpreta como el error que puedo cometer al rechazar $H_{0}$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $H_{0}$, se {\bf acepta} $H_{a}$. Si por el contrario se considera este valor grande, entonce no rechazo $H_{0}$, asumo que $H_{0}$ es verdad.\\
+$$F =  \dfrac{s_{1}^{2}}{s_{2}^{2}} \sim F_{v_{1}:n_{1}-1; v_{2}: n_{2}-1}$$
+ 
+<br/><br/><br/> 
+ 
+### **Regiones de Rechazo**
 
-\rule{9cm}{1pt}
-\textcolor{col4}{\bf Tipos de pruebas} \\
-{\small
-	\begin{tabular}{lc}
-		$H_{0}: \theta = \theta_{o}$ vs $H_{0}: \theta \neq \theta_{o}$ | $RdeR*|$------------------$|*RdeR$\\
-		|\\
-		$H_{0}: \theta \leq \theta_{o}$ vs $H_{0}: \theta > \theta_{o}$ | ----------------------------$|*RdeR**$\\
-		|\\
-		$H_{0}: \theta \geq \theta_{o}$ vs $H_{0}: \theta < \theta_{o}$ | $**RdeR*|$------------------------\\
-		
-	\end{tabular}
-}
 
-\rule{9cm}{1pt}
+$H_{o}: \theta \leq \theta_{o}$ <br/> 
+$H_{a}: \theta > \theta_{o}$
 
-\vspace{.5cm}
-\textcolor{col4}{\bf Códigos en R pruebas paramétricas }\\
-{\scriptsize
-\begin{verbatim}
-# Entrada de datos 
+
+<br/><br/><br/>
+
+### **Reglas de decisión**
+
+
+### **Regla1**:  
+
+Si el Estadístico de Prueva cae en la Región de Rechazo, entonce se rechaza la $H_{0}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el $EdeP$ NO cae en la $RdeR$, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{0}$ es verdad.
+
+<br/><br/>
+
+### **Regla2**: 
+
+Si el valor de $\alpha >$ valor-p entonces rechazamos $H_{0}$, se {\bf acepta} $H_{a}$. Si por el contrario $\alpha <$ $valor-p$, no rechazamos $H_{0}$, **asumimos** 	que $H_{0}$ es verdad.
+
+<br/><br/>
+
+
+### **Regla3**:
+
+El $valor-p$ se interpreta como el error que puedo cometer al rechazar $H_{0}$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $H_{0}$, se **acepta** $H_{a}$. Si por el contrario se considera este valor grande, entonce no rechazo $H_{0}$, se **asume** que $H_{0}$ es verdad.\\
+
+
+<br/><br/><br/>
+
+## **Tipos de pruebas**
+
+$H_{0}: \theta = \theta_{o}$ 
+$H_{0}: \theta \neq \theta_{o}$  
+$RdeR*$------------------$*RdeR$
+
+$H_{0}: \theta \leq \theta_{o}$
+$H_{0}: \theta > \theta_{o}$  
+----------------------------$|*RdeR**$
+
+
+$H_{0}: \theta \geq \theta_{o}$ 
+$H_{0}: \theta < \theta_{o}$  
+$**RdeR*|$------------------------
+	
+
+<br/><br/><br/>
+
+### **Códigos en R pruebas paramétricas**
+
+<br/><br/>
+
+### **Entrada de datos** 
+
+<pre>
 x1=c(7, 13, 6, 5, 5, 10, 8, 6, 7)
 x2=c(3,7,2,3,6,2,1,0,2)
-\end{verbatim} 
-Una población
-\begin{verbatim}
+</pre>
+
+<pre>
 z.test(datos,mu=10,stdev=4, conf.level=98)
 t.test(datos, mu=10,conf.level=0.98)
 t.test(datos, mu=10,conf.level=0.98,alternative="greater")
 t.test(datos, mu=10,conf.level=0.98,alternative="less)
 prop.test(x,n, p=0.20, conf.level=0.98)
-\end{verbatim}%
-Dos poblaciones \\
-\begin{verbatim}
+</pre>
+
+<br/><br/><br/>
+
+### **Dos poblaciones**
+
+<pre>
 t.test(x1,x2,  paired=TRUE)
 t.test(x1,x2,  paired=FALSE, var.equal=TRUE, conf.level=0-98)
 t.test(x1,x2,  paired=FALSE, var.equal=FALSE, conf.level=0.98)
 var.test(x,y)
 prop.test(c(x1,x2), c(n1,n2))
-\end{verbatim}
-}
+</pre>
 
-\end{multicols}
-\newpage 
+### **Códigos en R pruebas no paramétricas** 
 
-.\vspace{1cm}
-\begin{multicols}{2} 
-\textcolor{col4}{\bf Códigos en R pruebas no paramétricas }\\
-{\scriptsize
-\begin{verbatim}
+<pre>
  library(BSDA)
  sign.test(x,md=6.5,alternative= "less")  "greater", "two.sided"
  sign.test(x,y,md=0, "two.sided")
@@ -322,13 +404,14 @@ prop.test(c(x1,x2), c(n1,n2))
  obs=c(10,15,20)
  esp=c(0.333,0.333,0.334)
  chisq.test(obs,p=esp)  
-\end{verbatim}
-}
-\vspace{.5cm}
+</pre>
 
-\textcolor{col4}{\bf Códigos en R pruebas de normalidad}\\
-{\scriptsize
-\begin{verbatim}
+<br/><br/><br/>
+
+
+### **Códigos en R pruebas de normalidad**
+
+<pre>
 x=rnorm(200,100,25)
 hist(x)
 qqnorm(x)
@@ -354,18 +437,13 @@ skewness.test(x)
 kurtosis.test(x)
 dpirgelhalter(x)
 wb.test(x)
-\end{verbatim}
-}
+</pre>
 
 
-%{\bf Paquete R-comander}\\
-%library(Rcmdr)
-\end{multicols}
- 
-\rule{18.5cm}{1pt}
-\begin{flushright}
-{\small Profesor Daniel Enrique González Gómez\\
-Curso: Probabilidad y Estadística\\
-\end{flushright}
+<br/><br/><br/>
+
+Profesor Daniel Enrique González Gómez <br/>
+Curso: Probabilidad y Estadística
+
 
 
