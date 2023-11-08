@@ -178,7 +178,7 @@ navbar:
         - text: "Código 5.1"
           href: CODIGO501.html 
         - text: "Código 5.2"
-          href: recurso000.html 
+          href: recurso502.html 
     - text: "Proyecto"
       menu:
         - text: "Guía proyecto"
