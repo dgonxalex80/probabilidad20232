@@ -725,7 +725,7 @@ Existen repositorio de bases de datos para uso general
 
 * [kaggle](https://www.kaggle.com)
 
-* [FiveThirtyEight](https://data.fivethirtyeight.com/)
+* [FiveThirtyEight](https://github.com/fivethirtyeight/data/tree/master/soccer-spi (y datos actuales de fútbol bajo CC BY 4.0 en https://www.football-charts.com/developers))
 
 * [Datos abiertos Cali](https://datos.cali.gov.co/)
 
